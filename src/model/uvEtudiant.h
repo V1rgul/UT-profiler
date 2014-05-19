@@ -1,5 +1,7 @@
 
 
+#include <QString>
+
 enum Note {ABS, FX, F, E, D, C, B, A}
 
 public class UVEtudiant {

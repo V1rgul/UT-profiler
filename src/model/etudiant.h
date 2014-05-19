@@ -1,4 +1,7 @@
+#include "formation.h"
 
+#include <QList>
+#include <QString>
 
 public class Etudiant {
 private:
