@@ -1,12 +1,16 @@
+#ifndef __FORMATION__
+#define __FORMATION__
+
 #include "semestre.h"
 
 #include <QList>
 
-public class Formation {
-private:
-	QList<Semestre> semestres;
+class Formation {
+  private:
+    QList<Semestre> _semestres;
 
+  public:
+    inline QList<Semestre> semestre () const { return _semestres; }
+};
 
-public:
-
-}
+#endif

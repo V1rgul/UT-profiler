@@ -1,12 +1,16 @@
+#ifndef __SEMESTRE__
+#define __SEMESTRE__
+
 #include "uvEtudiant.h"
 
 #include <QList>
 
-public class Semestre {
-private:
-	QList<UVEtudiant> uvs;
+class Semestre {
+  private:
+    QList<UVEtudiant> _uvs;
 
+  public:
+    inline QList<UVEtudiant> uvs () const { return _uvs; }
+};
 
-public:
-
-}
+#endif

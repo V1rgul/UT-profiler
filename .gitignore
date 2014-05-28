@@ -26,3 +26,6 @@ build-*
 # QtCreator
 
 *.autosave
+
+# Vim swap
+*.sw[op]
