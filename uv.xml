@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalogue>
+  <uv tag="BL01" titre="Sciences Biologiques Pour L'Ingénieur" credits="6" type="CS" />
+  <uv tag="BL10" titre="Structures Et Physicochimie Des Molécules Biologiques" credits="6" type="CS" />
+  <uv tag="BL22" titre="Microbiologie Et Biologie Moléculaire" credits="6" type="CS" />
+  <uv tag="CM01" titre="Physique De La Matière" credits="6" type="CS" />
+  <uv tag="CM11" titre="Chimie Générale" credits="6" type="CS" />
+  <uv tag="CM12" titre="Chimie Physique Minérale" credits="6" type="CS" />
+  <uv tag="CM13" titre="Chimie Des Substances Organiques Et Biologiques" credits="6" type="CS" />
+  <uv tag="CM15" titre="Systemes Colloidaux - Applications Agroalimentaires" credits="6" type="CS" />
+  <uv tag="EL01" titre="Phénomènes Electromagnétiques" credits="6" type="CS" />
+  <uv tag="EN21" titre="Bases De L'électronique Analogique" credits="6" type="CS" />
+  <uv tag="IA02" titre="Résolution De Problèmes Et Programmation Logique" credits="6" type="CS" />
+  <uv tag="MQ01" titre="éléments De Resistance Des Matériaux" credits="6" type="CS" />
+  <uv tag="MQ03" titre="Mécanique Des Vibrations I" credits="6" type="CS" />
+  <uv tag="MQ17" titre="Introduction Aux Propriétés Mécaniques Et à L'Ingénierie Des Matériaux" credits="6" type="CS" />
+  <uv tag="MQ18" titre="Cinématique Et Dynamique Des Systèmes" credits="6" type="CS" />
+  <uv tag="MT10" titre="Structures,Calcul Formel Et Algorithmes" credits="6" type="CS" />
+  <uv tag="MT12" titre="Methodes Mathematiques Pour L'Analyse Du Signal Et De L'Image" credits="6" type="CS" />
+  <uv tag="MT22" titre="Fonctions De Plusieurs Variables Réelles Et Applications" credits="6" type="CS" />
+  <uv tag="MT23" titre="Algèbre Linéaire Et Applications" credits="6" type="CS" />
+  <uv tag="MT90" titre="Fonctions D'Une Variable Reelle 1" credits="4" type="CS" />
+  <uv tag="MT91" titre="Fonctions D'Une Variable Reelle 2" credits="3" type="CS" />
+  <uv tag="NF04" titre="Modélisation Numérique Des Problèmes De L'Ingénieur" credits="6" type="CS" />
+  <uv tag="NF16" titre="Algorithmique Et Structures De Données" credits="6" type="CS" />
+  <uv tag="PS04" titre="Thermodynamique" credits="6" type="CS" />
+  <uv tag="PS91" titre="Mecanique Physique" credits="6" type="CS" />
+  <uv tag="PS92" titre="Dynamique Des Systemes Et Des Solides" credits="3" type="CS" />
+  <uv tag="PS93" titre="Optique Geometrique" credits="3" type="CS" />
+  <uv tag="PS94" titre="Electricite" credits="3" type="CS" />
+  <uv tag="RO03" titre="Recherche Opérationnelle, Optimisation Combinatoire" credits="6" type="CS" />
+  <uv tag="RR01" titre="Cinétique Chimique Et Réacteurs Homogènes" credits="6" type="CS" />
+  <uv tag="SR02" titre="Systèmes D'Exploitation : Des Concepts à La Programmation" credits="6" type="CS" />
+  <uv tag="SY01" titre="éléments De Probabilités" credits="6" type="CS" />
+  <uv tag="SY02" titre="Méthodes Statistiques Pour L'Ingénieur" credits="6" type="CS" />
+  <uv tag="SY04" titre="Systèmes Asservis Linéaires : Analyse Et Commande" credits="6" type="CS" />
+  <uv tag="SY14" titre="éléments D'Automatique" credits="6" type="CS" />
+  <uv tag="TF01" titre="Mécanique Des Fluides Incompressibles" credits="6" type="CS" />
+  <uv tag="TF06" titre="Transfert De Chaleur" credits="6" type="CS" />
+  <uv tag="TN06" titre="Transmission Des Efforts En Mécanique" credits="6" type="CS" />
+  <uv tag="BA07" titre="Modes Opératoires De La Construction" credits="5" type="TM" />
+  <uv tag="BL09" titre="Biophysique Des Systèmes Biologiques" credits="6" type="TM" />
+  <uv tag="BM01" titre="Introduction à L'Instrumentation Biomédicale" credits="5" type="TM" />
+  <uv tag="BT02" titre="Opérations Agro-Industrielles" credits="6" type="TM" />
+  <uv tag="C2I1" titre="Certificat Informatique Et Internet Niveau 1" credits="4" type="TM" />
+  <uv tag="CM70" titre="Travaux Pratiques De Gp (1)" credits="3" type="TM" />
+  <uv tag="DD02" titre="Introduction A L'Eco-Conception Et A L'Analyse De Cycle De Vie" credits="3" type="TM" />
+  <uv tag="EL02" titre="électricité Industrielle Appliquée" credits="6" type="TM" />
+  <uv tag="FQ01" titre="économie Globale Et Maitrise De La Qualité" credits="6" type="TM" />
+  <uv tag="GE37" titre="Gestion De Projet" credits="6" type="TM" />
+  <uv tag="LO01" titre="Bases De La Programmation" credits="6" type="TM" />
+  <uv tag="LO21" titre="Programmation Et Conception Orientees Objet" credits="6" type="TM" />
+  <uv tag="LO22" titre="Genie Logiciel" credits="6" type="TM" />
+  <uv tag="MT94" titre="Introduction Aux Mathematiques Appliquées" credits="6" type="TM" />
+  <uv tag="NF01" titre="Algorithmique Et Programmation" credits="6" type="TM" />
+  <uv tag="NF02" titre="Du Circuit Intégré Au Microprocesseur" credits="6" type="TM" />
+  <uv tag="NF15" titre="Microprocesseurs, Interfaces Et Logiciels De Bases" credits="6" type="TM" />
+  <uv tag="NF17" titre="Conception De Bases De Données" credits="6" type="TM" />
+  <uv tag="NF22" titre="Micro-Ordinateurs Et Applications" credits="6" type="TM" />
+  <uv tag="NF92" titre="Traitement Automatique De L'Information" credits="6" type="TM" />
+  <uv tag="NP90" titre="Nano-Projets" credits="2" type="TM" />
+  <uv tag="NX17" titre="Introduction Aux Bases De Donnees" credits="6" type="TM" />
+  <uv tag="PR" titre="Réalisation De Projet" credits="5" type="TM" />
+  <uv tag="PS09" titre="Acoustique Appliquée" credits="6" type="TM" />
+  <uv tag="PS90" titre="Introduction A La Mesure" credits="3" type="TM" />
+  <uv tag="TF14" titre="Les Opérations De Transfert De Matière" credits="6" type="TM" />
+  <uv tag="TN01" titre="éléments De Dessin Technique" credits="6" type="TM" />
+  <uv tag="TN02" titre="Introduction A La Conception Mécanique" credits="6" type="TM" />
+  <uv tag="TN03" titre="Fabrication Mécanique" credits="6" type="TM" />
+  <uv tag="TN04" titre="Réalisation" credits="4" type="TM" />
+  <uv tag="TN08" titre="Dessin De Communication" credits="5" type="TM" />
+  <uv tag="TN20" titre="Cao : Modélisation Géométrique" credits="6" type="TM" />
+  <uv tag="TN22" titre="éléments De Bureau D'études" credits="6" type="TM" />
+  <uv tag="TR91" titre="Techniques De Recherche D'Information Pour L'Ingenieur" credits="2" type="TM" />
+  <uv tag="TS01" titre="Maitrise Des Risques" credits="6" type="TM" />
+  <uv tag="TX" titre="étude Expérimentale" credits="5" type="TM" />
+  <uv tag="UB04" titre="Ambiances Et Environnement Lumineux" credits="5" type="TM" />
+  <uv tag="UR03" titre="Cartographie Sémiologie Graphique Et Cao/Dao" credits="5" type="TM" />
+  <uv tag="UR05" titre="Aménagement Et Environnement" credits="5" type="TM" />
+  <uv tag="AR03" titre="Art Et Technologies Contemporaines" credits="4" type="TSH" />
+  <uv tag="DI01" titre="Initiation Au Design Industriel" credits="4" type="TSH" />
+  <uv tag="DI02" titre="Initiation Au Design Graphique" credits="4" type="TSH" />
+  <uv tag="EI03" titre="Communication Interculturelle En Entreprises, Organisations Transnationales" credits="4" type="TSH" />
+  <uv tag="EI04" titre="Intelligence économique : Stratégie D'Entreprise, Démarche Et Outils" credits="4" type="TSH" />
+  <uv tag="EI05" titre="Science, Technologie Et Société Dans L'Union Européenne" credits="4" type="TSH" />
+  <uv tag="GE10" titre="économie Politique" credits="4" type="TSH" />
+  <uv tag="GE12" titre="Géographie Et économie Des Territoires" credits="4" type="TSH" />
+  <uv tag="GE13" titre="Les Risques Entre Technique Et Societe" credits="4" type="TSH" />
+  <uv tag="GE15" titre="Initiation A La Création Et Gestion D'Entreprises Innovantes" credits="4" type="TSH" />
+  <uv tag="GE20" titre="économie Industrielle" credits="4" type="TSH" />
+  <uv tag="GE21" titre="économie Et Gestion De L'Innovation Et Du Numérique" credits="4" type="TSH" />
+  <uv tag="GE22" titre="économie Internationale" credits="4" type="TSH" />
+  <uv tag="GE23" titre="Transferts De Technologies Et Développements" credits="4" type="TSH" />
+  <uv tag="GE24" titre="Recherche Developpement : Ingenieur Et Investisseurs" credits="4" type="TSH" />
+  <uv tag="GE25" titre="Gestion Et Organisation De La Production" credits="4" type="TSH" />
+  <uv tag="GE26" titre="Management Stratégique Des Ressources Humaines" credits="4" type="TSH" />
+  <uv tag="GE28" titre="économie Et Droit De La Propriété Intellectuelle (Industrielle Et Artistique) Dans Une économie Reposant Sur La Connaissance" credits="4" type="TSH" />
+  <uv tag="GE29" titre="Gestion Et Management International De L'Entreprise" credits="4" type="TSH" />
+  <uv tag="GE36" titre="Marketing" credits="4" type="TSH" />
+  <uv tag="GE90" titre="Organisation, Innovation Et International" credits="4" type="TSH" />
+  <uv tag="HE01" titre="épistémologie Et Histoire Des Sciences" credits="4" type="TSH" />
+  <uv tag="HE03" titre="Logique : Histoire Et Formalisme" credits="4" type="TSH" />
+  <uv tag="HE05" titre="Culture Et Histoire Des Techniques" credits="4" type="TSH" />
+  <uv tag="IC01" titre="Histoire Et Prospective Des Industries Culturelles" credits="4" type="TSH" />
+  <uv tag="IC03" titre="Le Numérique : Des Formats Aux Chaines De Production" credits="4" type="TSH" />
+  <uv tag="IC05" titre="Technologies Pour La Documentation Et L'Indexation Dans L'Hypermédia" credits="4" type="TSH" />
+  <uv tag="IC07" titre="Techniques Et Technologies Du Musical Et Du Sonore" credits="4" type="TSH" />
+  <uv tag="LA00" titre="Allemand Initiation" credits="4" type="TSH" />
+  <uv tag="LA01" titre="Allemand Niveau I" credits="4" type="TSH" />
+  <uv tag="LA02" titre="Allemand Niveau II" credits="4" type="TSH" />
+  <uv tag="LA03" titre="Allemand Niveau III" credits="4" type="TSH" />
+  <uv tag="LA04" titre="Pratique De La Communication En Allemand" credits="4" type="TSH" />
+  <uv tag="LA11" titre="Anglais Niveau I" credits="4" type="TSH" />
+  <uv tag="LA12" titre="Anglais Niveau II" credits="4" type="TSH" />
+  <uv tag="LA13" titre="Anglais Niveau III" credits="4" type="TSH" />
+  <uv tag="LA14" titre="Civilisation Du Monde Anglophone" credits="4" type="TSH" />
+  <uv tag="LA15" titre="Anglais Professionnel - Niveau V" credits="4" type="TSH" />
+  <uv tag="LA20" titre="Espagnol Initiation" credits="4" type="TSH" />
+  <uv tag="LA21" titre="Espagnol Niveau I" credits="4" type="TSH" />
+  <uv tag="LA22" titre="Espagnol Niveau II" credits="4" type="TSH" />
+  <uv tag="LA23" titre="Espagnol Niveau III" credits="4" type="TSH" />
+  <uv tag="LA24" titre="Le Monde Hispanique Contemporain : L'Amérique Latine (Niveau IV)" credits="4" type="TSH" />
+  <uv tag="LA91" titre="Francais Langue étrangère Niveau I" credits="4" type="TSH" />
+  <uv tag="LA92" titre="Francais Langue étrangère Niveau II" credits="4" type="TSH" />
+  <uv tag="LA93" titre="Francais Langue étrangère Niveau III" credits="4" type="TSH" />
+  <uv tag="LA94" titre="Francais Langue étrangère Niveau IV" credits="4" type="TSH" />
+  <uv tag="LB04" titre="Interculturalité Franco-Allemande" credits="4" type="TSH" />
+  <uv tag="LB14" titre="Interculturalité Appliquée Aux Pays Anglophones" credits="4" type="TSH" />
+  <uv tag="LB24" titre="Le Monde Hispanique (Niveau IV): L'Espagne" credits="4" type="TSH" />
+  <uv tag="LC14" titre="Communication Scientifique Et Technique En Anglais" credits="4" type="TSH" />
+  <uv tag="LG30" titre="Japonais Initiation" credits="4" type="TSH" />
+  <uv tag="LG31" titre="Japonais Niveau I" credits="4" type="TSH" />
+  <uv tag="LG40" titre="Portugais Initiation" credits="4" type="TSH" />
+  <uv tag="LG41" titre="Portugais Niveau I" credits="4" type="TSH" />
+  <uv tag="LG42" titre="Portugais Niveau II" credits="4" type="TSH" />
+  <uv tag="LG50" titre="Italien Initiation" credits="4" type="TSH" />
+  <uv tag="LG51" titre="Italien Niveau I" credits="4" type="TSH" />
+  <uv tag="LG52" titre="Italien Niveau II" credits="4" type="TSH" />
+  <uv tag="LG60" titre="Chinois Initiation" credits="4" type="TSH" />
+  <uv tag="LG61" titre="Chinois Niveau I" credits="4" type="TSH" />
+  <uv tag="MU01" titre="Pratique Instrumentale D'Ensemble" credits="4" type="TSH" />
+  <uv tag="MU02" titre="Pratique Instrumentale De Haut Niveau" credits="8" type="TSH" />
+  <uv tag="MU03" titre="Pratique Collective Des Musiques Contemporaines" credits="4" type="TSH" />
+  <uv tag="PH01" titre="Introduction à La Philosophie" credits="4" type="TSH" />
+  <uv tag="PH09" titre="éthiques : Approche Pluridisciplinaire" credits="4" type="TSH" />
+  <uv tag="SA11" titre="Pratiques Théatrales" credits="4" type="TSH" />
+  <uv tag="SC01" titre="Séminaire Interdisciplinaire De Sciences Et Technologies Cognitives" credits="4" type="TSH" />
+  <uv tag="SC11" titre="Théorie Des Sciences Cognitives : Computation Et énaction" credits="4" type="TSH" />
+  <uv tag="SC12" titre="Technologie, Cognition, Perception" credits="4" type="TSH" />
+  <uv tag="SC21" titre="Linguistique Et Philosophie Du Langage" credits="4" type="TSH" />
+  <uv tag="SC22" titre="Sociologie Cognitive, Lien Social Et Techniques" credits="4" type="TSH" />
+  <uv tag="SI01" titre="Science Et Debat Public" credits="4" type="TSH" />
+  <uv tag="SI02" titre="Communication Professionnelle De L'Ingénieur" credits="4" type="TSH" />
+  <uv tag="SI05" titre="Theories De La Communication" credits="4" type="TSH" />
+  <uv tag="SI06" titre="La Documentattion Cross-Media Pour Les Entreprises Et Les Collectivites Locales" credits="4" type="TSH" />
+  <uv tag="SI07" titre="Medias Classiques Et Medias Numeriques" credits="4" type="TSH" />
+  <uv tag="SI11" titre="Expression Orale- Parole Publique" credits="4" type="TSH" />
+  <uv tag="SI14" titre="Parole Publique En Anglais" credits="4" type="TSH" />
+  <uv tag="SI20" titre="Rhetorique Et Arts Du Discours" credits="4" type="TSH" />
+  <uv tag="SI22" titre="Signes Et Contenus Numeriques" credits="4" type="TSH" />
+  <uv tag="SI24" titre="études Des écritures Numériques Ordinaires" credits="4" type="TSH" />
+  <uv tag="SI28" titre="écriture Interactive Et Multimédia" credits="4" type="TSH" />
+  <uv tag="SI90" titre="Séminaire De Communication Des Connaissances Technologiques" credits="4" type="TSH" />
+  <uv tag="SL" titre="Suivi Linguistique" credits="4" type="TSH" />
+  <uv tag="SO04" titre="Initiation Au Droit" credits="4" type="TSH" />
+  <uv tag="SO05" titre="Sociologie, Organisations Et Dynamiques Des Collectifs" credits="4" type="TSH" />
+  <uv tag="SP01" titre="Un Corps Pour Comprendre Et Apprendre" credits="4" type="TSH" />
+  <uv tag="SP02" titre="Conduire Un Projet Sportif" credits="4" type="TSH" />
+  <uv tag="TN16" titre="étude Interculturelle" credits="4" type="TSH" />
+  <uv tag="TO01" titre="Module De Preparation Au Toeic" credits="2" type="TSH" />
+  <uv tag="MT34" titre="Analyse 2 : Mesures, Intégrations, Probabilités" credits="6" type="CS" />
+  <uv tag="MT37" titre="Logiques, Quelques Approfondissements Mathématiques Et Philosophiques" credits="3" type="CS" />
+  <uv tag="MT38" titre="Probabilités" credits="3" type="CS" />
+  <uv tag="AP" titre="Atelier Projet" credits="6" type="TM" />
+  <uv tag="API06" titre="Analyse De Donnees Et Data Mining (Apprentissage)" credits="4" type="CS" />
+  <uv tag="API07" titre="Architecture Des Applications Internet, Programmation Web Et Securite (Apprentissage)" credits="3" type="TM" />
+  <uv tag="API08" titre="Ihm Et Multimédia (Apprentissage)" credits="4" type="TM" />
+  <uv tag="API09" titre="Méthodes Et Outils Pour L'Optimisation Et La Simulation (Apprentissage)" credits="4" type="CS" />
+  <uv tag="API10" titre="Méthodes De Vérification Et Validation De Logiciel Et Programmation Sous Linux (Apprentissage)" credits="3" type="TM" />
+  <uv tag="BA01" titre="Equipements Techniques Du Batiment" credits="5" type="TM" />
+  <uv tag="BA02" titre="Gestion Technique Du Patrimoine Immobilier" credits="5" type="TM" />
+  <uv tag="BA04" titre="Conversion Et Gestion Des Energies Renouvelables" credits="6" type="TM" />
+  <uv tag="BA09" titre="Introduction Au Calcul Des Structures Du Batiment" credits="6" type="CS" />
+  <uv tag="BI01" titre="Modeles Pour La Bioinformatique" credits="6" type="CS" />
+  <uv tag="BL30" titre="Physiologie Des Systèmes Intégrés" credits="6" type="CS" />
+  <uv tag="BL40" titre="Génie Cellulaire" credits="6" type="CS" />
+  <uv tag="BM02" titre="Organes Artificiels Et Biorheologie" credits="6" type="TM" />
+  <uv tag="BM08" titre="Modélisation Des Systèmes Biomécaniques" credits="5" type="TM" />
+  <uv tag="BT06" titre="Analyse Des Produits Biologiques Et Alimentaires" credits="6" type="TM" />
+  <uv tag="BT10" titre="Risques Biologiques Et Sécurité Alimentaire" credits="5" type="TM" />
+  <uv tag="BT21" titre="Biotechnologies Moleculaires Et Genie Genetique" credits="6" type="TM" />
+  <uv tag="BT22" titre="Les Agroressources" credits="6" type="TM" />
+  <uv tag="CM06" titre="Calcul D'Une Opération Industrielle" credits="6" type="TM" />
+  <uv tag="CM40" titre="Catalyse Heterogene" credits="3" type="CS" />
+  <uv tag="CT02" titre="Maitrise Statistique Des Processus" credits="6" type="TM" />
+  <uv tag="CT04" titre="Controles Non Destructifs" credits="5" type="TM" />
+  <uv tag="DI03" titre="Conception Formelle Des Produits" credits="6" type="TM" />
+  <uv tag="DI05" titre="Methodologie Et Analyse De La Valeur" credits="6" type="TM" />
+  <uv tag="DI06" titre="Analyse Des Produits De Consommation" credits="5" type="TM" />
+  <uv tag="EG01" titre="Ergonomie" credits="6" type="TM" />
+  <uv tag="EN14" titre="Fonctions Électroniques Pour L'Ingénieur" credits="6" type="TM" />
+  <uv tag="EV01" titre="Procédés De Traitement Des Déchets" credits="6" type="TM" />
+  <uv tag="FPP02" titre="Fiabilite Et Ingenierie Robuste De Produits (Apprentissage)" credits="3" type="CS" />
+  <uv tag="FQ07" titre="La Qualité Des Services A L'Industrie" credits="5" type="TM" />
+  <uv tag="GE38" titre="Management Et Outils D'Aide à La Créativité Industrielle Et à L'Innovation" credits="6" type="TM" />
+  <uv tag="GE39" titre="Management Et Marketing De L'Innovation" credits="6" type="TM" />
+  <uv tag="GPL01" titre="Gestion De Production Et Erp (Apprentissage)" credits="5" type="TM" />
+  <uv tag="IA04" titre="Systèmes Multiagents" credits="6" type="TM" />
+  <uv tag="LO17" titre="Indexation Et Recherche D'Information" credits="6" type="TM" />
+  <uv tag="LO18" titre="Projets Multimédia Pour La Formation" credits="6" type="TM" />
+  <uv tag="MAT03" titre="Mecanique Des Materiaux (Apprentissage)" credits="3" type="CS" />
+  <uv tag="MB11" titre="Révision D'Analyse Et D'Algèbre (Gb, Gi, Gsu)" credits="6" type="CS" />
+  <uv tag="MC01" titre="Machines Électriques" credits="6" type="CS" />
+  <uv tag="MC05" titre="Machines De Transfert De Fluides" credits="6" type="TM" />
+  <uv tag="MC07" titre="Électronique De Puissance" credits="6" type="TM" />
+  <uv tag="MEQ03" titre="Dynamique Des Solides (Apprentissage)" credits="3" type="CS" />
+  <uv tag="MI03" titre="Systèmes Temps Réel" credits="6" type="TM" />
+  <uv tag="MP02" titre="Introduction Aux Méthodes De La Gpao" credits="6" type="TM" />
+  <uv tag="MQ02" titre="Mécanique Des Solides Déformables" credits="6" type="CS" />
+  <uv tag="MQ04" titre="Polymères" credits="6" type="TM" />
+  <uv tag="MQ06" titre="Modélisation Des Structures Par Éléments Finis" credits="6" type="TM" />
+  <uv tag="MQ08" titre="Elaboration Et Proprietes D'Usage Des Metaux" credits="6" type="TM" />
+  <uv tag="MQ09" titre="Mécanique Des Vibrations II" credits="6" type="TM" />
+  <uv tag="MQ10" titre="Comportement Mécanique Des Matériaux" credits="6" type="TM" />
+  <uv tag="MQ11" titre="Mise En Oeuvre Des Matériaux" credits="6" type="TM" />
+  <uv tag="MQ14" titre="Optimisation En Mécanique" credits="6" type="TM" />
+  <uv tag="MQ19" titre="Dynamique Des Structures" credits="6" type="TM" />
+  <uv tag="MS02" titre="Principes Physiques Des Capteurs Et Instrumentation" credits="6" type="TM" />
+  <uv tag="MS03" titre="Pratique Expérimentale En Acoustique Et Vibrations" credits="6" type="TM" />
+  <uv tag="NF11" titre="Théorie Des Langages De Programmation" credits="6" type="CS" />
+  <uv tag="NF24" titre="Modelisation Et Simulation Des Procedes" credits="6" type="TM" />
+  <uv tag="NF26" titre="Data Warehouse Et Outils Décisionnels" credits="6" type="TM" />
+  <uv tag="NF28" titre="Ingénierie Des Systèmes Intéractifs" credits="6" type="TM" />
+  <uv tag="NF33" titre="Conception Et Architecture De Systèmes Numériques Informatiques" credits="6" type="TM" />
+  <uv tag="PS05" titre="Fondements De L'Acoustique Et Modélisations" credits="6" type="CS" />
+  <uv tag="RO04" titre="Optimisation Et Recherche Opérationnelle" credits="6" type="CS" />
+  <uv tag="SCI08" titre="Introduction A L'Ingenierie Systeme" credits="6" type="TM" />
+  <uv tag="SR03" titre="Architecture Des Applications Internet" credits="6" type="TM" />
+  <uv tag="SY05" titre="Conduite Des Procédés" credits="6" type="TM" />
+  <uv tag="SY06" titre="Analyse Et Traitement Du Signal" credits="6" type="CS" />
+  <uv tag="SY09" titre="Analyse Des Données Et Data Mining" credits="6" type="CS" />
+  <uv tag="SY12" titre="Modélisation Et Performance Des Systèmes De Production" credits="6" type="TM" />
+  <uv tag="SY15" titre="Automatique Avancée" credits="6" type="CS" />
+  <uv tag="SY26" titre="Télécommunications" credits="6" type="TM" />
+  <uv tag="TA02" titre="Évaluation Économique Des Procédés" credits="6" type="TM" />
+  <uv tag="TF07" titre="Calcul Des Échangeurs Thermiques Industriels" credits="6" type="TM" />
+  <uv tag="TF08" titre="Hydrodynamique Des Systèmes Dispersés" credits="6" type="TM" />
+  <uv tag="TMI01" titre="Conception Niveau 2 (Apprentissage)" credits="5" type="TM" />
+  <uv tag="TMI05" titre="Fabrication Assistee Par Ordinateur Et Machines A Commande Numerique (Apprentissage)" credits="3" type="TM" />
+  <uv tag="TN12" titre="Conception Mécanique" credits="6" type="TM" />
+  <uv tag="TN13" titre="Dimensionnement Pour La Conception Des Systemes Mecaniques" credits="6" type="TM" />
+  <uv tag="TN15" titre="Création De Produit, D'Activité, D'Entreprise" credits="6" type="TM" />
+  <uv tag="TN24" titre="Technologies De Fabrication Et Outils Méthodes" credits="6" type="TM" />
+  <uv tag="TN29" titre="Outils De Definition Et De Developpement De Systemes" credits="6" type="TM" />
+  <uv tag="TN30" titre="Xao En Milieu Professionnel" credits="3" type="TM" />
+  <uv tag="UB02" titre="Systemes De Transport Urbain" credits="5" type="TM" />
+  <uv tag="UB06" titre="Mises En Scènes Urbaines" credits="5" type="TM" />
+  <uv tag="UB08" titre="Hydrologie Urbaine" credits="6" type="CS" />
+  <uv tag="UR01" titre="Droit De L'Urbanisme, De La Construction Et De L'Environnement" credits="5" type="TM" />
+  <uv tag="UXD01" titre="Design D'Experience" credits="6" type="TM" />
+
+</catalogue>
