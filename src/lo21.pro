@@ -13,7 +13,7 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        view/mainwindow.cpp \
+    view/mainwindow.cpp \
     model/etudiant.cpp \
     model/formation.cpp \
     model/semestre.cpp \
