@@ -29,22 +29,22 @@ int main(int argc, char *argv[]) {
   uv6.tag("SR02");
   //uv.note(EN_COURS);
 
-  s1.ajouterUv(uv1);
-  s1.ajouterUv(uv2);
-  s1.ajouterUv(uv3);
-  s2.ajouterUv(uv4);
-  s2.ajouterUv(uv5);
-  s2.ajouterUv(uv6);
+  s1.ajouterUv(&uv1);
+  s1.ajouterUv(&uv2);
+  s1.ajouterUv(&uv3);
+  s2.ajouterUv(&uv4);
+  s2.ajouterUv(&uv5);
+  s2.ajouterUv(&uv6);
 
-  f.ajouterSemestre(s1);
-  f.ajouterSemestre(s2);
+  f.ajouterSemestre(&s1);
+  f.ajouterSemestre(&s2);
 
   e.ajouterFormation(f);
 
   try {
     e.sauvegarder(); // test la sauvegarde d'un etudiant dans un fichier xml
-    Etudiant *e1 = Etudiant::charger("../test.xml"); // ainsi que le chargement d'un fichier xml
-    qDebug() << "nom: " << e1->nom() << " prenom: " << e1->prenom();
+    //Etudiant *e1 = Etudiant::charger("../test.xml"); // ainsi que le chargement d'un fichier xml
+    //qDebug() << "nom: " << e1->nom() << " prenom: " << e1->prenom();
   } 
   // TODO: Ameliorer la gestion d'erreur 
   catch (QString& e) {

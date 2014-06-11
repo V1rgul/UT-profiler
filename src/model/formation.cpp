@@ -1,10 +1,47 @@
+#include <QMap>
 #include <QtXml>
+#include "semestreInvalideErreur.h"
 #include "formation.h"
 
 const QString Formation::XML_NODE_NAME = "formation";
 
-void Formation::ajouterSemestre (Semestre s) {
-  this->_semestres.append(s);
+void Formation::ajouterSemestre (const Semestre* s) {
+  QList<UVEtudiant> dejaValidees;
+  if (!this->verifierSemestre(*s, &dejaValidees)) {
+    throw semestreInvalideErreur(dejaValidees);
+  }
+  this->_semestres.append(*s);
+}
+
+bool Formation::verifierSemestre (const Semestre &s, QList<UVEtudiant>* dejaValidees) const {
+  QList<UVEtudiant> uvs = s.uvs().values();
+  UVEtudiant ret;
+
+  for (int i = 0; i < uvs.count(); i++) {
+    if (uvDejaValidee(uvs[i].tag(), &ret)) {
+      if (dejaValidees) {
+        dejaValidees->append(ret);
+      }  
+      else {
+        return false;
+      }
+    }
+  }
+
+  if (dejaValidees) { return dejaValidees->count() == 0; }
+  return true;
+}
+
+bool Formation::uvDejaValidee(const QString& tag, UVEtudiant* uv) const {
+  QList<Semestre> s = this->semestres();
+  for (int i = 0; i < s.count(); i++) {
+    if (s[i].uvs().contains(tag)) {
+      *uv = s[i].uvs().value(tag);
+      return true;
+    }
+  }
+
+  return false;
 }
 
 void Formation::fromXml (const QDomNode& noeud) {
@@ -19,7 +56,7 @@ void Formation::fromXml (const QDomNode& noeud) {
     }
     Semestre *s = new Semestre();
     s->fromXml(child.at(i));
-    this->ajouterSemestre(*s);
+    this->ajouterSemestre(s);
   }
 }
 
