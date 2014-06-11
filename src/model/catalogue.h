@@ -1,23 +1,29 @@
 #ifndef __CATALOGUE__
 #define __CATALOGUE__
 
+#include <QString>
+#include <QMap>
+#include "uv.h"
+#include "xmlConvertible.h"
+
 class Catalogue : public XmlConvertible {
   public:
-    static Catalogue* instance ();
-    static const QString Catalogue::XML_NODE_NAME;
+    static const QString XML_NODE_NAME;
 
     void ajouterUv (const UV& uv);
-    void supprimerUv (const UV& uv);
-    void editerUv (const UV& uv);
-    bool existe (QString& tag);
+    void supprimerUv (const QString uv);
+    void editerUv (const QString oldTag, const UV& uv);
+    bool existe (QString tag);
+
+    static Catalogue* charger ();
+    void sauvegarder ();
 
     void fromXml (const QDomNode& noeud);
     QDomElement toXml () const;
 
-    inline QMap<QString, UV> uvs () { return _uvs; }
+    inline QMap<QString, UV> uvs () const { return _uvs; }
   private:
-    Catalogue () {}
-    static Catalogue* _instance;
+    Catalogue () {} 
     QMap<QString, UV> _uvs;
 };
 

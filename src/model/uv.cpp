@@ -10,7 +10,7 @@ void UV::fromXml (const QDomNode& noeud) {
   QDomElement e = noeud.toElement();
   this->tag(e.attribute("tag"));
   this->titre(e.attribute("titre"));
-  this->credits(static_cast<int>(e.attribute("credits")));
+  this->credits(e.attribute("credits").toInt());
   this->automne(e.hasAttribute("automne"));
   this->printemps(e.hasAttribute("printemps"));
   this->cursus(e.attribute("cursus").split(' '));
@@ -24,8 +24,8 @@ QDomElement UV::toXml () const {
   e.setAttribute("titre", this->titre());
   e.setAttribute("credits", this->credits());
   e.setAttribute("cursus", this->cursus().join(" "));
-  if (this->automne) { e.setAttribute("automne", "automne"); }
-  if (this->printemps) { e.setAttribute("printemps", "printemps"); }
+  if (this->automne()) { e.setAttribute("automne", "automne"); }
+  if (this->printemps()) { e.setAttribute("printemps", "printemps"); }
 
   return e;
 }
