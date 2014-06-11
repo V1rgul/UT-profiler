@@ -32,9 +32,12 @@
     </property>
     <item>
      <widget class="QTabWidget" name="tabWidget">
-      <widget class="QWidget" name="tab">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tabEtudiant">
        <attribute name="title">
-        <string>Tab 1</string>
+        <string>Etudiant</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
         <item>
@@ -91,9 +94,9 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_2">
+      <widget class="QWidget" name="tabUV">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>Liste d'UV</string>
        </attribute>
       </widget>
      </widget>
