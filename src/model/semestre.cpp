@@ -7,7 +7,6 @@
 const QString Semestre::XML_NODE_NAME = "semestre";
 
 void Semestre::ajouterUv (const UVEtudiant* uv) {
-  qDebug() << "Ajout de " << uv->tag();
   if (this->dejaChoisie(uv->tag())) {
     throw std::invalid_argument("Uv déjà choisie !");
   }
