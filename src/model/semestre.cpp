@@ -1,3 +1,4 @@
+#include <stdexcept>
 #include <QList>
 #include <QtXml>
 
@@ -5,8 +6,15 @@
 
 const QString Semestre::XML_NODE_NAME = "semestre";
 
-void Semestre::ajouterUv (UVEtudiant uv) {
-  this->_uvs.append(uv);
+void Semestre::ajouterUv (const UVEtudiant* uv) {
+  if (this->dejaChoisie(uv->tag())) {
+    throw std::invalid_argument("Uv déjà choisie !");
+  }
+  this->_uvs[uv->tag()] = *uv;
+}
+
+bool Semestre::dejaChoisie(const QString &tag) const {
+  return this->uvs().contains(tag);
 }
 
 void Semestre::fromXml (const QDomNode& noeud) {
@@ -21,7 +29,7 @@ void Semestre::fromXml (const QDomNode& noeud) {
     }
     UVEtudiant *uv = new UVEtudiant();
     uv->fromXml(child.at(i));
-    this->ajouterUv(*uv);
+    this->ajouterUv(uv);
   }
 }
 
@@ -29,8 +37,9 @@ QDomElement Semestre::toXml () const {
   QDomDocument doc;
   QDomElement semestre = doc.createElement(Semestre::XML_NODE_NAME);
 
-  for (int i = 0; i < this->uvs().count(); i++) { 
-    semestre.appendChild(this->uvs()[i].toXml());
+  QList<QString> tags = this->uvs().keys();
+  for (int i = 0; i < tags.count(); i++) { 
+    semestre.appendChild(this->uvs().value(tags[i]).toXml());
   }
 
   return semestre;
