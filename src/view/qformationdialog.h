@@ -16,6 +16,9 @@ class QFormationDialog : public QDialog
 	signals:
 
 	public slots:
+		void buttonAccepted();
+		void buttonRejected();
+	private slots:
 
 	private:
 		Ui::QFormationDialog ui;

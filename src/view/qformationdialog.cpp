@@ -1,9 +1,12 @@
+#include <QtDebug>
 #include "qformationdialog.h"
 
 QFormationDialog::QFormationDialog(QWidget *parent) :
     QDialog(parent)
 {
 	ui.setupUi(this);
+	connect(ui.buttonBox, SIGNAL(accepted()), this, SLOT(buttonAccepted()));
+	connect(ui.buttonBox, SIGNAL(rejected()), this, SLOT(buttonRejected()));
 }
 
 void QFormationDialog::name(QString name){
@@ -18,4 +21,13 @@ void QFormationDialog::utc(bool utc){
 }
 bool QFormationDialog::utc(){
 	return (ui.checkBoxUTC->checkState()==Qt::Checked);
+}
+
+void QFormationDialog::buttonAccepted(){
+	qDebug() << "accepted";
+	emit(finished(QDialog::Accepted));
+}
+void QFormationDialog::buttonRejected(){
+	qDebug() << "rejected";
+	emit(finished(QDialog::Rejected));
 }

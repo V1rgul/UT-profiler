@@ -1,26 +1,35 @@
 #include "formationcontroller.h"
-#include "qformationdialog.h"
+
 
 FormationController::FormationController(Formation* formation, QFormation* qFormation, QObject *parent) :
-	QObject(parent), formation(formation), qFormation(qFormation)
+	QObject(parent), formation(formation), qFormation(qFormation), dialog(new QFormationDialog())
 {
 	connect(this, SIGNAL(_removed()), this, SLOT(deleteLater()));
+	connect(dialog, SIGNAL(finished(int)), this, SLOT(dialogState(int)));
+	loadInfo();
+}
+
+void FormationController::loadInfo(){
+	qFormation->name(formation->nom());
 }
 
 
-int FormationController::edit(){
-	QFormationDialog dialog;
-
+void FormationController::edit(){
 	//fill dialog
-	//connects
+	dialog->name(formation->nom());
 
-	if( dialog.exec() == QDialog::Accepted ){
+	dialog->show();
 
+
+}
+
+void FormationController::dialogState(int r){
+	if( r == QDialog::Accepted ){
 		//save data
-		//update data in qFormation
-		return QDialog::Accepted;
+		formation->nom(dialog->name());
+		loadInfo();
 	}
-	return QDialog::Rejected;
+	dialog->close();
 }
 
 void FormationController::editEvent(){
@@ -31,4 +40,3 @@ void FormationController::remove(){
 	emit(removed(formation));
 	emit(_removed());
 }
-

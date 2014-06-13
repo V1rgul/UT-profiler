@@ -12,6 +12,7 @@ class QFormation : public QWidget
 		explicit QFormation(QWidget *parent = 0);
 
 		void addSemestre(QSemestre &semestre);
+		void name(QString name);
 	signals:
 		void addSemestreClicked();
 	public slots:
