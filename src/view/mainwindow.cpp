@@ -13,6 +13,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::setName(const QString &name, const QString &surname){
+	ui->editNom->setText(name);
+	ui->editPrenom->setText(surname);
+}
+
 void MainWindow::addFormation(QFormation& formation){
 	ui->tabEtudiant->layout()->addWidget(&formation);
 }

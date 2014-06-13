@@ -16,6 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+	void setName(const QString &name, const QString &surname);
 	void addFormation(QFormation &formation);
 
 private:

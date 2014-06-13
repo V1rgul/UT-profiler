@@ -1,19 +1,27 @@
+#include <QtDebug>
 #include "qformation.h"
 QFormation::QFormation(QWidget *parent) :
 	QWidget(parent)
 {
 	ui.setupUi(this);
+	connect(ui.buttonAddSemestre, SIGNAL(clicked()), this, SLOT(buttonAddSemestreClicked()));
 }
 
 
 QFormation::QFormation(const QString &title, QWidget *parent) :
-	QWidget(parent)
+	QFormation(parent)
 {
-	ui.setupUi(this);
 	ui.groupBox->setTitle(title);
 }
 
 void QFormation::addSemestre(QSemestre &semestre)
 {
 	ui.groupBox->layout()->addWidget(&semestre);
+}
+
+
+
+void QFormation::buttonAddSemestreClicked(){
+	emit addSemestreClicked();
+	qDebug() << "click on addSemestre";
 }

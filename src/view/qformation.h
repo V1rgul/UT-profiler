@@ -14,9 +14,9 @@ class QFormation : public QWidget
 
 		void addSemestre(QSemestre &semestre);
 	signals:
-
+		void addSemestreClicked();
 	public slots:
-
+		void buttonAddSemestreClicked();
 
 	private:
 		Ui::QFormation ui;
