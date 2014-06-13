@@ -19,7 +19,7 @@
 class Etudiant {
   public:
     Etudiant ();
-    virtual ~Etudiant ();
+    ~Etudiant ();
 
     const static QString XML_NODE_NAME;
     static Etudiant* charger (const QString& nom, const QString& prenom);

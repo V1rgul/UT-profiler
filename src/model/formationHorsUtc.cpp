@@ -19,7 +19,7 @@ QDomElement FormationHorsUtc::toXml () const {
   QDomElement formation = doc.createElement(FormationHorsUtc::XML_NODE_NAME);
 
   formation.setAttribute("nom", this->nom());
-  formation.setAttribute("credits", QString::number(this->nom()));
+  formation.setAttribute("credits", QString::number(this->credits()));
 
   return formation;
 }

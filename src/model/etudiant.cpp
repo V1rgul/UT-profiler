@@ -2,7 +2,9 @@
 #include <QtXml>
 #include <QFile>
 
+#include "formation.h"
 #include "formationUtc.h"
+#include "formationHorsUtc.h"
 #include "etudiant.h"
 
 const QString Etudiant::XML_NODE_NAME = "etudiant";

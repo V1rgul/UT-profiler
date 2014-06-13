@@ -24,7 +24,9 @@ SOURCES += main.cpp\
     view/qsemestre.cpp \
     controller/mainwindowcontroller.cpp \
     view/quserdialog.cpp \
-    controller/formationcontroller.cpp
+    controller/formationcontroller.cpp \
+    model/formationHorsUtc.cpp \
+    model/formationUtc.cpp
 
 HEADERS  += view/mainwindow.h \
     model/etudiant.h \
@@ -39,7 +41,9 @@ HEADERS  += view/mainwindow.h \
     view/qsemestre.h \
     controller/mainwindowcontroller.h \
     view/quserdialog.h \
-    controller/formationcontroller.h
+    controller/formationcontroller.h \
+    model/formationHorsUtc.h \
+    model/formationUtc.h
 
 FORMS    += view/mainwindow.ui \
     view/qsemestre.ui \

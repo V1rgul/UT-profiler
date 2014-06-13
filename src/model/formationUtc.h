@@ -10,6 +10,9 @@
 
 class FormationUtc : public Formation {
   public:
+    FormationUtc () {}
+    virtual ~FormationUtc() {}
+
     const static QString XML_NODE_NAME;
 
     void ajouterSemestre (const Semestre* s);

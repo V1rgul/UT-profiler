@@ -4,10 +4,14 @@
 #include <QtXml>
 #include <QList>
 
+#include "formation.h"
 #include "xmlConvertible.h"
 
 class FormationHorsUtc : public Formation {
   public:
+    FormationHorsUtc () {}
+    virtual ~FormationHorsUtc () {}
+
     const static QString XML_NODE_NAME;
 
     void fromXml (const QDomNode& noeud);
@@ -17,6 +21,7 @@ class FormationHorsUtc : public Formation {
     inline QString nom () const { return _nom; }
 
     inline void nom (const QString& n) { _nom = n; }
+    inline void credits (unsigned int c) { _credits = c; }
 
   private:
     QString _nom;

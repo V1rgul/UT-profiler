@@ -4,12 +4,12 @@
 #include <QtXml>
 #include <QList>
 
-#include "semestre.h"
 #include "xmlConvertible.h"
 
 class Formation : public XmlConvertible {
   public:
     Formation () { _id = idCpt++; }
+    virtual ~Formation () {}
 
     inline unsigned int id () const { return _id; }
     inline unsigned int credits () const { return _credits; }
