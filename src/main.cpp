@@ -11,6 +11,7 @@
 #include "model/uvEtudiant.h"
 
 #include "view/qformation.h"
+#include "view/qsemestre.h"
 
 int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
@@ -82,8 +83,11 @@ int main(int argc, char *argv[]) {
   }
   */
 
-  QFormation formation1;
+  QFormation formation1("Test Formation");
   w.addFormation(formation1);
+
+  QSemestre semestre1;
+  formation1.addSemestre(semestre1);
 
 
   return a.exec();

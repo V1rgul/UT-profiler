@@ -2,6 +2,7 @@
 #define QSEMESTRE_H
 
 #include <QWidget>
+#include "ui_qsemestre.h"
 
 class QSemestre : public QWidget
 {
@@ -12,6 +13,9 @@ class QSemestre : public QWidget
 	signals:
 
 	public slots:
+
+	private:
+		Ui::QSemestre ui;
 
 };
 
