@@ -21,7 +21,7 @@ class UVEtudiant : public XmlConvertible {
 
     inline QString note () const { return _note; }
     inline void note (const QString& n) { 
-      if (!listeNotes().contains(n)) {
+      if (!n.isEmpty() && !listeNotes().contains(n)) {
         throw std::invalid_argument("Note invalide");
       } 
       _note = n; 
