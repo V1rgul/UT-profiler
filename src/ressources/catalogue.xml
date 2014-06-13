@@ -1,262 +1,778 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <catalogue>
-  <uv tag="BL01" titre="Sciences Biologiques Pour L'Ingénieur" type="CS" credits="6" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="BL10" titre="Structures Et Physicochimie Des Molécules Biologiques" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="BL22" titre="Microbiologie Et Biologie Moléculaire" type="CS" credits="6" cursus="TC" printemps="printemps" />
-  <uv tag="CM01" titre="Physique De La Matière" type="CS" credits="6" cursus="TC" printemps="printemps" />
-  <uv tag="CM11" titre="Chimie Générale" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="CM12" titre="Chimie Physique Minérale" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="CM13" titre="Chimie Des Substances Organiques Et Biologiques" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="CM15" titre="Systemes Colloidaux - Applications Agroalimentaires" type="CS" credits="6" cursus="TC GP" printemps="printemps" />
-  <uv tag="EL01" titre="Phénomènes Electromagnétiques" type="CS" credits="6" cursus="TC GM" printemps="printemps" />
-  <uv tag="EN21" titre="Bases De L'électronique Analogique" type="CS" credits="6" cursus="TC GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="IA02" titre="Résolution De Problèmes Et Programmation Logique" type="CS" credits="6" cursus="TC HUTECH GI" printemps="printemps" />
-  <uv tag="MQ01" titre="éléments De Resistance Des Matériaux" type="CS" credits="6" cursus="TC GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="MQ03" titre="Mécanique Des Vibrations I" type="CS" credits="6" cursus="TC GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="MQ17" titre="Introduction Aux Propriétés Mécaniques Et à L'Ingénierie Des Matériaux" type="CS" credits="6" cursus="TC GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="MQ18" titre="Cinématique Et Dynamique Des Systèmes" type="CS" credits="6" cursus="TC GM GSM" printemps="printemps" />
-  <uv tag="MT10" titre="Structures,Calcul Formel Et Algorithmes" type="CS" credits="6" cursus="TC GI" printemps="printemps" />
-  <uv tag="MT12" titre="Methodes Mathematiques Pour L'Analyse Du Signal Et De L'Image" type="CS" credits="6" cursus="TC GI GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="MT22" titre="Fonctions De Plusieurs Variables Réelles Et Applications" type="CS" credits="6" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="MT23" titre="Algèbre Linéaire Et Applications" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="MT90" titre="Fonctions D'Une Variable Reelle 1" type="CS" credits="4" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="MT91" titre="Fonctions D'Une Variable Reelle 2" type="CS" credits="3" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="NF04" titre="Modélisation Numérique Des Problèmes De L'Ingénieur" type="CS" credits="6" cursus="TC GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="NF16" titre="Algorithmique Et Structures De Données" type="CS" credits="6" cursus="TC HUTECH GI" automne="automne" printemps="printemps" />
-  <uv tag="PS04" titre="Thermodynamique" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="PS91" titre="Mecanique Physique" type="CS" credits="6" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="PS92" titre="Dynamique Des Systemes Et Des Solides" type="CS" credits="3" cursus="TC" printemps="printemps" />
-  <uv tag="PS93" titre="Optique Geometrique" type="CS" credits="3" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="PS94" titre="Electricite" type="CS" credits="3" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="RO03" titre="Recherche Opérationnelle, Optimisation Combinatoire" type="CS" credits="6" cursus="TC GI GSU" printemps="printemps" />
-  <uv tag="RR01" titre="Cinétique Chimique Et Réacteurs Homogènes" type="CS" credits="6" cursus="TC GP" printemps="printemps" />
-  <uv tag="SR02" titre="Systèmes D'Exploitation : Des Concepts à La Programmation" type="CS" credits="6" cursus="TC GI" printemps="printemps" />
-  <uv tag="SY01" titre="éléments De Probabilités" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="SY02" titre="Méthodes Statistiques Pour L'Ingénieur" type="CS" credits="6" cursus="TC GI GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="SY04" titre="Systèmes Asservis Linéaires : Analyse Et Commande" type="CS" credits="6" cursus="TC GM GSM" printemps="printemps" />
-  <uv tag="SY14" titre="éléments D'Automatique" type="CS" credits="6" cursus="TC GI" printemps="printemps" />
-  <uv tag="TF01" titre="Mécanique Des Fluides Incompressibles" type="CS" credits="6" cursus="TC GM GSM GP" automne="automne" printemps="printemps" />
-  <uv tag="TF06" titre="Transfert De Chaleur" type="CS" credits="6" cursus="TC GP GSU" printemps="printemps" />
-  <uv tag="TN06" titre="Transmission Des Efforts En Mécanique" type="CS" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="BA07" titre="Modes Opératoires De La Construction" type="TM" credits="5" cursus="TC HUTECH GSU" printemps="printemps" />
-  <uv tag="BL09" titre="Biophysique Des Systèmes Biologiques" type="TM" credits="6" cursus="TC" printemps="printemps" />
-  <uv tag="BM01" titre="Introduction à L'Instrumentation Biomédicale" type="TM" credits="5" cursus="TC" printemps="printemps" />
-  <uv tag="BT02" titre="Opérations Agro-Industrielles" type="TM" credits="6" cursus="TC GP" printemps="printemps" />
-  <uv tag="C2I1" titre="Certificat Informatique Et Internet Niveau 1" type="TM" credits="4" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="CM70" titre="Travaux Pratiques De Gp (1)" type="TM" credits="3" cursus="TC GP" printemps="printemps" />
-  <uv tag="DD02" titre="Introduction A L'Eco-Conception Et A L'Analyse De Cycle De Vie" type="TM" credits="3" cursus="TC GSM" printemps="printemps" />
-  <uv tag="EL02" titre="électricité Industrielle Appliquée" type="TM" credits="6" cursus="TC GM" printemps="printemps" />
-  <uv tag="FQ01" titre="économie Globale Et Maitrise De La Qualité" type="TM" credits="6" cursus="TC GI GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="GE37" titre="Gestion De Projet" type="TM" credits="6" cursus="TC GI GM GSM GSU" automne="automne" printemps="printemps" />
-  <uv tag="LO01" titre="Bases De La Programmation" type="TM" credits="6" cursus="TC HUTECH GM GSM GSU" automne="automne" printemps="printemps" />
-  <uv tag="LO21" titre="Programmation Et Conception Orientees Objet" type="TM" credits="6" cursus="TC HUTECH GI" printemps="printemps" />
-  <uv tag="LO22" titre="Genie Logiciel" type="TM" credits="6" cursus="TC GI" printemps="printemps" />
-  <uv tag="MT94" titre="Introduction Aux Mathematiques Appliquées" type="TM" credits="6" cursus="TC" printemps="printemps" />
-  <uv tag="NF01" titre="Algorithmique Et Programmation" type="TM" credits="6" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="NF02" titre="Du Circuit Intégré Au Microprocesseur" type="TM" credits="6" cursus="TC GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="NF15" titre="Microprocesseurs, Interfaces Et Logiciels De Bases" type="TM" credits="6" cursus="TC GM" printemps="printemps" />
-  <uv tag="NF17" titre="Conception De Bases De Données" type="TM" credits="6" cursus="TC HUTECH GI" printemps="printemps" />
-  <uv tag="NF22" titre="Micro-Ordinateurs Et Applications" type="TM" credits="6" cursus="TC GM GSM GP" automne="automne" printemps="printemps" />
-  <uv tag="NF92" titre="Traitement Automatique De L'Information" type="TM" credits="6" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="NP90" titre="Nano-Projets" type="TM" credits="2" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="NX17" titre="Introduction Aux Bases De Donnees" type="TM" credits="6" cursus="TC GSM GSU" printemps="printemps" />
-  <uv tag="PR" titre="Réalisation De Projet" type="TM" credits="5" cursus="TC HUTECH GI GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="PS09" titre="Acoustique Appliquée" type="TM" credits="6" cursus="TC GM GSU" printemps="printemps" />
-  <uv tag="PS90" titre="Introduction A La Mesure" type="TM" credits="3" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="TF14" titre="Les Opérations De Transfert De Matière" type="TM" credits="6" cursus="TC GP" printemps="printemps" />
-  <uv tag="TN01" titre="éléments De Dessin Technique" type="TM" credits="6" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="TN02" titre="Introduction A La Conception Mécanique" type="TM" credits="6" cursus="TC GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="TN03" titre="Fabrication Mécanique" type="TM" credits="6" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="TN04" titre="Réalisation" type="TM" credits="4" cursus="TC HUTECH" automne="automne" printemps="printemps" />
-  <uv tag="TN08" titre="Dessin De Communication" type="TM" credits="5" cursus="TC GM" automne="automne" printemps="printemps" />
-  <uv tag="TN20" titre="Cao : Modélisation Géométrique" type="TM" credits="6" cursus="TC GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="TN22" titre="éléments De Bureau D'études" type="TM" credits="6" cursus="TC GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="TR91" titre="Techniques De Recherche D'Information Pour L'Ingenieur" type="TM" credits="2" cursus="TC" automne="automne" printemps="printemps" />
-  <uv tag="TS01" titre="Maitrise Des Risques" type="TM" credits="6" cursus="TC GP" printemps="printemps" />
-  <uv tag="TX" titre="étude Expérimentale" type="TM" credits="5" cursus="TC GI GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="UB04" titre="Ambiances Et Environnement Lumineux" type="TM" credits="5" cursus="TC GSU" printemps="printemps" />
-  <uv tag="UR03" titre="Cartographie Sémiologie Graphique Et Cao/Dao" type="TM" credits="5" cursus="TC HUTECH GSU" automne="automne" printemps="printemps" />
-  <uv tag="UR05" titre="Aménagement Et Environnement" type="TM" credits="5" cursus="TC HUTECH GSU" printemps="printemps" />
-  <uv tag="AR03" titre="Art Et Technologies Contemporaines" type="TSH" credits="4" />
-  <uv tag="DI01" titre="Initiation Au Design Industriel" type="TSH" credits="4" />
-  <uv tag="DI02" titre="Initiation Au Design Graphique" type="TSH" credits="4" />
-  <uv tag="EI03" titre="Communication Interculturelle En Entreprises, Organisations Transnationales" type="TSH" credits="4" />
-  <uv tag="EI04" titre="Intelligence économique : Stratégie D'Entreprise, Démarche Et Outils" type="TSH" credits="4" />
-  <uv tag="EI05" titre="Science, Technologie Et Société Dans L'Union Européenne" type="TSH" credits="4" />
-  <uv tag="GE10" titre="économie Politique" type="TSH" credits="4" />
-  <uv tag="GE12" titre="Géographie Et économie Des Territoires" type="TSH" credits="4" />
-  <uv tag="GE13" titre="Les Risques Entre Technique Et Societe" type="TSH" credits="4" />
-  <uv tag="GE15" titre="Initiation A La Création Et Gestion D'Entreprises Innovantes" type="TSH" credits="4" />
-  <uv tag="GE20" titre="économie Industrielle" type="TSH" credits="4" />
-  <uv tag="GE21" titre="économie Et Gestion De L'Innovation Et Du Numérique" type="TSH" credits="4" />
-  <uv tag="GE22" titre="économie Internationale" type="TSH" credits="4" />
-  <uv tag="GE23" titre="Transferts De Technologies Et Développements" type="TSH" credits="4" />
-  <uv tag="GE24" titre="Recherche Developpement : Ingenieur Et Investisseurs" type="TSH" credits="4" />
-  <uv tag="GE25" titre="Gestion Et Organisation De La Production" type="TSH" credits="4" />
-  <uv tag="GE26" titre="Management Stratégique Des Ressources Humaines" type="TSH" credits="4" />
-  <uv tag="GE28" titre="économie Et Droit De La Propriété Intellectuelle (Industrielle Et Artistique) Dans Une économie Reposant Sur La Connaissance" type="TSH" credits="4" />
-  <uv tag="GE29" titre="Gestion Et Management International De L'Entreprise" type="TSH" credits="4" />
-  <uv tag="GE36" titre="Marketing" type="TSH" credits="4" />
-  <uv tag="GE90" titre="Organisation, Innovation Et International" type="TSH" credits="4" />
-  <uv tag="HE01" titre="épistémologie Et Histoire Des Sciences" type="TSH" credits="4" />
-  <uv tag="HE03" titre="Logique : Histoire Et Formalisme" type="TSH" credits="4" />
-  <uv tag="HE05" titre="Culture Et Histoire Des Techniques" type="TSH" credits="4" />
-  <uv tag="IC01" titre="Histoire Et Prospective Des Industries Culturelles" type="TSH" credits="4" />
-  <uv tag="IC03" titre="Le Numérique : Des Formats Aux Chaines De Production" type="TSH" credits="4" />
-  <uv tag="IC05" titre="Technologies Pour La Documentation Et L'Indexation Dans L'Hypermédia" type="TSH" credits="4" />
-  <uv tag="IC07" titre="Techniques Et Technologies Du Musical Et Du Sonore" type="TSH" credits="4" />
-  <uv tag="LA00" titre="Allemand Initiation" type="TSH" credits="4" />
-  <uv tag="LA01" titre="Allemand Niveau I" type="TSH" credits="4" />
-  <uv tag="LA02" titre="Allemand Niveau II" type="TSH" credits="4" />
-  <uv tag="LA03" titre="Allemand Niveau III" type="TSH" credits="4" />
-  <uv tag="LA04" titre="Pratique De La Communication En Allemand" type="TSH" credits="4" />
-  <uv tag="LA11" titre="Anglais Niveau I" type="TSH" credits="4" />
-  <uv tag="LA12" titre="Anglais Niveau II" type="TSH" credits="4" />
-  <uv tag="LA13" titre="Anglais Niveau III" type="TSH" credits="4" />
-  <uv tag="LA14" titre="Civilisation Du Monde Anglophone" type="TSH" credits="4" />
-  <uv tag="LA15" titre="Anglais Professionnel - Niveau V" type="TSH" credits="4" />
-  <uv tag="LA20" titre="Espagnol Initiation" type="TSH" credits="4" />
-  <uv tag="LA21" titre="Espagnol Niveau I" type="TSH" credits="4" />
-  <uv tag="LA22" titre="Espagnol Niveau II" type="TSH" credits="4" />
-  <uv tag="LA23" titre="Espagnol Niveau III" type="TSH" credits="4" />
-  <uv tag="LA24" titre="Le Monde Hispanique Contemporain : L'Amérique Latine (Niveau IV)" type="TSH" credits="4" />
-  <uv tag="LA91" titre="Francais Langue étrangère Niveau I" type="TSH" credits="4" />
-  <uv tag="LA92" titre="Francais Langue étrangère Niveau II" type="TSH" credits="4" />
-  <uv tag="LA93" titre="Francais Langue étrangère Niveau III" type="TSH" credits="4" />
-  <uv tag="LA94" titre="Francais Langue étrangère Niveau IV" type="TSH" credits="4" />
-  <uv tag="LB04" titre="Interculturalité Franco-Allemande" type="TSH" credits="4" />
-  <uv tag="LB14" titre="Interculturalité Appliquée Aux Pays Anglophones" type="TSH" credits="4" />
-  <uv tag="LB24" titre="Le Monde Hispanique (Niveau IV): L'Espagne" type="TSH" credits="4" />
-  <uv tag="LC14" titre="Communication Scientifique Et Technique En Anglais" type="TSH" credits="4" />
-  <uv tag="LG30" titre="Japonais Initiation" type="TSH" credits="4" />
-  <uv tag="LG31" titre="Japonais Niveau I" type="TSH" credits="4" />
-  <uv tag="LG40" titre="Portugais Initiation" type="TSH" credits="4" />
-  <uv tag="LG41" titre="Portugais Niveau I" type="TSH" credits="4" />
-  <uv tag="LG42" titre="Portugais Niveau II" type="TSH" credits="4" />
-  <uv tag="LG50" titre="Italien Initiation" type="TSH" credits="4" />
-  <uv tag="LG51" titre="Italien Niveau I" type="TSH" credits="4" />
-  <uv tag="LG52" titre="Italien Niveau II" type="TSH" credits="4" />
-  <uv tag="LG60" titre="Chinois Initiation" type="TSH" credits="4" />
-  <uv tag="LG61" titre="Chinois Niveau I" type="TSH" credits="4" />
-  <uv tag="MU01" titre="Pratique Instrumentale D'Ensemble" type="TSH" credits="4" />
-  <uv tag="MU02" titre="Pratique Instrumentale De Haut Niveau" type="TSH" credits="8" />
-  <uv tag="MU03" titre="Pratique Collective Des Musiques Contemporaines" type="TSH" credits="4" />
-  <uv tag="PH01" titre="Introduction à La Philosophie" type="TSH" credits="4" />
-  <uv tag="PH09" titre="éthiques : Approche Pluridisciplinaire" type="TSH" credits="4" />
-  <uv tag="SA11" titre="Pratiques Théatrales" type="TSH" credits="4" />
-  <uv tag="SC01" titre="Séminaire Interdisciplinaire De Sciences Et Technologies Cognitives" type="TSH" credits="4" />
-  <uv tag="SC11" titre="Théorie Des Sciences Cognitives : Computation Et énaction" type="TSH" credits="4" />
-  <uv tag="SC12" titre="Technologie, Cognition, Perception" type="TSH" credits="4" />
-  <uv tag="SC21" titre="Linguistique Et Philosophie Du Langage" type="TSH" credits="4" />
-  <uv tag="SC22" titre="Sociologie Cognitive, Lien Social Et Techniques" type="TSH" credits="4" />
-  <uv tag="SI01" titre="Science Et Debat Public" type="TSH" credits="4" />
-  <uv tag="SI02" titre="Communication Professionnelle De L'Ingénieur" type="TSH" credits="4" />
-  <uv tag="SI05" titre="Theories De La Communication" type="TSH" credits="4" />
-  <uv tag="SI06" titre="La Documentattion Cross-Media Pour Les Entreprises Et Les Collectivites Locales" type="TSH" credits="4" />
-  <uv tag="SI07" titre="Medias Classiques Et Medias Numeriques" type="TSH" credits="4" />
-  <uv tag="SI11" titre="Expression Orale- Parole Publique" type="TSH" credits="4" />
-  <uv tag="SI14" titre="Parole Publique En Anglais" type="TSH" credits="4" />
-  <uv tag="SI20" titre="Rhetorique Et Arts Du Discours" type="TSH" credits="4" />
-  <uv tag="SI22" titre="Signes Et Contenus Numeriques" type="TSH" credits="4" />
-  <uv tag="SI24" titre="études Des écritures Numériques Ordinaires" type="TSH" credits="4" />
-  <uv tag="SI28" titre="écriture Interactive Et Multimédia" type="TSH" credits="4" />
-  <uv tag="SI90" titre="Séminaire De Communication Des Connaissances Technologiques" type="TSH" credits="4" />
-  <uv tag="SL" titre="Suivi Linguistique" type="TSH" credits="4" />
-  <uv tag="SO04" titre="Initiation Au Droit" type="TSH" credits="4" />
-  <uv tag="SO05" titre="Sociologie, Organisations Et Dynamiques Des Collectifs" type="TSH" credits="4" />
-  <uv tag="SP01" titre="Un Corps Pour Comprendre Et Apprendre" type="TSH" credits="4" />
-  <uv tag="SP02" titre="Conduire Un Projet Sportif" type="TSH" credits="4" />
-  <uv tag="TN16" titre="étude Interculturelle" type="TSH" credits="4" />
-  <uv tag="TO01" titre="Module De Preparation Au Toeic" type="TSH" credits="2" />
-  <uv tag="MT34" titre="Analyse 2 : Mesures, Intégrations, Probabilités" type="CS" credits="6" cursus="HUTECH" printemps="printemps" />
-  <uv tag="MT37" titre="Logiques, Quelques Approfondissements Mathématiques Et Philosophiques" type="CS" credits="3" cursus="HUTECH" printemps="printemps" />
-  <uv tag="MT38" titre="Probabilités" type="CS" credits="3" cursus="HUTECH" printemps="printemps" />
-  <uv tag="AP" titre="Atelier Projet" type="TM" credits="6" cursus="GSU" automne="automne" printemps="printemps" />
-  <uv tag="API06" titre="Analyse De Donnees Et Data Mining (Apprentissage)" type="CS" credits="4" cursus="GI" printemps="printemps" />
-  <uv tag="API07" titre="Architecture Des Applications Internet, Programmation Web Et Securite (Apprentissage)" type="TM" credits="3" cursus="GI" printemps="printemps" />
-  <uv tag="API08" titre="Ihm Et Multimédia (Apprentissage)" type="TM" credits="4" cursus="GI" printemps="printemps" />
-  <uv tag="API09" titre="Méthodes Et Outils Pour L'Optimisation Et La Simulation (Apprentissage)" type="CS" credits="4" cursus="GI" printemps="printemps" />
-  <uv tag="API10" titre="Méthodes De Vérification Et Validation De Logiciel Et Programmation Sous Linux (Apprentissage)" type="TM" credits="3" cursus="GI" printemps="printemps" />
-  <uv tag="BA01" titre="Equipements Techniques Du Batiment" type="TM" credits="5" cursus="GSU" printemps="printemps" />
-  <uv tag="BA02" titre="Gestion Technique Du Patrimoine Immobilier" type="TM" credits="5" cursus="GSU" printemps="printemps" />
-  <uv tag="BA04" titre="Conversion Et Gestion Des Energies Renouvelables" type="TM" credits="6" cursus="GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="BA09" titre="Introduction Au Calcul Des Structures Du Batiment" type="CS" credits="6" cursus="GSU" printemps="printemps" />
-  <uv tag="BI01" titre="Modeles Pour La Bioinformatique" type="CS" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="BL30" titre="Physiologie Des Systèmes Intégrés" type="CS" credits="6" />
-  <uv tag="BL40" titre="Génie Cellulaire" type="CS" credits="6" />
-  <uv tag="BM02" titre="Organes Artificiels Et Biorheologie" type="TM" credits="6" />
-  <uv tag="BM08" titre="Modélisation Des Systèmes Biomécaniques" type="TM" credits="5" cursus="GSM" printemps="printemps" />
-  <uv tag="BT06" titre="Analyse Des Produits Biologiques Et Alimentaires" type="TM" credits="6" cursus="GP" printemps="printemps" />
-  <uv tag="BT10" titre="Risques Biologiques Et Sécurité Alimentaire" type="TM" credits="5" />
-  <uv tag="BT21" titre="Biotechnologies Moleculaires Et Genie Genetique" type="TM" credits="6" />
-  <uv tag="BT22" titre="Les Agroressources" type="TM" credits="6" />
-  <uv tag="CM06" titre="Calcul D'Une Opération Industrielle" type="TM" credits="6" cursus="GP" automne="automne" printemps="printemps" />
-  <uv tag="CM40" titre="Catalyse Heterogene" type="CS" credits="3" cursus="GP" printemps="printemps" />
-  <uv tag="CT02" titre="Maitrise Statistique Des Processus" type="TM" credits="6" cursus="GM GSM" printemps="printemps" />
-  <uv tag="CT04" titre="Controles Non Destructifs" type="TM" credits="5" cursus="GM" printemps="printemps" />
-  <uv tag="DI03" titre="Conception Formelle Des Produits" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="DI05" titre="Methodologie Et Analyse De La Valeur" type="TM" credits="6" cursus="HUTECH GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="DI06" titre="Analyse Des Produits De Consommation" type="TM" credits="5" cursus="GM" printemps="printemps" />
-  <uv tag="EG01" titre="Ergonomie" type="TM" credits="6" cursus="GM" automne="automne" printemps="printemps" />
-  <uv tag="EN14" titre="Fonctions E;lectroniques Pour L'Ingénieur" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="EV01" titre="Procédés De Traitement Des Déchets" type="TM" credits="6" cursus="GP GSU" printemps="printemps" />
-  <uv tag="FPP02" titre="Fiabilite Et Ingenierie Robuste De Produits (Apprentissage)" type="CS" credits="3" cursus="GM GSM" printemps="printemps" />
-  <uv tag="FQ07" titre="La Qualité Des Services A L'Industrie" type="TM" credits="5" cursus="GM" printemps="printemps" />
-  <uv tag="GE38" titre="Management Et Outils D'Aide à La Créativité Industrielle Et à L'Innovation" type="TM" credits="6" cursus="GI GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="GE39" titre="Management Et Marketing De L'Innovation" type="TM" credits="6" cursus="GI GM GSM GP GSU" automne="automne" printemps="printemps" />
-  <uv tag="GPL01" titre="Gestion De Production Et Erp (Apprentissage)" type="TM" credits="5" cursus="GM GSM" printemps="printemps" />
-  <uv tag="IA04" titre="Systèmes Multiagents" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="LO17" titre="Indexation Et Recherche D'Information" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="LO18" titre="Projets Multimédia Pour La Formation" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="MAT03" titre="Mecanique Des Materiaux (Apprentissage)" type="CS" credits="3" cursus="GM GSM" printemps="printemps" />
-  <uv tag="MB11" titre="Révision D'Analyse Et D'Algèbre (Gb, Gi, Gsu)" type="CS" credits="6" cursus="GI GSU" automne="automne" printemps="printemps" />
-  <uv tag="MC01" titre="Machines E;lectriques" type="CS" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="MC05" titre="Machines De Transfert De Fluides" type="TM" credits="6" cursus="GM GSM" printemps="printemps" />
-  <uv tag="MC07" titre="E;lectronique De Puissance" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="MEQ03" titre="Dynamique Des Solides (Apprentissage)" type="CS" credits="3" cursus="GM GSM" printemps="printemps" />
-  <uv tag="MI03" titre="Systèmes Temps Réel" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="MP02" titre="Introduction Aux Méthodes De La Gpao" type="TM" credits="6" cursus="GI GSM" printemps="printemps" />
-  <uv tag="MQ02" titre="Mécanique Des Solides Déformables" type="CS" credits="6" cursus="GM GSM" printemps="printemps" />
-  <uv tag="MQ04" titre="Polymères" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="MQ06" titre="Modélisation Des Structures Par E;léments Finis" type="TM" credits="6" cursus="GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="MQ08" titre="Elaboration Et Proprietes D'Usage Des Metaux" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="MQ09" titre="Mécanique Des Vibrations II" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="MQ10" titre="Comportement Mécanique Des Matériaux" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="MQ11" titre="Mise En Oeuvre Des Matériaux" type="TM" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="MQ14" titre="Optimisation En Mécanique" type="TM" credits="6" cursus="GSM" printemps="printemps" />
-  <uv tag="MQ19" titre="Dynamique Des Structures" type="TM" credits="6" cursus="GM GSM" printemps="printemps" />
-  <uv tag="MS02" titre="Principes Physiques Des Capteurs Et Instrumentation" type="TM" credits="6" cursus="GSM" printemps="printemps" />
-  <uv tag="MS03" titre="Pratique Expérimentale En Acoustique Et Vibrations" type="TM" credits="6" cursus="GM" automne="automne" printemps="printemps" />
-  <uv tag="NF11" titre="Théorie Des Langages De Programmation" type="CS" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="NF24" titre="Modelisation Et Simulation Des Procedes" type="TM" credits="6" cursus="GP" printemps="printemps" />
-  <uv tag="NF26" titre="Data Warehouse Et Outils Décisionnels" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="NF28" titre="Ingénierie Des Systèmes Intéractifs" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="NF33" titre="Conception Et Architecture De Systèmes Numériques Informatiques" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="PS05" titre="Fondements De L'Acoustique Et Modélisations" type="CS" credits="6" cursus="GM" printemps="printemps" />
-  <uv tag="RO04" titre="Optimisation Et Recherche Opérationnelle" type="CS" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="SCI08" titre="Introduction A L'Ingenierie Systeme" type="TM" credits="6" />
-  <uv tag="SR03" titre="Architecture Des Applications Internet" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="SY05" titre="Conduite Des Procédés" type="TM" credits="6" cursus="GP" printemps="printemps" />
-  <uv tag="SY06" titre="Analyse Et Traitement Du Signal" type="CS" credits="6" cursus="GI GM" printemps="printemps" />
-  <uv tag="SY09" titre="Analyse Des Données Et Data Mining" type="CS" credits="6" cursus="GI GM" printemps="printemps" />
-  <uv tag="SY12" titre="Modélisation Et Performance Des Systèmes De Production" type="TM" credits="6" cursus="GSM" printemps="printemps" />
-  <uv tag="SY15" titre="Automatique Avancée" type="CS" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="SY26" titre="Télécommunications" type="TM" credits="6" cursus="GI" printemps="printemps" />
-  <uv tag="TA02" titre="E;valuation E;conomique Des Procédés" type="TM" credits="6" cursus="GP" printemps="printemps" />
-  <uv tag="TF07" titre="Calcul Des E;changeurs Thermiques Industriels" type="TM" credits="6" cursus="GP" printemps="printemps" />
-  <uv tag="TF08" titre="Hydrodynamique Des Systèmes Dispersés" type="TM" credits="6" cursus="GP" printemps="printemps" />
-  <uv tag="TMI01" titre="Conception Niveau 2 (Apprentissage)" type="TM" credits="5" cursus="GM GSM" printemps="printemps" />
-  <uv tag="TMI05" titre="Fabrication Assistee Par Ordinateur Et Machines A Commande Numerique (Apprentissage)" type="TM" credits="3" cursus="GM GSM" printemps="printemps" />
-  <uv tag="TN12" titre="Conception Mécanique" type="TM" credits="6" cursus="GM GSM" automne="automne" printemps="printemps" />
-  <uv tag="TN13" titre="Dimensionnement Pour La Conception Des Systemes Mecaniques" type="TM" credits="6" cursus="GSM" printemps="printemps" />
-  <uv tag="TN15" titre="Création De Produit, D'Activité, D'Entreprise" type="TM" credits="6" />
-  <uv tag="TN24" titre="Technologies De Fabrication Et Outils Méthodes" type="TM" credits="6" cursus="GSM" printemps="printemps" />
-  <uv tag="TN29" titre="Outils De Definition Et De Developpement De Systemes" type="TM" credits="6" cursus="GSM" printemps="printemps" />
-  <uv tag="TN30" titre="Xao En Milieu Professionnel" type="TM" credits="3" cursus="GSM" printemps="printemps" />
-  <uv tag="UB02" titre="Systemes De Transport Urbain" type="TM" credits="5" cursus="GSU" printemps="printemps" />
-  <uv tag="UB06" titre="Mises En Scènes Urbaines" type="TM" credits="5" cursus="GSU" printemps="printemps" />
-  <uv tag="UB08" titre="Hydrologie Urbaine" type="CS" credits="6" cursus="GSU" printemps="printemps" />
-  <uv tag="UR01" titre="Droit De L'Urbanisme, De La Construction Et De L'Environnement" type="TM" credits="5" cursus="GSU" printemps="printemps" />
-  <uv tag="UXD01" titre="Design D'Experience" type="TM" credits="6" />
+  <uv tag="BL01" titre="Sciences Biologiques Pour L'Ingénieur" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="BL10" titre="Structures Et Physicochimie Des Molécules Biologiques" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="BL22" titre="Microbiologie Et Biologie Moléculaire" cursus="TC" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="CM01" titre="Physique De La Matière" cursus="TC" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="CM11" titre="Chimie Générale" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="CM12" titre="Chimie Physique Minérale" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="CM13" titre="Chimie Des Substances Organiques Et Biologiques" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="CM15" titre="Systemes Colloidaux - Applications Agroalimentaires" cursus="TC GP" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="EL01" titre="Phénomènes Electromagnétiques" cursus="TC GM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="EN21" titre="Bases De L'électronique Analogique" cursus="TC GM GSM" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="IA02" titre="Résolution De Problèmes Et Programmation Logique" cursus="TC HUTECH GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MQ01" titre="éléments De Resistance Des Matériaux" cursus="TC GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MQ03" titre="Mécanique Des Vibrations I" cursus="TC GM GSM" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MQ17" titre="Introduction Aux Propriétés Mécaniques Et à L'Ingénierie Des Matériaux" cursus="TC GM GSM" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MQ18" titre="Cinématique Et Dynamique Des Systèmes" cursus="TC GM GSM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MT10" titre="Structures,Calcul Formel Et Algorithmes" cursus="TC GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MT12" titre="Methodes Mathematiques Pour L'Analyse Du Signal Et De L'Image" cursus="TC GI GM GSM" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MT22" titre="Fonctions De Plusieurs Variables Réelles Et Applications" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MT23" titre="Algèbre Linéaire Et Applications" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MT90" titre="Fonctions D'Une Variable Reelle 1" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="CS">4</credits>
+  </uv>
+  <uv tag="MT91" titre="Fonctions D'Une Variable Reelle 2" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="NF04" titre="Modélisation Numérique Des Problèmes De L'Ingénieur" cursus="TC GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="NF16" titre="Algorithmique Et Structures De Données" cursus="TC HUTECH GI" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="PS04" titre="Thermodynamique" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="PS91" titre="Mecanique Physique" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="PS92" titre="Dynamique Des Systemes Et Des Solides" cursus="TC" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="PS93" titre="Optique Geometrique" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="PS94" titre="Electricite" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="RO03" titre="Recherche Opérationnelle, Optimisation Combinatoire" cursus="TC GI GSU" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="RR01" titre="Cinétique Chimique Et Réacteurs Homogènes" cursus="TC GP" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SR02" titre="Systèmes D'Exploitation : Des Concepts à La Programmation" cursus="TC GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SY01" titre="éléments De Probabilités" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SY02" titre="Méthodes Statistiques Pour L'Ingénieur" cursus="TC GI GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SY04" titre="Systèmes Asservis Linéaires : Analyse Et Commande" cursus="TC GM GSM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SY14" titre="éléments D'Automatique" cursus="TC GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="TF01" titre="Mécanique Des Fluides Incompressibles" cursus="TC GM GSM GP" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="TF06" titre="Transfert De Chaleur" cursus="TC GP GSU" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="TN06" titre="Transmission Des Efforts En Mécanique" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="BA07" titre="Modes Opératoires De La Construction" cursus="TC HUTECH GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="BL09" titre="Biophysique Des Systèmes Biologiques" cursus="TC" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="BM01" titre="Introduction à L'Instrumentation Biomédicale" cursus="TC" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="BT02" titre="Opérations Agro-Industrielles" cursus="TC GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="C2I1" titre="Certificat Informatique Et Internet Niveau 1" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="TM">4</credits>
+  </uv>
+  <uv tag="CM70" titre="Travaux Pratiques De Gp (1)" cursus="TC GP" printemps="printemps">
+    <credits type="TM">3</credits>
+  </uv>
+  <uv tag="DD02" titre="Introduction A L'Eco-Conception Et A L'Analyse De Cycle De Vie" cursus="TC GSM" printemps="printemps">
+    <credits type="TM">3</credits>
+  </uv>
+  <uv tag="EL02" titre="électricité Industrielle Appliquée" cursus="TC GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="FQ01" titre="économie Globale Et Maitrise De La Qualité" cursus="TC GI GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="GE37" titre="Gestion De Projet" cursus="TC GI GM GSM GSU" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="LO01" titre="Bases De La Programmation" cursus="TC HUTECH GM GSM GSU" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="LO21" titre="Programmation Et Conception Orientees Objet" cursus="TC HUTECH GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="LO22" titre="Genie Logiciel" cursus="TC GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MT94" titre="Introduction Aux Mathematiques Appliquées" cursus="TC" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF01" titre="Algorithmique Et Programmation" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF02" titre="Du Circuit Intégré Au Microprocesseur" cursus="TC GM GSM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF15" titre="Microprocesseurs, Interfaces Et Logiciels De Bases" cursus="TC GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF17" titre="Conception De Bases De Données" cursus="TC HUTECH GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF22" titre="Micro-Ordinateurs Et Applications" cursus="TC GM GSM GP" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF92" titre="Traitement Automatique De L'Information" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NP90" titre="Nano-Projets" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="TM">2</credits>
+  </uv>
+  <uv tag="NX17" titre="Introduction Aux Bases De Donnees" cursus="TC GSM GSU" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="PR" titre="Réalisation De Projet" cursus="TC HUTECH GI GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="PS09" titre="Acoustique Appliquée" cursus="TC GM GSU" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="PS90" titre="Introduction A La Mesure" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="TM">3</credits>
+  </uv>
+  <uv tag="TF14" titre="Les Opérations De Transfert De Matière" cursus="TC GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN01" titre="éléments De Dessin Technique" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN02" titre="Introduction A La Conception Mécanique" cursus="TC GM GSM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN03" titre="Fabrication Mécanique" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN04" titre="Réalisation" cursus="TC HUTECH" automne="automne" printemps="printemps">
+    <credits type="TM">4</credits>
+  </uv>
+  <uv tag="TN08" titre="Dessin De Communication" cursus="TC GM" automne="automne" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="TN20" titre="Cao : Modélisation Géométrique" cursus="TC GM GSM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN22" titre="éléments De Bureau D'études" cursus="TC GM GSM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TR91" titre="Techniques De Recherche D'Information Pour L'Ingenieur" cursus="TC" automne="automne" printemps="printemps">
+    <credits type="TM">2</credits>
+  </uv>
+  <uv tag="TS01" titre="Maitrise Des Risques" cursus="TC GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TX" titre="étude Expérimentale" cursus="TC GI GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="UB04" titre="Ambiances Et Environnement Lumineux" cursus="TC GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="UR03" titre="Cartographie Sémiologie Graphique Et Cao/Dao" cursus="TC HUTECH GSU" automne="automne" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="UR05" titre="Aménagement Et Environnement" cursus="TC HUTECH GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="AR03" titre="Art Et Technologies Contemporaines" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="DI01" titre="Initiation Au Design Industriel" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="DI02" titre="Initiation Au Design Graphique" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="EI03" titre="Communication Interculturelle En Entreprises, Organisations Transnationales" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="EI04" titre="Intelligence économique : Stratégie D'Entreprise, Démarche Et Outils" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="EI05" titre="Science, Technologie Et Société Dans L'Union Européenne" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE10" titre="économie Politique" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE12" titre="Géographie Et économie Des Territoires" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE13" titre="Les Risques Entre Technique Et Societe" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE15" titre="Initiation A La Création Et Gestion D'Entreprises Innovantes" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE20" titre="économie Industrielle" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE21" titre="économie Et Gestion De L'Innovation Et Du Numérique" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE22" titre="économie Internationale" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE23" titre="Transferts De Technologies Et Développements" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE24" titre="Recherche Developpement : Ingenieur Et Investisseurs" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE25" titre="Gestion Et Organisation De La Production" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE26" titre="Management Stratégique Des Ressources Humaines" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE28" titre="économie Et Droit De La Propriété Intellectuelle (Industrielle Et Artistique) Dans Une économie Reposant Sur La Connaissance" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE29" titre="Gestion Et Management International De L'Entreprise" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE36" titre="Marketing" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="GE90" titre="Organisation, Innovation Et International" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="HE01" titre="épistémologie Et Histoire Des Sciences" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="HE03" titre="Logique : Histoire Et Formalisme" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="HE05" titre="Culture Et Histoire Des Techniques" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="IC01" titre="Histoire Et Prospective Des Industries Culturelles" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="IC03" titre="Le Numérique : Des Formats Aux Chaines De Production" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="IC05" titre="Technologies Pour La Documentation Et L'Indexation Dans L'Hypermédia" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="IC07" titre="Techniques Et Technologies Du Musical Et Du Sonore" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA00" titre="Allemand Initiation" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA01" titre="Allemand Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA02" titre="Allemand Niveau II" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA03" titre="Allemand Niveau III" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA04" titre="Pratique De La Communication En Allemand" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA11" titre="Anglais Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA12" titre="Anglais Niveau II" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA13" titre="Anglais Niveau III" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA14" titre="Civilisation Du Monde Anglophone" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA15" titre="Anglais Professionnel - Niveau V" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA20" titre="Espagnol Initiation" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA21" titre="Espagnol Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA22" titre="Espagnol Niveau II" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA23" titre="Espagnol Niveau III" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA24" titre="Le Monde Hispanique Contemporain : L'Amérique Latine (Niveau IV)" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA91" titre="Francais Langue étrangère Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA92" titre="Francais Langue étrangère Niveau II" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA93" titre="Francais Langue étrangère Niveau III" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LA94" titre="Francais Langue étrangère Niveau IV" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LB04" titre="Interculturalité Franco-Allemande" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LB14" titre="Interculturalité Appliquée Aux Pays Anglophones" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LB24" titre="Le Monde Hispanique (Niveau IV): L'Espagne" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LC14" titre="Communication Scientifique Et Technique En Anglais" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG30" titre="Japonais Initiation" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG31" titre="Japonais Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG40" titre="Portugais Initiation" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG41" titre="Portugais Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG42" titre="Portugais Niveau II" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG50" titre="Italien Initiation" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG51" titre="Italien Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG52" titre="Italien Niveau II" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG60" titre="Chinois Initiation" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="LG61" titre="Chinois Niveau I" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="MU01" titre="Pratique Instrumentale D'Ensemble" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="MU02" titre="Pratique Instrumentale De Haut Niveau" >
+    <credits type="TSH">8</credits>
+  </uv>
+  <uv tag="MU03" titre="Pratique Collective Des Musiques Contemporaines" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="PH01" titre="Introduction à La Philosophie" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="PH09" titre="éthiques : Approche Pluridisciplinaire" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SA11" titre="Pratiques Théatrales" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SC01" titre="Séminaire Interdisciplinaire De Sciences Et Technologies Cognitives" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SC11" titre="Théorie Des Sciences Cognitives : Computation Et énaction" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SC12" titre="Technologie, Cognition, Perception" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SC21" titre="Linguistique Et Philosophie Du Langage" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SC22" titre="Sociologie Cognitive, Lien Social Et Techniques" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI01" titre="Science Et Debat Public" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI02" titre="Communication Professionnelle De L'Ingénieur" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI05" titre="Theories De La Communication" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI06" titre="La Documentattion Cross-Media Pour Les Entreprises Et Les Collectivites Locales" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI07" titre="Medias Classiques Et Medias Numeriques" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI11" titre="Expression Orale- Parole Publique" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI14" titre="Parole Publique En Anglais" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI20" titre="Rhetorique Et Arts Du Discours" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI22" titre="Signes Et Contenus Numeriques" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI24" titre="études Des écritures Numériques Ordinaires" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI28" titre="écriture Interactive Et Multimédia" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SI90" titre="Séminaire De Communication Des Connaissances Technologiques" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SL" titre="Suivi Linguistique" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SO04" titre="Initiation Au Droit" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SO05" titre="Sociologie, Organisations Et Dynamiques Des Collectifs" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SP01" titre="Un Corps Pour Comprendre Et Apprendre" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="SP02" titre="Conduire Un Projet Sportif" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="TN16" titre="étude Interculturelle" >
+    <credits type="TSH">4</credits>
+  </uv>
+  <uv tag="TO01" titre="Module De Preparation Au Toeic" >
+    <credits type="TSH">2</credits>
+  </uv>
+  <uv tag="MT34" titre="Analyse 2 : Mesures, Intégrations, Probabilités" cursus="HUTECH" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MT37" titre="Logiques, Quelques Approfondissements Mathématiques Et Philosophiques" cursus="HUTECH" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="MT38" titre="Probabilités" cursus="HUTECH" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="AP" titre="Atelier Projet" cursus="GSU" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="API06" titre="Analyse De Donnees Et Data Mining (Apprentissage)" cursus="GI" printemps="printemps">
+    <credits type="CS">4</credits>
+  </uv>
+  <uv tag="API07" titre="Architecture Des Applications Internet, Programmation Web Et Securite (Apprentissage)" cursus="GI" printemps="printemps">
+    <credits type="TM">3</credits>
+  </uv>
+  <uv tag="API08" titre="Ihm Et Multimédia (Apprentissage)" cursus="GI" printemps="printemps">
+    <credits type="TM">4</credits>
+  </uv>
+  <uv tag="API09" titre="Méthodes Et Outils Pour L'Optimisation Et La Simulation (Apprentissage)" cursus="GI" printemps="printemps">
+    <credits type="CS">4</credits>
+  </uv>
+  <uv tag="API10" titre="Méthodes De Vérification Et Validation De Logiciel Et Programmation Sous Linux (Apprentissage)" cursus="GI" printemps="printemps">
+    <credits type="TM">3</credits>
+  </uv>
+  <uv tag="BA01" titre="Equipements Techniques Du Batiment" cursus="GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="BA02" titre="Gestion Technique Du Patrimoine Immobilier" cursus="GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="BA04" titre="Conversion Et Gestion Des Energies Renouvelables" cursus="GP GSU" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="BA09" titre="Introduction Au Calcul Des Structures Du Batiment" cursus="GSU" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="BI01" titre="Modeles Pour La Bioinformatique" cursus="GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="BL30" titre="Physiologie Des Systèmes Intégrés" >
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="BL40" titre="Génie Cellulaire" >
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="BM02" titre="Organes Artificiels Et Biorheologie" >
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="BM08" titre="Modélisation Des Systèmes Biomécaniques" cursus="GSM" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="BT06" titre="Analyse Des Produits Biologiques Et Alimentaires" cursus="GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="BT10" titre="Risques Biologiques Et Sécurité Alimentaire" >
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="BT21" titre="Biotechnologies Moleculaires Et Genie Genetique" >
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="BT22" titre="Les Agroressources" >
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="CM06" titre="Calcul D'Une Opération Industrielle" cursus="GP" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="CM40" titre="Catalyse Heterogene" cursus="GP" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="CT02" titre="Maitrise Statistique Des Processus" cursus="GM GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="CT04" titre="Controles Non Destructifs" cursus="GM" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="DI03" titre="Conception Formelle Des Produits" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="DI05" titre="Methodologie Et Analyse De La Valeur" cursus="HUTECH GM GSM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="DI06" titre="Analyse Des Produits De Consommation" cursus="GM" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="EG01" titre="Ergonomie" cursus="GM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="EN14" titre="Fonctions E;lectroniques Pour L'Ingénieur" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="EV01" titre="Procédés De Traitement Des Déchets" cursus="GP GSU" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="FPP02" titre="Fiabilite Et Ingenierie Robuste De Produits (Apprentissage)" cursus="GM GSM" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="FQ07" titre="La Qualité Des Services A L'Industrie" cursus="GM" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="GE38" titre="Management Et Outils D'Aide à La Créativité Industrielle Et à L'Innovation" cursus="GI GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="GE39" titre="Management Et Marketing De L'Innovation" cursus="GI GM GSM GP GSU" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="GPL01" titre="Gestion De Production Et Erp (Apprentissage)" cursus="GM GSM" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="IA04" titre="Systèmes Multiagents" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="LO17" titre="Indexation Et Recherche D'Information" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="LO18" titre="Projets Multimédia Pour La Formation" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MAT03" titre="Mecanique Des Materiaux (Apprentissage)" cursus="GM GSM" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="MB11" titre="Révision D'Analyse Et D'Algèbre (Gb, Gi, Gsu)" cursus="GI GSU" automne="automne" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MC01" titre="Machines E;lectriques" cursus="GM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MC05" titre="Machines De Transfert De Fluides" cursus="GM GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MC07" titre="E;lectronique De Puissance" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MEQ03" titre="Dynamique Des Solides (Apprentissage)" cursus="GM GSM" printemps="printemps">
+    <credits type="CS">3</credits>
+  </uv>
+  <uv tag="MI03" titre="Systèmes Temps Réel" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MP02" titre="Introduction Aux Méthodes De La Gpao" cursus="GI GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ02" titre="Mécanique Des Solides Déformables" cursus="GM GSM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="MQ04" titre="Polymères" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ06" titre="Modélisation Des Structures Par E;léments Finis" cursus="GM GSM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ08" titre="Elaboration Et Proprietes D'Usage Des Metaux" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ09" titre="Mécanique Des Vibrations II" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ10" titre="Comportement Mécanique Des Matériaux" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ11" titre="Mise En Oeuvre Des Matériaux" cursus="GM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ14" titre="Optimisation En Mécanique" cursus="GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MQ19" titre="Dynamique Des Structures" cursus="GM GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MS02" titre="Principes Physiques Des Capteurs Et Instrumentation" cursus="GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="MS03" titre="Pratique Expérimentale En Acoustique Et Vibrations" cursus="GM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF11" titre="Théorie Des Langages De Programmation" cursus="GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="NF24" titre="Modelisation Et Simulation Des Procedes" cursus="GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF26" titre="Data Warehouse Et Outils Décisionnels" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF28" titre="Ingénierie Des Systèmes Intéractifs" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="NF33" titre="Conception Et Architecture De Systèmes Numériques Informatiques" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="PS05" titre="Fondements De L'Acoustique Et Modélisations" cursus="GM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="RO04" titre="Optimisation Et Recherche Opérationnelle" cursus="GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SCI08" titre="Introduction A L'Ingenierie Systeme" >
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="SR03" titre="Architecture Des Applications Internet" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="SY05" titre="Conduite Des Procédés" cursus="GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="SY06" titre="Analyse Et Traitement Du Signal" cursus="GI GM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SY09" titre="Analyse Des Données Et Data Mining" cursus="GI GM" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SY12" titre="Modélisation Et Performance Des Systèmes De Production" cursus="GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="SY15" titre="Automatique Avancée" cursus="GI" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="SY26" titre="Télécommunications" cursus="GI" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TA02" titre="E;valuation E;conomique Des Procédés" cursus="GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TF07" titre="Calcul Des E;changeurs Thermiques Industriels" cursus="GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TF08" titre="Hydrodynamique Des Systèmes Dispersés" cursus="GP" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TMI01" titre="Conception Niveau 2 (Apprentissage)" cursus="GM GSM" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="TMI05" titre="Fabrication Assistee Par Ordinateur Et Machines A Commande Numerique (Apprentissage)" cursus="GM GSM" printemps="printemps">
+    <credits type="TM">3</credits>
+  </uv>
+  <uv tag="TN12" titre="Conception Mécanique" cursus="GM GSM" automne="automne" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN13" titre="Dimensionnement Pour La Conception Des Systemes Mecaniques" cursus="GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN15" titre="Création De Produit, D'Activité, D'Entreprise" >
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN24" titre="Technologies De Fabrication Et Outils Méthodes" cursus="GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN29" titre="Outils De Definition Et De Developpement De Systemes" cursus="GSM" printemps="printemps">
+    <credits type="TM">6</credits>
+  </uv>
+  <uv tag="TN30" titre="Xao En Milieu Professionnel" cursus="GSM" printemps="printemps">
+    <credits type="TM">3</credits>
+  </uv>
+  <uv tag="UB02" titre="Systemes De Transport Urbain" cursus="GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="UB06" titre="Mises En Scènes Urbaines" cursus="GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="UB08" titre="Hydrologie Urbaine" cursus="GSU" printemps="printemps">
+    <credits type="CS">6</credits>
+  </uv>
+  <uv tag="UR01" titre="Droit De L'Urbanisme, De La Construction Et De L'Environnement" cursus="GSU" printemps="printemps">
+    <credits type="TM">5</credits>
+  </uv>
+  <uv tag="UXD01" titre="Design D'Experience" >
+    <credits type="TM">6</credits>
+  </uv>
 </catalogue>
 
