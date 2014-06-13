@@ -2,13 +2,14 @@
 #include "mainwindowcontroller.h"
 
 #include "model/formation.h"
-#include "qformation.h"
 #include "formationcontroller.h"
 
 MainWindowController::MainWindowController(QApplication& a, QObject *parent):
 	QObject(parent), a(&a), mainWindow(new MainWindow()), etudiant(0)
 {
-	userDialog = new QUserDialog();
+	QStringList tmpList = Etudiant::listeEtudiants();
+	etudiantList = &tmpList;
+	userDialog = new QUserDialog(*etudiantList);
 	connect(userDialog, SIGNAL(selected(int)), this, SLOT(userSelect(int)));
 	connect(userDialog, SIGNAL(rejected()), this, SLOT(userSelectRejected()));
 	userDialog->show();
@@ -30,20 +31,33 @@ void MainWindowController::userSelect(const int index){
 
 	userDialog = 0;
 
+	//Init main Window Data
+	qDebug() << "etudiant list" << etudiantList;
 	if( index == -1)
 		etudiant = new Etudiant();
-	else
-		etudiant = /**/new Etudiant()/**/;
+	else{
+		etudiant = Etudiant::charger(etudiantList->at(index));
+		mainWindow->setName(etudiant->nom(), etudiant->prenom());
+	}
 
-	//Init main Window
+	//Init main Window Events
 	connect(mainWindow, SIGNAL(nameChanged(QString,QString)), this, SLOT(nameChanged(QString,QString)));
 	connect(mainWindow, SIGNAL(addFormationClicked()), this, SLOT(addFormation()));
+	connect(a, SIGNAL(aboutToQuit()), this, SLOT(exiting()));
+
+	delete etudiantList;
+	etudiantList = 0;
 
 	mainWindow->show();
 }
 void MainWindowController::userSelectRejected(){
 	qDebug() << "User select rejected";
 	a->exit();
+}
+
+void MainWindowController::exiting(){
+	qDebug() << "exiting procedure started, saving...";
+	etudiant->sauvegarder();
 }
 
 
@@ -56,7 +70,14 @@ void MainWindowController::nameChanged(const QString & name, const QString & sur
 void MainWindowController::addFormation(){
 	qDebug() << "add Formation Clicked";
 	QFormation* qFormation = new QFormation();
-	FormationController* formationController = new FormationController(new Formation(), qFormation);
-	formationController->edit();
+	Formation* formation = new Formation();
+	FormationController* formationController = new FormationController(formation, qFormation);
 	mainWindow->addFormation(qFormation);
+	connect(formationController, SIGNAL(removed(Formation*)), this, SLOT(removeFormation(Formation*)));
+	formationController->edit();
+}
+
+void MainWindowController::removeFormation(Formation *formation){
+	qDebug() << "remove Formation Clicked";
+	//add remove in model
 }
