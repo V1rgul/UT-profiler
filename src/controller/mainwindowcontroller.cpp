@@ -24,7 +24,6 @@ MainWindowController::MainWindowController(QApplication& a, QObject *parent):
 void MainWindowController::userSelect(int index){
 	qDebug() << "User selected:" << index;
 
-	delete userDialog;
 	userDialog = 0;
 
 	mainWindow->show();
