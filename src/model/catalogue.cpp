@@ -88,18 +88,19 @@ Catalogue* Catalogue::charger () {
 
 void Catalogue::sauvegarder () {
   QDomDocument doc;
-  QFile f(":/ressources/catalogue.xml");
+  QFile f("catalogue-bis.xml");
   QString err;
 
   if(!f.open(QIODevice::ReadWrite | QIODevice::Truncate)) {
-    throw "Impossible d'ouvrir le fichier catalogue.xml";
+    throw f.errorString();
   }
 
   doc.appendChild(doc.createProcessingInstruction("xml", "version='1.0' encoding='UTF-8'")); 
   doc.appendChild(this->toXml());
 
   QTextStream out(&f);
-  out << doc.toString();
+  //out << doc.toString();
+  //qDebug() << doc.toString();
 
   f.close(); 
 }

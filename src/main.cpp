@@ -27,9 +27,14 @@ int main(int argc, char *argv[]) {
 
   for (int i = 0; i < keys.count(); i++) {
     UV u = uvs[keys[i]];
-    qDebug() << u.tag() << ": " << u.titre() << "\tcredits: " << u.credits() 
-             << "\tcursus: " << u.cursus().join(" ") << "\tautomne: " << u.automne()
-             << "\tprintemps: " << u.printemps(); 
+    qDebug() << u.toString() + "\n";
+  }
+
+  qDebug() << "toString()";
+  try {
+    c->sauvegarder();
+  } catch (QString e) {
+    qDebug() << e;
   }
 
   Etudiant e;
