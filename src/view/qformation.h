@@ -11,13 +11,14 @@ class QFormation : public QWidget
 	public:
 		explicit QFormation(QWidget *parent = 0);
 
-		void addSemestre(QSemestre &semestre);
-		void name(QString name);
+		void edit(QString name, int credits);
 	signals:
-		void addSemestreClicked();
+		void remove();
+		void edited(const QString name, const int credits);
 	public slots:
-		void buttonAddSemestreClicked();
-
+		void buttonRemoveClicked();
+		void editedName(QString name);
+		void editedCredits(int credits);
 	private:
 		Ui::QFormation ui;
 };

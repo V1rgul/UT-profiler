@@ -5,20 +5,24 @@ QFormation::QFormation(QWidget *parent) :
 	QWidget(parent)
 {
 	ui.setupUi(this);
-	connect(ui.buttonAddSemestre, SIGNAL(clicked()), this, SLOT(buttonAddSemestreClicked()));
-}
-
-void QFormation::addSemestre(QSemestre &semestre)
-{
-	ui.groupBox->layout()->addWidget(&semestre);
-}
-void QFormation::name(QString name){
-	ui.groupBox->setTitle(name);
+	connect(ui.buttonDelete, SIGNAL(clicked()), this, SLOT(buttonRemoveClicked()));
+	connect(ui.editName, SIGNAL(textChanged(QString)), this, SLOT(editedName(QString)));
+	connect(ui.spinCredits, SIGNAL(valueChanged(int)), this, SLOT(editedCredits(int)));
 }
 
 
+void QFormation::edit(QString name, int credits){
+	ui.editName->setText(name);
+	ui.spinCredits->setValue(credits);
+}
 
-void QFormation::buttonAddSemestreClicked(){
-	qDebug() << "click on addSemestre";
-	emit addSemestreClicked();
+void QFormation::buttonRemoveClicked(){
+	emit(remove());
+}
+
+void QFormation::editedName(QString name){
+	emit(edited(name, ui.spinCredits->value()));
+}
+void QFormation::editedCredits(int credits){
+	emit(edited(ui.editName->text(), credits));
 }

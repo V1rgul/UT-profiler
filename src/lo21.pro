@@ -22,7 +22,6 @@ SOURCES += main.cpp\
     model/uv.cpp \
     view/qformation.cpp \
     view/qsemestre.cpp \
-    view/qformationdialog.cpp \
     controller/mainwindowcontroller.cpp \
     view/quserdialog.cpp \
     controller/formationcontroller.cpp
@@ -38,7 +37,6 @@ HEADERS  += view/mainwindow.h \
     model/xmlConvertible.h \
     view/qformation.h \
     view/qsemestre.h \
-    view/qformationdialog.h \
     controller/mainwindowcontroller.h \
     view/quserdialog.h \
     controller/formationcontroller.h
@@ -46,8 +44,6 @@ HEADERS  += view/mainwindow.h \
 FORMS    += view/mainwindow.ui \
     view/qsemestre.ui \
     view/qformation.ui \
-    view/qformationdialog.ui \
-    view/qsemestredialog.ui \
     view/quserdialog.ui
 
 INCLUDEPATH += view

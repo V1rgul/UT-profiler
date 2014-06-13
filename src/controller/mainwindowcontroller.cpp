@@ -1,7 +1,7 @@
 #include <QtDebug>
 #include "mainwindowcontroller.h"
 
-#include "model/formation.h"
+#include "model/formationHorsUtc.h"
 #include "formationcontroller.h"
 
 MainWindowController::MainWindowController(QApplication& a, QObject *parent):
@@ -37,9 +37,9 @@ void MainWindowController::userSelect(const int index){
 	else{
 		etudiant = Etudiant::charger(etudiantList.at(index));
 		mainWindow->setName(etudiant->nom(), etudiant->prenom());
-		foreach(Formation f, etudiant->formations()){
+		foreach(FormationHorsUtc* f, etudiant->formations()){
 			QFormation* qFormation = new QFormation();
-			FormationController* formationController = new FormationController(&f, qFormation);
+			FormationController* formationController = new FormationController(f, qFormation);
 			mainWindow->addFormation(qFormation);
 			connect(formationController, SIGNAL(removed(Formation*)), this, SLOT(removeFormation(Formation*)));
 		}
@@ -72,15 +72,14 @@ void MainWindowController::nameChanged(const QString & name, const QString & sur
 void MainWindowController::addFormation(){
 	qDebug() << "add Formation Clicked";
 	QFormation* qFormation = new QFormation();
-	Formation* formation = new Formation();
+	FormationHorsUtc* formation = new FormationHorsUtc();
 	FormationController* formationController = new FormationController(formation, qFormation);
 	mainWindow->addFormation(qFormation);
-	etudiant->ajouterFormation(*formation);
-	connect(formationController, SIGNAL(removed(Formation*)), this, SLOT(removeFormation(Formation*)));
-	formationController->edit();
+	etudiant->ajouterFormation(formation);
+	connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
 }
 
-void MainWindowController::removeFormation(Formation *formation){
+void MainWindowController::removeFormation(FormationHorsUtc *formation){
 	qDebug() << "remove Formation Clicked";
 	etudiant->supprimerFormation(formation->id());
 }

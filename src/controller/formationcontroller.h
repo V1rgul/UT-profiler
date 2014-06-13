@@ -3,29 +3,23 @@
 
 #include <QObject>
 #include "qformation.h"
-#include "model/formation.h"
-#include "qformationdialog.h"
+#include "model/formationHorsUtc.h"
 
 class FormationController : public QObject
 {
 		Q_OBJECT
 	public:
-		explicit FormationController(Formation* formation, QFormation* qFormation, QObject *parent = 0);
-		void edit();
+		explicit FormationController(FormationHorsUtc* formation, QFormation* qFormation, QObject *parent = 0);
 	signals:
-		void removed(Formation *formation);
+		void removed(FormationHorsUtc *formation);
 		void _removed();
 	public slots:
-		void editEvent();
+		void editEvent(const QString name, const int credits);
 		void remove();
 
-		void dialogState(int r);
 	private:
-		void loadInfo();
-		Formation* formation;
+		FormationHorsUtc* formation;
 		QFormation* qFormation;
-
-		QFormationDialog* dialog;
 };
 
 #endif // FORMATIONCONTROLLER_H
