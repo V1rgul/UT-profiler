@@ -22,8 +22,8 @@ void MainWindow::setName(const QString &name, const QString &surname){
 	ui->editPrenom->setText(surname);
 }
 
-void MainWindow::addFormation(QFormation& formation){
-	ui->tabEtudiant->layout()->addWidget(&formation);
+void MainWindow::addFormation(QFormation* formation){
+	ui->tabEtudiant->layout()->addWidget(formation);
 }
 
 void MainWindow::buttonAddFormationClicked(){
