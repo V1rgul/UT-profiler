@@ -2,21 +2,35 @@
 #include <QtXml>
 #include <QFile>
 
+#include "formationUtc.h"
 #include "etudiant.h"
 
 const QString Etudiant::XML_NODE_NAME = "etudiant";
+
+Etudiant::Etudiant () {
+  FormationUtc *f = new FormationUtc();
+  this->_formations.append(f);
+}
+
+Etudiant::~Etudiant () {
+  // supprimer formations
+}
 
 QString Etudiant::nomFichier () const {
   return "./etudiant/" + this->nom() + "_" + this->prenom() + ".xml";
 }
 
-void Etudiant::ajouterFormation (Formation& f) {
+void Etudiant::ajouterFormation (FormationHorsUtc* f) {
   this->_formations.append(f);
 }
 
 void Etudiant::supprimerFormation (int id) {
   for (int i = 0; i < this->_formations.count(); i++) {
-    if (this->_formations[i].id() == id) {
+    if (this->_formations[i]->id() == id) {
+      if (this->_formations[i]->utc()) {
+        throw QString("Impossible de supprimer la formation UTC");
+      }
+
       this->_formations.removeAt(i);
       return;
     }
@@ -30,7 +44,7 @@ QDomElement Etudiant::toXml () const {
   etudiant.setAttribute("prenom", this->prenom());
   
   for (int i = 0; i < this->formations().count(); i++) {
-    etudiant.appendChild(this->formations()[i].toXml());
+    etudiant.appendChild(this->formations()[i]->toXml());
   }
 
   return etudiant;
@@ -47,13 +61,28 @@ void Etudiant::fromXml (QDomNode& noeud) {
 
   QDomNodeList child = noeud.childNodes();
   for (int i = 0; i < child.count(); i++) {
-    if (child.at(i).nodeName() != Formation::XML_NODE_NAME) {
-      throw "Les noeuds etudiant ne peuvent contenir que des noeuds formation";
+    if (child.at(i).nodeName() == FormationUtc::XML_NODE_NAME) {
+      this->formationUtc()->fromXml(child.at(i));
     }
-    Formation *f = new Formation();
-    f->fromXml(child.at(i));
-    this->ajouterFormation(*f);
+    else if (child.at(i).nodeName() == FormationHorsUtc::XML_NODE_NAME) {
+      FormationHorsUtc *f = new FormationHorsUtc();
+      f->fromXml(child.at(i));
+      this->ajouterFormation(f);
+    }
+    else {
+      throw QString("Les noeuds etudiant ne peuvent contenir que des noeuds formation");
+    }
   }
+}
+
+FormationUtc* Etudiant::formationUtc () {
+  for (int i = 0; i < this->_formations.count(); i++) {
+    if (this->_formations[i]->utc()) { 
+      return dynamic_cast<FormationUtc*>(this->_formations[i]); 
+    }
+  }
+
+  throw QString("Formation utc introuvable");
 }
 
 Etudiant* Etudiant::charger (const QString& nomComplet) {

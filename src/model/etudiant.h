@@ -7,6 +7,8 @@
 #include <QtXml>
 
 #include "formation.h"
+#include "formationUtc.h"
+#include "formationHorsUtc.h"
 #include "xmlConvertible.h"
 
 // BUG: Si la classe hérite de XmlConvertible, et donc que la méthode
@@ -16,27 +18,31 @@
 // mais je sais pas comment le corriger
 class Etudiant {
   public:
+    Etudiant ();
+    virtual ~Etudiant ();
+
     const static QString XML_NODE_NAME;
     static Etudiant* charger (const QString& nom, const QString& prenom);
     static Etudiant* charger (const QString& nomComplet);
     static QStringList listeEtudiants ();
 
     void sauvegarder ();
-    void ajouterFormation (Formation& f);
+    void ajouterFormation (FormationHorsUtc* f);
     void supprimerFormation (int id);
 
     void fromXml (QDomNode& noeud);
     QDomElement toXml () const;
     QString xmlNodeName () const;
 
-    inline QList<Formation> formations () const { return _formations; }
+    inline QList<Formation*> formations () const { return _formations; }
     inline QString nom () const { return _nom; }
     inline void nom (const QString& n) { _nom = n; }
     inline QString prenom () const { return _prenom; }
     inline void prenom (const QString& p) { _prenom = p; }
 
   private:
-    QList<Formation> _formations;
+    FormationUtc* formationUtc ();
+    QList<Formation*> _formations;
     QString _nom; 
     QString _prenom;
 
