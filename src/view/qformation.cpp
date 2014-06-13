@@ -22,6 +22,6 @@ void QFormation::addSemestre(QSemestre &semestre)
 
 
 void QFormation::buttonAddSemestreClicked(){
-	emit addSemestreClicked();
 	qDebug() << "click on addSemestre";
+	emit addSemestreClicked();
 }
