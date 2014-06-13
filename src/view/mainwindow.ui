@@ -33,13 +33,13 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabEtudiant">
        <attribute name="title">
         <string>Etudiant</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
@@ -86,11 +86,15 @@
          </layout>
         </item>
         <item>
-         <widget class="QGroupBox" name="groupBox">
-          <property name="title">
-           <string>GroupBox</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Ajouter une Formation</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -109,7 +113,7 @@
      <x>0</x>
      <y>0</y>
      <width>542</width>
-     <height>25</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
