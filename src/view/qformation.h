@@ -10,13 +10,13 @@ class QFormation : public QWidget
 		Q_OBJECT
 	public:
 		explicit QFormation(QWidget *parent = 0);
-		QFormation(const QString &title, QWidget *parent = 0);
 
 		void addSemestre(QSemestre &semestre);
 	signals:
 		void addSemestreClicked();
 	public slots:
 		void buttonAddSemestreClicked();
+		void buttonEditClicked();
 
 	private:
 		Ui::QFormation ui;

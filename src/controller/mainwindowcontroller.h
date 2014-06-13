@@ -19,6 +19,7 @@ class MainWindowController : public QObject
 		void userSelect(const int index);
 		void userSelectRejected();
 		void nameChanged(const QString & name, const QString & surname);
+		void addFormation();
 	private:
 		QApplication *a;
 		QUserDialog *userDialog;
