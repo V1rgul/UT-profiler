@@ -41,7 +41,7 @@ void MainWindowController::userSelect(const int index){
 			QFormation* qFormation = new QFormation();
 			FormationController* formationController = new FormationController(f, qFormation);
 			mainWindow->addFormation(qFormation);
-			connect(formationController, SIGNAL(removed(Formation*)), this, SLOT(removeFormation(Formation*)));
+			connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
 		}
 	}
 
