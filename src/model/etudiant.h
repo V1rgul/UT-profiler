@@ -34,15 +34,16 @@ class Etudiant {
     QDomElement toXml () const;
     QString xmlNodeName () const;
 
-    inline QList<Formation*> formations () const { return _formations; }
+    inline FormationUtc* formationUtc () const { return _formationUtc; }
+    inline QList<FormationHorsUtc*> formationsHorsUtc () const { return _formationsHorsUtc; }
     inline QString nom () const { return _nom; }
     inline void nom (const QString& n) { _nom = n; }
     inline QString prenom () const { return _prenom; }
     inline void prenom (const QString& p) { _prenom = p; }
 
   private:
-    FormationUtc* formationUtc ();
-    QList<Formation*> _formations;
+    FormationUtc* _formationUtc;
+    QList<FormationHorsUtc*> _formationsHorsUtc;
     QString _nom; 
     QString _prenom;
 
