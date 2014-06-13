@@ -18,8 +18,6 @@ class FormationHorsUtc : public Formation {
 
     inline void nom (const QString& n) { _nom = n; }
 
-    inline bool utc () { return false; }
-
   private:
     QString _nom;
     unsigned int _credits;

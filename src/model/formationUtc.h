@@ -25,8 +25,6 @@ class FormationUtc : public Formation {
 
     inline void nom (const QString& n) { _nom = n; }
 
-    inline bool utc () { return true; }
-
   private:
     static int idCpt;
     bool verifierSemestre (const Semestre &s, QList<UVEtudiant>* dejaValidees = 0) const;
