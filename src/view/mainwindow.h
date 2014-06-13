@@ -18,6 +18,7 @@ public:
 
 	void setName(const QString &name, const QString &surname);
 	void addFormation(QFormation &formation);
+	QWidget* getTabEtudiant();
 
 signals:
 	void addFormationClicked();
@@ -27,7 +28,7 @@ public slots:
 	void editNameChanged(const QString & text);
 	void editSurnameChanged(const QString & text);
 private:
-    Ui::MainWindow *ui;
+	Ui::MainWindow *ui;
 };
 
 #endif // MAINWINDOW_H

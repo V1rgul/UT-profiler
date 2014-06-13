@@ -3,10 +3,9 @@
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+	QMainWindow(parent), ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+	ui->setupUi(this);
 	connect(ui->buttonAddFormation, SIGNAL(clicked()), this, SLOT(buttonAddFormationClicked()));
 	connect(ui->editNom, SIGNAL(textChanged(QString)), this, SLOT(editNameChanged(QString)));
 	connect(ui->editPrenom, SIGNAL(textChanged(QString)), this, SLOT(editSurnameChanged(QString)));
@@ -14,7 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+	qDebug() << "calling destructor of MainWindow";
+	delete ui;
 }
 
 void MainWindow::setName(const QString &name, const QString &surname){
@@ -39,3 +39,10 @@ void MainWindow::editSurnameChanged(const QString & text){
 	qDebug() << "nameChanged" << ui->editNom->text() <<  text;
 	emit(nameChanged(ui->editNom->text(), text));
 }
+
+
+QWidget* MainWindow::getTabEtudiant(){
+	return ui->tabEtudiant;
+}
+
+

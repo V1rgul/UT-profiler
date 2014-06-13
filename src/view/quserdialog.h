@@ -1,5 +1,5 @@
-#ifndef QUSER_H
-#define QUSER_H
+#ifndef QUSERDIALOG_H
+#define QUSERDIALOG_H
 
 #include <QDialog>
 #include<QStringList>
@@ -16,6 +16,8 @@ class QUserDialog : public QDialog
 	signals:
 		//-1 for new, id of selected user in userList else
 		void selected(int index);
+
+		void doneEvent(int r);
 	public slots:
 		void buttonSelect();
 		void buttonCreate();
@@ -24,4 +26,4 @@ class QUserDialog : public QDialog
 		QStringListModel model;
 };
 
-#endif // QUSER_H
+#endif // QUSERDIALOG_H
