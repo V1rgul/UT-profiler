@@ -13,9 +13,9 @@ QString QFormationDialog::name(){
 	return ui.editName->text();
 }
 
-void QFormationDialog::utc(boolean utc){
+void QFormationDialog::utc(bool utc){
 	ui.checkBoxUTC->setChecked(utc);
 }
-boolean QFormationDialog::utc(){
+bool QFormationDialog::utc(){
 	return (ui.checkBoxUTC->checkState()==Qt::Checked);
 }

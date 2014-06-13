@@ -11,8 +11,8 @@ class QFormationDialog : public QDialog
 		explicit QFormationDialog(QWidget *parent = 0);
 		void name(QString name);
 		QString name();
-		void utc(boolean utc);
-		boolean utc();
+		void utc(bool utc);
+		bool utc();
 	signals:
 
 	public slots:

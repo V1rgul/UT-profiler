@@ -79,5 +79,5 @@ void MainWindowController::addFormation(){
 
 void MainWindowController::removeFormation(Formation *formation){
 	qDebug() << "remove Formation Clicked";
-	//add remove in model
+	etudiant->supprimerFormation(formation->id());
 }
