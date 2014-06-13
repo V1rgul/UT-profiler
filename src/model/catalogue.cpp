@@ -66,15 +66,21 @@ void Catalogue::fromXml(const QDomNode& noeud) {
 }
 
 Catalogue* Catalogue::charger () {
-  QFile f(":/ressources/catalogue.xml");
+  QFile f1(":/ressources/catalogue.xml");
+  QFile f2("./catalogue.xml");
+  QFile *f;
+
   QDomDocument dom = QDomDocument("doc");
   QString err;
 
-  if(!f.open(QIODevice::ReadOnly)) {
+  f = f2.exists() ? &f2 : &f1;
+
+  qDebug() << "Chargement du fichier " + f->fileName();
+  if(!f->open(QIODevice::ReadOnly)) {
     throw "Impossible d'ouvrir le fichier catalogue.xml";
   }
-  if (!dom.setContent(&f, &err)) {
-    f.close();
+  if (!dom.setContent(f, &err)) {
+    f->close();
     throw err;
   }
 
@@ -82,13 +88,13 @@ Catalogue* Catalogue::charger () {
   Catalogue *c = new Catalogue();
   c->fromXml(domElement);
 
-  f.close();
+  f->close();
   return c;
 }
 
 void Catalogue::sauvegarder () {
   QDomDocument doc;
-  QFile f("catalogue-bis.xml");
+  QFile f("./catalogue.xml");
   QString err;
 
   if(!f.open(QIODevice::ReadWrite | QIODevice::Truncate)) {
@@ -99,9 +105,21 @@ void Catalogue::sauvegarder () {
   doc.appendChild(this->toXml());
 
   QTextStream out(&f);
-  //out << doc.toString();
-  //qDebug() << doc.toString();
+  out << doc.toString();
 
   f.close(); 
 }
 
+QString Catalogue::toString () {
+  QString ret = "Catalogue: \n";
+  QMap<QString, UV> uvs = this->uvs();
+  QList<QString> keys = uvs.keys();
+
+  for (int i = 0; i < keys.count(); i++) {
+    ret += "*******************************\n";
+    ret += uvs[keys[i]].toString();
+  }
+  ret += "*******************************\n";
+
+  return ret;
+}

@@ -18,18 +18,20 @@ void UV::fromXml (const QDomNode& noeud) {
   QDomNodeList child = noeud.childNodes();
 
   for (int i = 0; i < child.count(); i++) {
-    if (child.at(i).nodeName() != UV::CREDIT_XML_NODE_NAME) {
-      throw "Les uv ne peuvent contenir des balises credits";
+    QDomNode c = child.at(i);
+    if (c.nodeName() != UV::CREDIT_XML_NODE_NAME) {
+      throw "Les uv ne peuvent contenir que des balises credits";
     }
-    this->_credits[child.at(i).toElement().attribute("type")] = child.at(i).nodeValue().toInt();
+    QDomElement e = c.toElement();
+    QString type = e.attribute("type");
+    this->_credits[type] = e.text().toInt();
   }
 }
 
 QDomElement UV::toXml () const {
   QDomDocument doc;
   QDomElement e = doc.createElement(UV::XML_NODE_NAME);
-  QDomNode creditsNode;
-  QDomElement creditsElem;
+  QDomElement creditsElem = doc.createElement(UV::CREDIT_XML_NODE_NAME);
 
   e.setAttribute("tag", this->tag());
   e.setAttribute("titre", this->titre());
@@ -40,16 +42,12 @@ QDomElement UV::toXml () const {
   QMap<QString, unsigned int> credits = this->credits();
   QList<QString> keys = credits.keys();
 
-  qDebug() << this->tag() << ": " << keys.count() << " types de crédit";
   for (int i = 0; i < keys.count(); i++) {
-    creditsNode.setNodeValue(QString::number(credits[keys[i]]));
-    creditsElem = creditsNode.toElement();
-    creditsElem.setTagName(UV::CREDIT_XML_NODE_NAME);
-    qDebug() << "text: " << creditsElem.text();
+    QDomText nombreCredits = doc.createTextNode(QString::number(credits[keys[i]]));
+    creditsElem.setAttribute("type", keys[i]);
+    creditsElem.appendChild(nombreCredits);
     e.appendChild(creditsElem);
   }
-
-  qDebug() << doc.toString();
 
   return e;
 }
@@ -57,15 +55,16 @@ QDomElement UV::toXml () const {
 QString UV::toString () {
   QString ret = 
         this->tag() + " - " + this->titre() + "\n"
-          + "\tautomne: " + this->automne() + "\n"
-          + "\tprintemps: " + this->printemps() + "\n"
+          + "\tcursus: " + this->cursus().join(" ") + "\n"
+          + "\tautomne: " + (this->automne() ? "true" : "false") + "\n"
+          + "\tprintemps: " + (this->printemps() ? "true" : "false") + "\n"
           + "\tcredits: " + "\n";
 
   QMap<QString, unsigned int> credits = this->credits();
   QList<QString> keys = credits.keys();
 
   for (int i = 0; i < keys.count(); i++) {
-    ret += "\t\t" + keys[i] + ": " + credits[keys[i]] + "\n";
+    ret += "\t\t" + keys[i] + ": " + QString::number(credits[keys[i]]) + "\n";
   }
 
   return ret;

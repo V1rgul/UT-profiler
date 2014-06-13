@@ -22,6 +22,8 @@ class Catalogue : public XmlConvertible {
     QDomElement toXml () const;
 
     inline QMap<QString, UV> uvs () const { return _uvs; }
+
+    QString toString ();
   private:
     Catalogue () {} 
     QMap<QString, UV> _uvs;
