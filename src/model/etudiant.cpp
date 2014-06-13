@@ -14,6 +14,15 @@ void Etudiant::ajouterFormation (Formation f) {
   this->_formations.append(f);
 }
 
+void Etudiant::supprimerFormation (int id) {
+  for (int i = 0; i < this->_formations.count(); i++) {
+    if (this->_formations[i].id() == id) {
+      this->_formations.removeAt(i);
+      return;
+    }
+  }
+}
+
 QDomElement Etudiant::toXml () const {
   QDomDocument doc;
   QDomElement etudiant = doc.createElement(Etudiant::XML_NODE_NAME);

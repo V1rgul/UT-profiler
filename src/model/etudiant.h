@@ -23,6 +23,7 @@ class Etudiant {
 
     void sauvegarder ();
     void ajouterFormation (Formation f);
+    void supprimerFormation (int id);
 
     void fromXml (QDomNode& noeud);
     QDomElement toXml () const;

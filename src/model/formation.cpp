@@ -4,6 +4,7 @@
 #include "formation.h"
 
 const QString Formation::XML_NODE_NAME = "formation";
+int Formation::idCpt = 0;
 
 void Formation::ajouterSemestre (const Semestre* s) {
   QList<UVEtudiant> dejaValidees;
@@ -11,6 +12,15 @@ void Formation::ajouterSemestre (const Semestre* s) {
     throw semestreInvalideErreur(dejaValidees);
   }
   this->_semestres.append(*s);
+}
+
+void Formation::supprimerSemestre (int id) {
+  for (int i = 0; i < this->_semestres.count(); i++) {
+    if (this->_semestres[i].id() == id) {
+      this->_semestres.removeAt(i);
+      return;
+    }
+  }
 }
 
 bool Formation::verifierSemestre (const Semestre &s, QList<UVEtudiant>* dejaValidees) const {
@@ -49,6 +59,8 @@ void Formation::fromXml (const QDomNode& noeud) {
     throw "Fichier XML invalide";
   }
 
+  QDomElement e = noeud.toElement();
+  this->nom(e.attribute("nom"));
   QDomNodeList child = noeud.childNodes();
   for (int i = 0; i < child.count(); i++) {
     if (child.at(i).nodeName() != Semestre::XML_NODE_NAME) {
@@ -64,6 +76,7 @@ QDomElement Formation::toXml () const {
   QDomDocument doc;
   QDomElement formation = doc.createElement(Formation::XML_NODE_NAME);
 
+  formation.setAttribute("nom", this->nom());
   for (int i = 0; i < this->semestres().count(); i++) {
     formation.appendChild(this->semestres()[i].toXml());
   }
