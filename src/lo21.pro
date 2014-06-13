@@ -21,7 +21,10 @@ SOURCES += main.cpp\
     model/catalogue.cpp \
     model/uv.cpp \
     view/qformation.cpp \
-    view/qsemestre.cpp
+    view/qsemestre.cpp \
+    view/qformationdialog.cpp \
+    controller/mainwindowcontroller.cpp \
+    view/quserdialog.cpp
 
 HEADERS  += view/mainwindow.h \
     model/etudiant.h \
@@ -33,11 +36,17 @@ HEADERS  += view/mainwindow.h \
     model/semestreInvalideErreur.h \
     model/xmlConvertible.h \
     view/qformation.h \
-    view/qsemestre.h
+    view/qsemestre.h \
+    view/qformationdialog.h \
+    controller/mainwindowcontroller.h \
+    view/quserdialog.h
 
 FORMS    += view/mainwindow.ui \
     view/qsemestre.ui \
-    view/qformation.ui
+    view/qformation.ui \
+    view/qformationdialog.ui \
+    view/qsemestredialog.ui \
+    view/quserdialog.ui
 
 INCLUDEPATH += view
 
