@@ -60,7 +60,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableUV"/>
+    <widget class="QTableView" name="tableUV"/>
    </item>
   </layout>
  </widget>

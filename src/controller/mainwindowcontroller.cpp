@@ -3,6 +3,8 @@
 
 #include "model/formationHorsUtc.h"
 #include "formationcontroller.h"
+#include "semestrecontroller.h"
+#include "model/semestre.h"
 
 MainWindowController::MainWindowController(QApplication& a, QObject *parent):
 	QObject(parent), a(&a), mainWindow(new MainWindow()), etudiant(0)
@@ -43,6 +45,12 @@ void MainWindowController::userSelect(const int index){
 			mainWindow->addFormation(qFormation);
 			connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
 		}
+		/*foreach(Semestre* s, etudiant->formationUtc()->semestres()){
+			QSemestre* qSemestre = new QSemestre();
+			SemestreController* semestreController = new SemestreController(s, qSemestre);
+			mainWindow->addSemestre(qSemestre);
+			//connect(semestreController, SIGNAL())
+		}*/
 	}
 
 	//Init main Window Events
@@ -87,4 +95,8 @@ void MainWindowController::addFormation(){
 void MainWindowController::removeFormation(FormationHorsUtc *formation){
 	qDebug() << "remove Formation Clicked";
 	etudiant->supprimerFormation(formation->id());
+}
+void MainWindowController::removeSemestre(Semestre *semestre){
+	qDebug() << "remove Semestre Clicked";
+	etudiant->formationUtc()->supprimerSemestre(semestre->id());
 }

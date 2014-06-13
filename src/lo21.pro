@@ -28,6 +28,7 @@ SOURCES += main.cpp\
     view/qsemestredialog.cpp \
     controller/mainwindowcontroller.cpp \
     controller/formationcontroller.cpp \
+    controller/semestrecontroller.cpp
 
 
 HEADERS  += \
@@ -47,7 +48,8 @@ HEADERS  += \
     view/quserdialog.h \    
     view/qsemestredialog.h \
     controller/mainwindowcontroller.h \
-    controller/formationcontroller.h
+    controller/formationcontroller.h \
+    controller/semestrecontroller.h
 
 FORMS    += view/mainwindow.ui \
     view/qsemestre.ui \

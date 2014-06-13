@@ -25,6 +25,9 @@ void MainWindow::setName(const QString &name, const QString &surname){
 void MainWindow::addFormation(QFormation* formation){
 	ui->layoutFormations->addWidget(formation);
 }
+void MainWindow::addSemestre(QSemestre *semestre){
+	ui->layoutSemestres->addWidget(semestre);
+}
 
 void MainWindow::buttonAddFormationClicked(){
 	qDebug() << "addFormation clicked";
