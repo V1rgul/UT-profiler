@@ -16,7 +16,6 @@ class QFormation : public QWidget
 		void addSemestreClicked();
 	public slots:
 		void buttonAddSemestreClicked();
-		void buttonEditClicked();
 
 	private:
 		Ui::QFormation ui;

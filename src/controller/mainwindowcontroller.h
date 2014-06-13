@@ -6,6 +6,8 @@
 #include "mainwindow.h"
 #include "quserdialog.h"
 #include "model/etudiant.h"
+#include "qformation.h"
+#include <QStringList>
 
 class MainWindowController : public QObject
 {
@@ -20,12 +22,16 @@ class MainWindowController : public QObject
 		void userSelectRejected();
 		void nameChanged(const QString & name, const QString & surname);
 		void addFormation();
+		void removeFormation(Formation *formation);
+
+		void exiting();
 	private:
 		QApplication *a;
 		QUserDialog *userDialog;
 		MainWindow *mainWindow;
 
 		Etudiant *etudiant;
+		QStringList etudiantList;
 
 };
 

@@ -19,7 +19,3 @@ void QFormation::buttonAddSemestreClicked(){
 	qDebug() << "click on addSemestre";
 	emit addSemestreClicked();
 }
-
-void QFormation::buttonEditClicked(){
-
-}
