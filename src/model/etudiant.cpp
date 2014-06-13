@@ -86,6 +86,10 @@ Etudiant* Etudiant::charger (const QString& nom, const QString& prenom) {
 }
 
 void Etudiant::sauvegarder () {
+  if (this->nom().isEmpty() || this->prenom().isEmpty()) {
+    throw QString("L'étudiant ne peut être sauvegardé sans nom et prénom");
+  }
+
   QDir dir("./etudiant");
   if (!dir.exists()) {
     QDir().mkdir("./etudiant");
@@ -108,7 +112,7 @@ void Etudiant::sauvegarder () {
 }
 
 QStringList Etudiant::listeEtudiants () {
-  QStringList fichiers = QDir("./etudiant").entryList();
+  QStringList fichiers = QDir("./etudiant").entryList(QDir::Files | QDir::NoDotAndDotDot);
   for (int i = 0; i < fichiers.count(); i++) {
     fichiers[i] = fichiers[i].replace('_', ' ');
     fichiers[i].resize(fichiers[i].length() - 4);
