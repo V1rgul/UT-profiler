@@ -10,7 +10,7 @@ QString Etudiant::nomFichier () const {
   return "./etudiant/" + this->nom() + "_" + this->prenom() + ".xml";
 }
 
-void Etudiant::ajouterFormation (Formation f) {
+void Etudiant::ajouterFormation (Formation& f) {
   this->_formations.append(f);
 }
 

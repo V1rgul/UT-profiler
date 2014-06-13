@@ -22,7 +22,7 @@ class Etudiant {
     static QStringList listeEtudiants ();
 
     void sauvegarder ();
-    void ajouterFormation (Formation f);
+    void ajouterFormation (Formation& f);
     void supprimerFormation (int id);
 
     void fromXml (QDomNode& noeud);
