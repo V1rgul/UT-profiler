@@ -17,7 +17,10 @@
 class Etudiant {
   public:
     const static QString XML_NODE_NAME;
-    static Etudiant* charger (const QString& chemin);
+    static Etudiant* charger (const QString& nom, const QString& prenom);
+    static Etudiant* charger (const QString& nomComplet);
+    static QStringList listeEtudiants ();
+
     void sauvegarder ();
     void ajouterFormation (Formation f);
 
@@ -36,8 +39,7 @@ class Etudiant {
     QString _nom; 
     QString _prenom;
 
-    QString* nomFichier () const;
-    QFile* fichier (QIODevice::OpenMode mode) const;
+    QString nomFichier () const;
 };
 
 #endif

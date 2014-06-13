@@ -6,19 +6,8 @@
 
 const QString Etudiant::XML_NODE_NAME = "etudiant";
 
-QString* Etudiant::nomFichier () const {
-  return new QString(this->nom() + "_" + this->prenom() + ".xml");
-}
-
-QFile* Etudiant::fichier (QIODevice::OpenMode mode) const {
-  QString* n = this->nomFichier();
-  QFile *f = new QFile(*n);
-
-  if(!f->open(mode)) {
-    return NULL;
-  }
-
-  return f; 
+QString Etudiant::nomFichier () const {
+  return "./etudiant/" + this->nom() + "_" + this->prenom() + ".xml";
 }
 
 void Etudiant::ajouterFormation (Formation f) {
@@ -58,8 +47,17 @@ void Etudiant::fromXml (QDomNode& noeud) {
   }
 }
 
-Etudiant* Etudiant::charger (const QString& chemin) {
-  QFile f(chemin);
+Etudiant* Etudiant::charger (const QString& nomComplet) {
+  QStringList s = nomComplet.split(' ');
+  return Etudiant::charger (s.at(0), s.at(1));
+}
+
+Etudiant* Etudiant::charger (const QString& nom, const QString& prenom) {
+  Etudiant *e = new Etudiant();
+  e->nom(nom);
+  e->prenom(prenom);
+
+  QFile f(e->nomFichier());
   QDomDocument dom = QDomDocument("doc");
   QString err;
 
@@ -72,7 +70,6 @@ Etudiant* Etudiant::charger (const QString& chemin) {
   }
 
   QDomElement domElement = dom.documentElement();
-  Etudiant *e = new Etudiant();
   e->fromXml(domElement);
 
   f.close();
@@ -80,19 +77,33 @@ Etudiant* Etudiant::charger (const QString& chemin) {
 }
 
 void Etudiant::sauvegarder () {
+  QDir dir("./etudiant");
+  if (!dir.exists()) {
+    QDir().mkdir("./etudiant");
+  }
   QDomDocument doc;
-  QFile *f;
+  QFile f(this->nomFichier());
   QString err;
 
-  if(!(f = this->fichier(QIODevice::ReadWrite | QIODevice::Truncate))) {
-    throw "Etudiant::sauvegarder: Impossible d'ouvrir le fichier";
+  if(!(f.open(QIODevice::ReadWrite | QIODevice::Truncate))) {
+    throw f.errorString();
   }
 
   doc.appendChild(doc.createProcessingInstruction("xml", "version='1.0' encoding='UTF-8'")); 
   doc.appendChild(this->toXml());
 
-  QTextStream out(f);
+  QTextStream out(&f);
   out << doc.toString();
 
-  f->close(); 
+  f.close(); 
+}
+
+QStringList Etudiant::listeEtudiants () {
+  QStringList fichiers = QDir("./etudiant").entryList();
+  for (int i = 0; i < fichiers.count(); i++) {
+    fichiers[i] = fichiers[i].replace('_', ' ');
+    fichiers[i].resize(fichiers[i].length() - 4);
+  }
+
+  return fichiers;
 }
