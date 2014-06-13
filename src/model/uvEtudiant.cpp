@@ -4,6 +4,20 @@
 
 const QString UVEtudiant::XML_NODE_NAME = "uv";
 
+QSet<QString> UVEtudiant::listeNotes () {
+  QSet<QString> set;
+  set.insert("A");
+  set.insert("B");
+  set.insert("C");
+  set.insert("D");
+  set.insert("E");
+  set.insert("F");
+  set.insert("FX");
+  set.insert("ABS");
+
+  return set;
+}
+
 void UVEtudiant::fromXml (const QDomNode& noeud) {
   if (noeud.nodeName() != UVEtudiant::XML_NODE_NAME) {
     throw "Fichier XML invalide";
