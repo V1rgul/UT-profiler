@@ -39,3 +39,10 @@ void MainWindow::editSurnameChanged(const QString & text){
 	qDebug() << "nameChanged" << ui->editNom->text() <<  text;
 	emit(nameChanged(ui->editNom->text(), text));
 }
+
+
+QWidget* MainWindow::getTabEtudiant(){
+	return ui->tabEtudiant;
+}
+
+

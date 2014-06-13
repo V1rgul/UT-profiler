@@ -18,6 +18,7 @@ public:
 
 	void setName(const QString &name, const QString &surname);
 	void addFormation(QFormation &formation);
+	QWidget* getTabEtudiant();
 
 signals:
 	void addFormationClicked();

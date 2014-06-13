@@ -5,6 +5,7 @@
 #include <QApplication>
 #include "mainwindow.h"
 #include "quserdialog.h"
+#include "model/etudiant.h"
 
 class MainWindowController : public QObject
 {
@@ -15,12 +16,16 @@ class MainWindowController : public QObject
 	signals:
 
 	public slots:
-		void userSelect(int index);
+		void userSelect(const int index);
 		void userSelectRejected();
+		void nameChanged(const QString & name, const QString & surname);
 	private:
 		QApplication *a;
 		QUserDialog *userDialog;
 		MainWindow *mainWindow;
+
+		Etudiant *etudiant;
+
 };
 
 #endif // MAINWINDOWCONTROLLER_H
