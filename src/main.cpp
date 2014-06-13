@@ -10,11 +10,15 @@
 #include "model/semestre.h"
 #include "model/uvEtudiant.h"
 
+#include "view/qformation.h"
+#include "view/qsemestre.h"
+
 int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
   MainWindow w;
   w.show();
 
+  /*
   Catalogue* c;
   try {
     c = Catalogue::charger();
@@ -77,6 +81,14 @@ int main(int argc, char *argv[]) {
     box.setText(e2);
     box.exec();
   }
+  */
+
+  QFormation formation1("Test Formation");
+  w.addFormation(formation1);
+
+  QSemestre semestre1;
+  formation1.addSemestre(semestre1);
+
 
   return a.exec();
 }

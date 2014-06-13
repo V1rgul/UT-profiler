@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     model/semestre.cpp \
     model/uvEtudiant.cpp \
     model/catalogue.cpp \
-    model/uv.cpp
+    model/uv.cpp \
+    view/qformation.cpp \
+    view/qsemestre.cpp
 
 HEADERS  += view/mainwindow.h \
     model/etudiant.h \
@@ -29,9 +31,15 @@ HEADERS  += view/mainwindow.h \
     model/catalogue.h \
     model/uv.h \
     model/semestreInvalideErreur.h \
-    model/xmlConvertible.h
+    model/xmlConvertible.h \
+    view/qformation.h \
+    view/qsemestre.h
 
-FORMS    += view/mainwindow.ui
+FORMS    += view/mainwindow.ui \
+    view/qsemestre.ui \
+    view/qformation.ui
+
+INCLUDEPATH += view
 
 RESOURCES     = ressources.qrc \
     ressources.qrc
