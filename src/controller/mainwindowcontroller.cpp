@@ -1,6 +1,10 @@
 #include <QtDebug>
 #include "mainwindowcontroller.h"
 
+#include "model/formation.h"
+#include "qformation.h"
+#include "formationcontroller.h"
+
 MainWindowController::MainWindowController(QApplication& a, QObject *parent):
 	QObject(parent), a(&a), mainWindow(new MainWindow()), etudiant(0)
 {
@@ -33,6 +37,7 @@ void MainWindowController::userSelect(const int index){
 
 	//Init main Window
 	connect(mainWindow, SIGNAL(nameChanged(QString,QString)), this, SLOT(nameChanged(QString,QString)));
+	connect(mainWindow, SIGNAL(addFormationClicked()), this, SLOT(addFormation()));
 
 	mainWindow->show();
 }
@@ -46,4 +51,12 @@ void MainWindowController::userSelectRejected(){
 void MainWindowController::nameChanged(const QString & name, const QString & surname){
 	etudiant->nom(name);
 	etudiant->prenom(surname);
+}
+
+void MainWindowController::addFormation(){
+	qDebug() << "add Formation Clicked";
+	QFormation* qFormation = new QFormation();
+	FormationController* formationController = new FormationController(new Formation(), qFormation);
+	formationController->edit();
+	mainWindow->addFormation(qFormation);
 }
