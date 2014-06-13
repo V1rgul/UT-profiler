@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "qformation.h"
+#include "qsemestre.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,6 +19,7 @@ public:
 
 	void setName(const QString &name, const QString &surname);
 	void addFormation(QFormation *formation);
+	void addSemestre(QSemestre *semestre);
 	QWidget* getTabEtudiant();
 
 signals:
