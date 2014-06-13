@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<etudiant nom="Hendrix" prenom="Jimi">
+ <formation-utc nom="">
+  <semestre nom="" saison="printemps">
+   <uv note="" tag="NF24"/>
+   <uv note="" tag="PH09"/>
+   <uv note="" tag="PS91"/>
+  </semestre>
+  <semestre nom="" saison="automne">
+   <uv note="" tag="LG30"/>
+   <uv note="" tag="MC05"/>
+   <uv note="" tag="SA11"/>
+  </semestre>
+ </formation-utc>
+ <formation-hors-utc nom="DUT Informatique" credits="120"/>
+ <formation-hors-utc nom="Semestre USA" credits="30"/>
+</etudiant>
