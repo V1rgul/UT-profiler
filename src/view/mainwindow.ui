@@ -39,7 +39,7 @@
        <attribute name="title">
         <string>Etudiant</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
@@ -84,6 +84,22 @@
            </spacer>
           </item>
          </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Formation UTC</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QPushButton" name="buttonAddSemestre">
+             <property name="text">
+              <string>Ajouter un Semestre</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
