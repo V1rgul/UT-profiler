@@ -22,6 +22,7 @@ class MainWindowController : public QObject
 		void userSelectRejected();
 		void nameChanged(const QString & name, const QString & surname);
 		void addFormation();
+		void addSemestre();
 		void removeFormation(FormationHorsUtc *formation);
 
 		void exiting();

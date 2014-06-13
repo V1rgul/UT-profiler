@@ -23,12 +23,16 @@ void MainWindow::setName(const QString &name, const QString &surname){
 }
 
 void MainWindow::addFormation(QFormation* formation){
-	ui->tabEtudiant->layout()->addWidget(formation);
+	ui->layoutFormations->addWidget(formation);
 }
 
 void MainWindow::buttonAddFormationClicked(){
 	qDebug() << "addFormation clicked";
 	emit(addFormationClicked());
+}
+void MainWindow::buttonAddSemestreClicked(){
+	qDebug() << "addSemestre clicked";
+	emit(addSemestreClicked());
 }
 
 void MainWindow::editNameChanged(const QString & text){
