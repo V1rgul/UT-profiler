@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<etudiant nom="Stevie" prenom="Wonder">
+ <formation-utc nom="">
+  <semestre saison="printemps" nom="">
+   <uv note="C" tag="NF24"/>
+   <uv note="FX" tag="PH09"/>
+   <uv note="B" tag="PS91"/>
+  </semestre>
+  <semestre saison="automne" nom="">
+   <uv note="" tag="LG30"/>
+   <uv note="" tag="MC05"/>
+   <uv note="A" tag="SA11"/>
+  </semestre>
+ </formation-utc>
+</etudiant>

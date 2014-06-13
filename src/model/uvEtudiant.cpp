@@ -1,5 +1,6 @@
 #include <QtXml>
 
+#include "catalogue.h"
 #include "uvEtudiant.h"
 
 const QString UVEtudiant::XML_NODE_NAME = "uv";
@@ -24,8 +25,8 @@ void UVEtudiant::fromXml (const QDomNode& noeud) {
   }
   
   QDomElement e = noeud.toElement();
-  this->tag(e.attribute("tag"));
-  //this->note(e.attribute("note"));
+  this->_details = (*(Catalogue::instance()))[e.attribute("tag")];
+  this->note(e.attribute("note"));
 }
 
 QDomElement UVEtudiant::toXml () const {

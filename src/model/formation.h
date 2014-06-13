@@ -8,7 +8,10 @@
 
 class Formation : public XmlConvertible {
   public:
-    Formation () { _id = idCpt++; }
+    Formation () { 
+      _id = idCpt++; 
+      _credits = 0;
+    }
     virtual ~Formation () {}
 
     inline unsigned int id () const { return _id; }

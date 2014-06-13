@@ -14,47 +14,41 @@
 int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
 
-
-  /*Catalogue* c;
-  try {
-    c = Catalogue::charger();
-  } catch (const char* e) {
-    qDebug() << e;
-  }
+  const Catalogue* c = Catalogue::instance();
 
   Etudiant e;
-  e.nom("Stevie");
-  e.prenom("Wonder");
+  e.nom("Potter");
+  e.prenom("Harry");
 
-  Formation f;
   Semestre s1, s2;
-  UVEtudiant uv1, uv2, uv3, uv4, uv5, uv6;
+  UVEtudiant uv1(*((*c)["NF16"])), 
+             uv2(*((*c)["MB11"]));
 
-  uv1.tag("PS91"); uv1.note("B");
-  uv2.tag("PH09"); uv2.note("FX");
-  uv3.tag("NF24"); uv3.note("C");
-  uv4.tag("SA11"); uv4.note("A");
-  uv5.tag("LG30");
-  uv6.tag("MC05");
+  uv1.note("B");
+  uv2.note("FX");
+
+  s1.saison(Semestre::PRINTEMPS);
 
   s1.ajouterUv(&uv1);
   s1.ajouterUv(&uv2);
-  s1.ajouterUv(&uv3);
-  s2.ajouterUv(&uv4);
-  s2.ajouterUv(&uv5);
-  s2.ajouterUv(&uv6);
 
-  f.ajouterSemestre(&s1);
-  f.ajouterSemestre(&s2);
+  e.formationUtc()->ajouterSemestre(&s1);
+  e.formationUtc()->ajouterSemestre(&s2);
 
-  e.ajouterFormation(f);
+  FormationHorsUtc f1, f2;
+  f1.nom("DUT Informatique");
+  f1.credits(120);
+  f2.nom("Semestre USA");
+  f2.credits(30);
 
+  e.ajouterFormation(&f1);
+  e.ajouterFormation(&f2);
   try {
-    e.sauvegarder();  //test la sauvegarde d'un etudiant dans un fichier xml
-    Etudiant *e1 = Etudiant::charger("Abou Baker"); // ainsi que le chargement d'un fichier xml
+    e.sauvegarder(); // test la sauvegarde d'un etudiant dans un fichier xml
+    Etudiant *e1 = Etudiant::charger("Newton Isaac"); // ainsi que le chargement d'un fichier xml
     qDebug() << "nom: " << e1->nom() << " prenom: " << e1->prenom();
   }
-  // TODO: Ameliorer la gestion d'erreur
+  //TODO: Ameliorer la gestion d'erreur
   catch (QString& e) {
     QMessageBox box;
     box.setIcon(QMessageBox::Critical);
@@ -65,7 +59,7 @@ int main(int argc, char *argv[]) {
     box.setIcon(QMessageBox::Critical);
     box.setText(e2);
     box.exec();
-  }*/
+  }
 
 
   MainWindowController mainWindowController(a);

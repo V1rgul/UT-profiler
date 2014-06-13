@@ -4,29 +4,46 @@
 #include "uv.h"
 
 const QString Catalogue::XML_NODE_NAME = "catalogue";
+const Catalogue* Catalogue::_instance = 0;
 
-void Catalogue::ajouterUv (const UV& uv) {
-  if (this->existe(uv.tag())) {
+const Catalogue * Catalogue::instance () {
+  if (!_instance) {
+    _instance = Catalogue::charger();
+  }
+
+  return _instance;
+}
+
+UV* Catalogue::operator[] (QString tag) {
+  return this->uvs()[tag];
+}
+
+const UV* Catalogue::operator[] (QString tag) const {
+  return this->uvs()[tag];
+}
+
+void Catalogue::ajouterUv (UV* uv) {
+  if (this->existe(uv->tag())) {
     throw std::invalid_argument("L'uv existe déjà");
   } 
 
-  this->_uvs[uv.tag()] = uv;
+  this->_uvs[uv->tag()] = uv;
 }
 
 void Catalogue::supprimerUv (const QString tag) {
   this->_uvs.remove(tag);
 }
 
-void Catalogue::editerUv (const QString oldTag, const UV& uv) {
-  if (uv.tag() != oldTag) {
-    if (this->existe(uv.tag())) {
+void Catalogue::editerUv (const QString oldTag, UV* uv) {
+  if (uv->tag() != oldTag) {
+    if (this->existe(uv->tag())) {
       throw std::invalid_argument("L'uv existe déjà");
     }
 
     this->_uvs.remove(oldTag);
   } 
 
-  this->_uvs[uv.tag()] = uv; 
+  this->_uvs[uv->tag()] = uv; 
 }
 
 bool Catalogue::existe(QString tag) {
@@ -37,11 +54,11 @@ QDomElement Catalogue::toXml () const {
   QDomDocument doc;
   QDomElement catalogue = doc.createElement(Catalogue::XML_NODE_NAME);
   
-  QMap<QString, UV> uvs = this->uvs();
+  QMap<QString, UV*> uvs = this->uvs();
   QList<QString> keys = uvs.keys();
 
   for (int i = 0; i < keys.count(); i++) {
-    catalogue.appendChild(uvs[keys[i]].toXml());
+    catalogue.appendChild(uvs[keys[i]]->toXml());
   }
 
   return catalogue;
@@ -61,7 +78,7 @@ void Catalogue::fromXml(const QDomNode& noeud) {
     }
     UV* uv = new UV();
     uv->fromXml(child.at(i));
-    this->ajouterUv(*uv);
+    this->ajouterUv(uv);
   }
 }
 
@@ -112,12 +129,12 @@ void Catalogue::sauvegarder () {
 
 QString Catalogue::toString () {
   QString ret = "Catalogue: \n";
-  QMap<QString, UV> uvs = this->uvs();
+  QMap<QString, UV*> uvs = this->uvs();
   QList<QString> keys = uvs.keys();
 
   for (int i = 0; i < keys.count(); i++) {
     ret += "*******************************\n";
-    ret += uvs[keys[i]].toString();
+    ret += uvs[keys[i]]->toString();
   }
   ret += "*******************************\n";
 

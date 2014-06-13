@@ -7,11 +7,11 @@
 const QString Semestre::XML_NODE_NAME = "semestre";
 int Semestre::idCpt = 0;
 
-void Semestre::ajouterUv (const UVEtudiant* uv) {
+void Semestre::ajouterUv (UVEtudiant* uv) {
   if (this->dejaChoisie(uv->tag())) {
     throw std::invalid_argument("Uv déjà choisie !");
   }
-  this->_uvs[uv->tag()] = *uv;
+  this->_uvs[uv->tag()] = uv;
 }
 
 void Semestre::supprimerUv (const QString& tag) {
@@ -37,7 +37,7 @@ void Semestre::fromXml (const QDomNode& noeud) {
     if (child.at(i).nodeName() != UVEtudiant::XML_NODE_NAME) {
       throw "Les noeuds semestre ne peuvent contenir que des noeuds uv";
     }
-    UVEtudiant *uv = new UVEtudiant();
+    UVEtudiant *uv = new UVEtudiant(child.at(i));
     uv->fromXml(child.at(i));
     this->ajouterUv(uv);
   }
@@ -52,7 +52,7 @@ QDomElement Semestre::toXml () const {
                                   "printemps" : "automne");
   QList<QString> tags = this->uvs().keys();
   for (int i = 0; i < tags.count(); i++) { 
-    semestre.appendChild(this->uvs().value(tags[i]).toXml());
+    semestre.appendChild(this->uvs().value(tags[i])->toXml());
   }
 
   return semestre;

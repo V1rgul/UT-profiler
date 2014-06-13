@@ -10,23 +10,29 @@ class Catalogue : public XmlConvertible {
   public:
     static const QString XML_NODE_NAME;
 
-    void ajouterUv (const UV& uv);
+    static const Catalogue* instance ();
+
+    UV* operator[] (QString tag);
+    const UV* operator[] (QString tag) const;
+
+    void ajouterUv (UV* uv);
     void supprimerUv (const QString uv);
-    void editerUv (const QString oldTag, const UV& uv);
+    void editerUv (const QString oldTag, UV* uv);
     bool existe (QString tag);
 
-    static Catalogue* charger ();
     void sauvegarder ();
 
     void fromXml (const QDomNode& noeud);
     QDomElement toXml () const;
 
-    inline QMap<QString, UV> uvs () const { return _uvs; }
+    inline QMap<QString, UV*> uvs () const { return _uvs; }
 
     QString toString ();
   private:
     Catalogue () {} 
-    QMap<QString, UV> _uvs;
+    static const Catalogue* _instance;
+    static Catalogue* charger ();
+    QMap<QString, UV*> _uvs;
 };
 
 #endif

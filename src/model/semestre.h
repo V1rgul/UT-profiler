@@ -16,12 +16,12 @@ class Semestre : public XmlConvertible {
     Semestre () { _id = idCpt++; }
 
     const static QString XML_NODE_NAME;
-    void ajouterUv (const UVEtudiant* uv);
+    void ajouterUv (UVEtudiant* uv);
     void supprimerUv (const QString& tag);
 
     void fromXml (const QDomNode& noeud);
     QDomElement toXml () const;
-    inline QMap<QString, UVEtudiant> uvs () const { return _uvs; }
+    inline QMap<QString, UVEtudiant*> uvs () const { return _uvs; }
     inline int id () const { return _id; }
     inline QString nom () const { return _nom; }
     inline enum Saison saison () const { return _saison; }
@@ -35,7 +35,7 @@ class Semestre : public XmlConvertible {
     QString _nom;
     enum Saison _saison;
     bool dejaChoisie(const QString &tag) const;
-    QMap<QString, UVEtudiant> _uvs;
+    QMap<QString, UVEtudiant*> _uvs;
 };
 
 #endif

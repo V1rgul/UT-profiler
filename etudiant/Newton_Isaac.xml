@@ -1,2 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<etudiant nom="Newton" prenom="Isaac"/>
+<etudiant nom="Newton" prenom="Isaac">
+ <formation-utc nom=""/>
+ <formation-hors-utc nom="" credits="10612"/>
+ <formation-hors-utc nom="" credits="10612"/>
+</etudiant>

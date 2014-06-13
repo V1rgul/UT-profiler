@@ -5,17 +5,17 @@
 
 const QString FormationUtc::XML_NODE_NAME = "formation-utc";
 
-void FormationUtc::ajouterSemestre (const Semestre* s) {
+void FormationUtc::ajouterSemestre (Semestre* s) {
   QList<UVEtudiant> dejaValidees;
   if (!this->verifierSemestre(*s, &dejaValidees)) {
     throw semestreInvalideErreur(dejaValidees);
   }
-  this->_semestres.append(*s);
+  this->_semestres.append(s);
 }
 
 void FormationUtc::supprimerSemestre (int id) {
   for (int i = 0; i < this->_semestres.count(); i++) {
-    if (this->_semestres[i].id() == id) {
+    if (this->_semestres[i]->id() == id) {
       this->_semestres.removeAt(i);
       return;
     }
@@ -23,13 +23,13 @@ void FormationUtc::supprimerSemestre (int id) {
 }
 
 bool FormationUtc::verifierSemestre (const Semestre &s, QList<UVEtudiant>* dejaValidees) const {
-  QList<UVEtudiant> uvs = s.uvs().values();
-  UVEtudiant ret;
+  QList<UVEtudiant*> uvs = s.uvs().values();
+  UVEtudiant *ret = 0;
 
   for (int i = 0; i < uvs.count(); i++) {
-    if (uvDejaValidee(uvs[i].tag(), &ret)) {
+    if (uvDejaValidee(uvs[i]->tag(), ret)) {
       if (dejaValidees) {
-        dejaValidees->append(ret);
+        dejaValidees->append(*ret);
       }  
       else {
         return false;
@@ -42,10 +42,10 @@ bool FormationUtc::verifierSemestre (const Semestre &s, QList<UVEtudiant>* dejaV
 }
 
 bool FormationUtc::uvDejaValidee(const QString& tag, UVEtudiant* uv) const {
-  QList<Semestre> s = this->semestres();
+  QList<Semestre*> s = this->semestres();
   for (int i = 0; i < s.count(); i++) {
-    if (s[i].uvs().contains(tag)) {
-      *uv = s[i].uvs().value(tag);
+    if (s[i]->uvs().contains(tag)) {
+      uv = s[i]->uvs().value(tag);
       return true;
     }
   }
@@ -77,7 +77,7 @@ QDomElement FormationUtc::toXml () const {
 
   formation.setAttribute("nom", this->nom());
   for (int i = 0; i < this->semestres().count(); i++) {
-    formation.appendChild(this->semestres()[i].toXml());
+    formation.appendChild(this->semestres()[i]->toXml());
   }
 
   return formation;
