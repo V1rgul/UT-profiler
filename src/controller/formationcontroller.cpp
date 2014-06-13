@@ -2,7 +2,7 @@
 
 
 FormationController::FormationController(FormationHorsUtc* formation, QFormation* qFormation, QObject *parent) :
-	QObject(parent), formation(formation), qFormation(qFormation), dialog(new QFormationDialog())
+	QObject(parent), formation(formation), qFormation(qFormation)
 {
 	connect(this, SIGNAL(_removed()), qFormation, SLOT(deleteLater()));
 	connect(this, SIGNAL(_removed()), this, SLOT(deleteLater()));
@@ -13,7 +13,7 @@ FormationController::FormationController(FormationHorsUtc* formation, QFormation
 
 
 void FormationController::editEvent(const QString name, const int credits){
-	formation->name(name);
+	formation->nom(name);
 	formation->credits(credits);
 }
 

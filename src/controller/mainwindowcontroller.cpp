@@ -37,7 +37,7 @@ void MainWindowController::userSelect(const int index){
 	else{
 		etudiant = Etudiant::charger(etudiantList.at(index));
 		mainWindow->setName(etudiant->nom(), etudiant->prenom());
-		foreach(FormationHorsUtc* f, etudiant->formations()){
+		foreach(FormationHorsUtc* f, etudiant->formationsHorsUtc()){
 			QFormation* qFormation = new QFormation();
 			FormationController* formationController = new FormationController(f, qFormation);
 			mainWindow->addFormation(qFormation);

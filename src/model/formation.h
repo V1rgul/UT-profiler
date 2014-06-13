@@ -20,7 +20,6 @@ class Formation : public XmlConvertible {
     virtual void fromXml (const QDomNode& noeud) = 0;
     virtual QDomElement toXml () const = 0;
 
-    virtual bool utc () = 0;
   private:
     static int idCpt;
     int _id;
