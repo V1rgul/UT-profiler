@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<etudiant nom="Abou" prenom="Baker">
+ <formation>
+  <semestre>
+   <uv tag="MB11" note="-368581256"/>
+   <uv tag="NF16" note="-314895672"/>
+   <uv tag="SR01" note="-314895672"/>
+  </semestre>
+  <semestre>
+   <uv tag="LO21" note="4301920"/>
+   <uv tag="NF17" note="-368580792"/>
+   <uv tag="SR02" note="6436872"/>
+  </semestre>
+ </formation>
+</etudiant>
