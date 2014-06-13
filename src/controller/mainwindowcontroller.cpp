@@ -37,6 +37,12 @@ void MainWindowController::userSelect(const int index){
 	else{
 		etudiant = Etudiant::charger(etudiantList.at(index));
 		mainWindow->setName(etudiant->nom(), etudiant->prenom());
+		foreach(Formation f, etudiant->formations()){
+			QFormation* qFormation = new QFormation();
+			FormationController* formationController = new FormationController(&f, qFormation);
+			mainWindow->addFormation(qFormation);
+			connect(formationController, SIGNAL(removed(Formation*)), this, SLOT(removeFormation(Formation*)));
+		}
 	}
 
 	//Init main Window Events
@@ -69,6 +75,7 @@ void MainWindowController::addFormation(){
 	Formation* formation = new Formation();
 	FormationController* formationController = new FormationController(formation, qFormation);
 	mainWindow->addFormation(qFormation);
+	etudiant->ajouterFormation(*formation);
 	connect(formationController, SIGNAL(removed(Formation*)), this, SLOT(removeFormation(Formation*)));
 	formationController->edit();
 }
