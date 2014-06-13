@@ -7,9 +7,9 @@
 MainWindowController::MainWindowController(QApplication& a, QObject *parent):
 	QObject(parent), a(&a), mainWindow(new MainWindow()), etudiant(0)
 {
-	QStringList tmpList = Etudiant::listeEtudiants();
-	etudiantList = &tmpList;
-	userDialog = new QUserDialog(*etudiantList);
+	etudiantList = Etudiant::listeEtudiants();
+	qDebug() << "etudiant list" << etudiantList;
+	userDialog = new QUserDialog(etudiantList);
 	connect(userDialog, SIGNAL(selected(int)), this, SLOT(userSelect(int)));
 	connect(userDialog, SIGNAL(rejected()), this, SLOT(userSelectRejected()));
 	userDialog->show();
@@ -32,11 +32,10 @@ void MainWindowController::userSelect(const int index){
 	userDialog = 0;
 
 	//Init main Window Data
-	qDebug() << "etudiant list" << etudiantList;
 	if( index == -1)
 		etudiant = new Etudiant();
 	else{
-		etudiant = Etudiant::charger(etudiantList->at(index));
+		etudiant = Etudiant::charger(etudiantList.at(index));
 		mainWindow->setName(etudiant->nom(), etudiant->prenom());
 	}
 
@@ -44,9 +43,6 @@ void MainWindowController::userSelect(const int index){
 	connect(mainWindow, SIGNAL(nameChanged(QString,QString)), this, SLOT(nameChanged(QString,QString)));
 	connect(mainWindow, SIGNAL(addFormationClicked()), this, SLOT(addFormation()));
 	connect(a, SIGNAL(aboutToQuit()), this, SLOT(exiting()));
-
-	delete etudiantList;
-	etudiantList = 0;
 
 	mainWindow->show();
 }

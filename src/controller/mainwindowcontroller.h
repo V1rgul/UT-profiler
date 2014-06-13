@@ -31,7 +31,7 @@ class MainWindowController : public QObject
 		MainWindow *mainWindow;
 
 		Etudiant *etudiant;
-		QStringList *etudiantList;
+		QStringList etudiantList;
 
 };
 
