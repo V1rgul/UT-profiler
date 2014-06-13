@@ -45,12 +45,12 @@ void MainWindowController::userSelect(const int index){
 			mainWindow->addFormation(qFormation);
 			connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
 		}
-		/*foreach(Semestre* s, etudiant->formationUtc()->semestres()){
+		foreach(Semestre* s, etudiant->formationUtc()->semestres()){
 			QSemestre* qSemestre = new QSemestre();
 			SemestreController* semestreController = new SemestreController(s, qSemestre);
 			mainWindow->addSemestre(qSemestre);
-			//connect(semestreController, SIGNAL())
-		}*/
+			connect(semestreController, SIGNAL(removed(Semestre*)), this, SLOT(removeSemestre(Semestre*)));
+		}
 	}
 
 	//Init main Window Events

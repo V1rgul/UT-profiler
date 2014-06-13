@@ -12,12 +12,15 @@ class SemestreController : public QObject
 		explicit SemestreController(Semestre* semestre, QSemestre* qSemestre, QObject *parent = 0);
 		void loadInfo();
 	signals:
-
+		void removed(Semestre *formation);
+		void _removed();
 	public slots:
-
+		void remove();
 	private:
 		Semestre* semestre;
 		QSemestre* qSemestre;
+
+		QString date();
 };
 
 #endif // SEMESTRECONTROLLER_H

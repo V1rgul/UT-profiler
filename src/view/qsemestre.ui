@@ -60,7 +60,20 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableView" name="tableUV"/>
+    <widget class="QTableView" name="tableUV">
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>20</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>10</number>
+     </attribute>
+    </widget>
    </item>
   </layout>
  </widget>
