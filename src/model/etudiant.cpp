@@ -40,6 +40,8 @@ QDomElement Etudiant::toXml () const {
   etudiant.setAttribute("nom", this->nom());
   etudiant.setAttribute("prenom", this->prenom());
   
+  etudiant.appendChild(this->formationUtc()->toXml());
+
   for (int i = 0; i < this->formationsHorsUtc().count(); i++) {
     etudiant.appendChild(this->formationsHorsUtc()[i]->toXml());
   }
