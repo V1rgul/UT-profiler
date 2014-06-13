@@ -22,9 +22,11 @@ public:
 
 signals:
 	void addFormationClicked();
+	void addSemestreClicked();
 	void nameChanged(const QString & name, const QString & surname);
 public slots:
 	void buttonAddFormationClicked();
+	void buttonAddSemestreClicked();
 	void editNameChanged(const QString & text);
 	void editSurnameChanged(const QString & text);
 private:

@@ -39,7 +39,7 @@
        <attribute name="title">
         <string>Etudiant</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0,0">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
@@ -92,6 +92,22 @@
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
+            <layout class="QVBoxLayout" name="layoutSemestres"/>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="buttonAddSemestre">
              <property name="text">
               <string>Ajouter un Semestre</string>
@@ -102,15 +118,27 @@
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QPushButton" name="buttonAddFormation">
-            <property name="text">
-             <string>Ajouter une Formation</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="layoutFormations"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonAddFormation">
+          <property name="text">
+           <string>Ajouter une Formation</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

@@ -48,6 +48,7 @@ void MainWindowController::userSelect(const int index){
 	//Init main Window Events
 	connect(mainWindow, SIGNAL(nameChanged(QString,QString)), this, SLOT(nameChanged(QString,QString)));
 	connect(mainWindow, SIGNAL(addFormationClicked()), this, SLOT(addFormation()));
+	connect(mainWindow, SIGNAL(addSemestreClicked()), this, SLOT(addSemestre()));
 	connect(a, SIGNAL(aboutToQuit()), this, SLOT(exiting()));
 
 	mainWindow->show();
@@ -69,6 +70,10 @@ void MainWindowController::nameChanged(const QString & name, const QString & sur
 	etudiant->prenom(surname);
 }
 
+void MainWindowController::addSemestre(){
+	qDebug() << "add Semestre Clicked";
+
+}
 void MainWindowController::addFormation(){
 	qDebug() << "add Formation Clicked";
 	QFormation* qFormation = new QFormation();
