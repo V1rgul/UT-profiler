@@ -2,10 +2,7 @@
 #define QSEMESTREDIALOG_H
 
 #include <QDialog>
-
-namespace Ui {
-class QSemestreDialog;
-}
+#include "ui_qsemestredialog.h"
 
 class QSemestreDialog : public QDialog
 {
@@ -13,10 +10,9 @@ class QSemestreDialog : public QDialog
 
 	public:
 		explicit QSemestreDialog(QWidget *parent = 0);
-		~QSemestreDialog();
 
 	private:
-		Ui::QSemestreDialog *ui;
+		Ui::QSemestreDialog ui;
 };
 
 #endif // QSEMESTREDIALOG_H

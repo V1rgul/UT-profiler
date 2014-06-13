@@ -2,13 +2,7 @@
 #include "ui_qsemestredialog.h"
 
 QSemestreDialog::QSemestreDialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::QSemestreDialog)
+	QDialog(parent), ui()
 {
-	ui->setupUi(this);
-}
-
-QSemestreDialog::~QSemestreDialog()
-{
-	delete ui;
+	ui.setupUi(this);
 }
