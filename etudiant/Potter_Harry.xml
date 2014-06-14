@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<etudiant nom="Potter" prenom="Harry">
+ <formation-utc nom="">
+  <semestre saison="printemps" nom="">
+   <uv note="FX" tag="MB11"/>
+   <uv note="B" tag="NF16"/>
+  </semestre>
+  <semestre saison="automne" nom=""/>
+ </formation-utc>
+ <formation-hors-utc nom="DUT Informatique" credits="120"/>
+ <formation-hors-utc nom="Semestre USA" credits="30"/>
+ <preference note="5" uv="NF16"/>
+ <preference note="1" uv="SY02"/>
+</etudiant>
