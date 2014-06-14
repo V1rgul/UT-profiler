@@ -17,6 +17,7 @@ class SemestreDialogController : public QObject
 		void update();
 
 		void saisonChanged();
+		void yearChanged(int year);
 		void filterChanged(QStringList list);
 	private:
 		Etudiant* etudiant;

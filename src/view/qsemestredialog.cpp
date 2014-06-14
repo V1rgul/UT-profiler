@@ -6,7 +6,7 @@ QSemestreDialog::QSemestreDialog(QWidget *parent) :
 {
 	ui.setupUi(this);
 	connect(ui.buttonSaison, SIGNAL(clicked()), this, SLOT(saisonClicked()));
-
+	connect(ui.spinAnnee, SIGNAL(valueChanged(int)), this, SLOT(spinYearChanged(int)));
 
 	this->show();
 }
@@ -21,4 +21,12 @@ void QSemestreDialog::saisonClicked(){
 
 void QSemestreDialog::setSaison(QString s){
 	ui.buttonSaison->setText(s);
+}
+
+void QSemestreDialog::spinYearChanged(int year){
+	emit(yearChanged(year));
+}
+
+void QSemestreDialog::setYear(int year){
+	ui.spinAnnee->setValue(year);
 }

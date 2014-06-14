@@ -33,7 +33,7 @@ void SemestreController::update(){
 }
 
 QString SemestreController::date(){
-	QString date = QString("Annee");
+	QString date = QString::number(semestre->annee());
 	date.append(" ");
 	date.append( (semestre->saison() == Semestre::AUTOMNE)? "A" : "P" );
 	return date;
