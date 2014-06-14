@@ -15,10 +15,10 @@ SemestreController::SemestreController(Etudiant* etudiant, Semestre* semestre, Q
 	connect(qSemestre, SIGNAL(editClicked()), this, SLOT(edit()));
 
 
-	loadInfo();
+	update();
 }
 
-void SemestreController::loadInfo(){
+void SemestreController::update(){
 
 	qSemestre->setDate(date());
 
@@ -53,5 +53,6 @@ void SemestreController::remove(){
 }
 
 void SemestreController::edit(){
-	new SemestreDialogController(etudiant, semestre, qSemestre);
+	SemestreDialogController* c = new SemestreDialogController(etudiant, semestre, qSemestre);
+	connect(c, SIGNAL(updated()), this, SLOT(update()));
 }

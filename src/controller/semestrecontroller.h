@@ -11,13 +11,13 @@ class SemestreController : public QObject
 		Q_OBJECT
 	public:
 		explicit SemestreController(Etudiant* etudiant, Semestre* semestre, QSemestre* qSemestre, QObject *parent = 0);
-		void loadInfo();
 	signals:
 		void removed(Semestre *formation);
 		void _removed();
 	public slots:
 		void remove();
 		void edit();
+		void update();
 	private:
 		Etudiant* etudiant;
 		Semestre* semestre;

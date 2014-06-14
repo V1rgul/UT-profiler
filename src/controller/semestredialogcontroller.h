@@ -12,16 +12,14 @@ class SemestreDialogController : public QObject
 	public:
 		SemestreDialogController(Etudiant* etudiant, Semestre* semestre, QWidget* parent=0);
 	signals:
-
+		void updated();
 	public slots:
 		void saisonChanged();
-
+		void update();
 	private:
 		Etudiant* etudiant;
 		Semestre* semestre;
 		QSemestreDialog* semestreDialog;
-
-		void loadInfo();
 };
 
 #endif // SEMESTREDIALOGCONTROLLER_H
