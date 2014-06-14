@@ -25,14 +25,17 @@ class Semestre : public XmlConvertible {
     inline int id () const { return _id; }
     inline QString nom () const { return _nom; }
     inline enum Saison saison () const { return _saison; }
+    inline int annee () const { return _annee; }
 
     inline void nom (const QString& n) { _nom = n; }
+    inline void annee (int a) { _annee = a; }
     inline void saison (enum Saison s) { _saison = s; }
 
   private:
     static int idCpt;
     int _id;
     QString _nom;
+    int _annee;
     enum Saison _saison;
     bool dejaChoisie(const QString &tag) const;
     QMap<QString, UVEtudiant*> _uvs;
