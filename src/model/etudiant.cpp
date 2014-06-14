@@ -41,8 +41,38 @@ void Etudiant::preference (const UV* uv, unsigned int note) {
   if (note > Etudiant::NOTE_MAX) {
     throw std::invalid_argument("Note invalide");
   }
-
   this->_preferences[uv] = note;
+}
+
+QList<const UV*> Etudiant::uvTriees (Semestre::Saison saison, 
+                                     QStringList* cursus) const 
+{
+  QList<const UV*> uvs = this->preferences().keys();
+  QList<const UV*> triees;
+  for (int i = Etudiant::NOTE_MAX; i >= 0; i--) {
+    for (int j = 0; j < uvs.count(); j++) {
+      bool matchSaison = 
+        (saison == Semestre::AUTOMNE && uvs[j]->automne()) ||
+        (saison == Semestre::PRINTEMPS && uvs[j]->printemps());
+      bool dejaValidee = this->formationUtc()->uvDejaValidee(uvs[j]->tag());
+      bool matchCursus = false;
+      if (!cursus) { matchCursus = true; }
+      else {
+        for (int k = 0; k < cursus->count(); k++) {
+          if (uvs[j]->cursus().contains((*cursus)[k])) {
+            matchCursus = true;
+            break;
+          }
+        }
+      }
+      bool noteMatch = this->preferences()[uvs[j]] == i;
+      if (matchSaison && !dejaValidee && matchCursus && noteMatch) { 
+        triees.append(uvs[j]); 
+      }
+    }
+  }
+ 
+  return triees;
 }
 
 QMap<QString, unsigned int> Etudiant::credits () const {
@@ -123,15 +153,21 @@ QDomElement Etudiant::toXml () const {
     etudiant.appendChild(this->formationsHorsUtc()[i]->toXml());
   }
 
-  for (int i = 0; i < this->preferences().count(); i++) {
+  qDebug() << "toXml: Ajout des preferences";
+  for (int i = 0; i < this->preferences().keys().count(); i++) {
     QDomElement e = doc.createElement(Etudiant::PREFERENCE_XML_NODE_NAME);
     const UV* uv = this->preferences().keys()[i];
+    if (uv) { qDebug() << "truthy"; } 
+    else { qDebug() << "falsy"; } 
+    qDebug() << "3";
     unsigned int note = this->preferences()[uv];
 
     e.setAttribute("uv", uv->tag());
+    qDebug() << "5";
     e.setAttribute("note", note);
     etudiant.appendChild(e);
   }
+  qDebug() << "toXml: Preference ajoutées";
 
   return etudiant;
 }

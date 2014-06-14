@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <iostream>
+#include <exception>
 
 #include "model/catalogue.h"
 #include "model/uv.h"
@@ -47,6 +48,15 @@ int main(int argc, char *argv[]) {
   e.ajouterFormation(&f1);
   e.ajouterFormation(&f2);
 
+  try {
+    e.preference((*c)["NF16"], 5);
+    e.preference((*c)["SY02"], 1);
+    e.preference((*c)["LO21"], 4);
+    e.preference((*c)["LG60"], 3);
+  } catch (const std::exception& e) {
+    qDebug() << e.what();
+  }
+
   QMap<QString, unsigned int> creditsNecessaires = Etudiant::creditsNecessaires();
   QMap<QString, unsigned int> credits = e.credits();
 
@@ -57,8 +67,13 @@ int main(int argc, char *argv[]) {
 
   try {
     e.sauvegarder(); // test la sauvegarde d'un etudiant dans un fichier xml
-    Etudiant *e1 = Etudiant::charger("Newton Isaac"); // ainsi que le chargement d'un fichier xml
+    Etudiant *e1 = Etudiant::charger("Potter Harry"); // ainsi que le chargement d'un fichier xml
     qDebug() << "nom: " << e1->nom() << " prenom: " << e1->prenom();
+    QList<const UV*> triees = e1->uvTriees(Semestre::PRINTEMPS);
+    qDebug() << "Tri:";
+    for (int i = 0; i < triees.count(); i++) {
+      qDebug() << triees[i]->tag();
+    }
   }
   //TODO: Ameliorer la gestion d'erreur
   catch (QString& e) {

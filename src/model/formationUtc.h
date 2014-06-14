@@ -27,11 +27,11 @@ class FormationUtc : public Formation {
     inline QString nom () const { return _nom; }
 
     inline void nom (const QString& n) { _nom = n; }
+    bool uvDejaValidee (const QString& tag, UVEtudiant* uv = 0) const;
 
   private:
     static int idCpt;
     bool verifierSemestre (const Semestre &s, QList<UVEtudiant>* dejaValidees = 0) const;
-    bool uvDejaValidee (const QString& tag, UVEtudiant* uv = 0) const;
     int _id;
     QString _nom;
     QList<Semestre*> _semestres;

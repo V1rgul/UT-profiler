@@ -52,7 +52,7 @@ QDomElement UV::toXml () const {
   return e;
 }
 
-QString UV::toString () {
+QString UV::toString () const {
   QString ret = 
         this->tag() + " - " + this->titre() + "\n"
           + "\tcursus: " + this->cursus().join(" ") + "\n"

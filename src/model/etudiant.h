@@ -38,6 +38,8 @@ class Etudiant {
     }
 
     void preference (const UV* uv, unsigned int note);
+    QList<const UV*> uvTriees (Semestre::Saison saison,
+                               QStringList* cursus = 0) const;
 
     QMap<QString, unsigned int> credits () const;
     static QMap<QString, unsigned int> creditsNecessaires ();
@@ -53,6 +55,7 @@ class Etudiant {
     inline void prenom (const QString& p) { _prenom = p; }
 
   private:
+    bool uvCompare (const UV* uv1, const UV* uv2);
     FormationUtc* _formationUtc;
     QList<FormationHorsUtc*> _formationsHorsUtc;
     QMap<const UV*, unsigned int> _preferences;

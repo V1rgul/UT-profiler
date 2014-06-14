@@ -21,13 +21,13 @@ class UV : public XmlConvertible {
     inline bool printemps () const { return _printemps; }
     inline QMap<QString, unsigned int> credits () const { return _credits; }
 
-    inline void tag (const QString& t) { _tag = t; }
-    inline void titre (const QString& d) { _titre = d; }
+    inline void tag (QString t) { _tag = t; }
+    inline void titre (QString d) { _titre = d; }
     inline void cursus (const QStringList& c) { _cursus = c; }
     inline void automne (bool a) { _automne = a; }
     inline void printemps (bool p) { _printemps = p; }
 
-    QString toString ();
+    QString toString () const;
   private:
     QString _tag, _titre;
     QStringList _cursus;
