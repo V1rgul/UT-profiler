@@ -78,6 +78,15 @@ void Catalogue::fromXml(const QDomNode& noeud) {
     }
     UV* uv = new UV();
     uv->fromXml(child.at(i));
+
+    // Ajout des cursus à la liste des cursus
+    for (int j = 0; j < uv->cursus().count(); j++) {
+      if (uv->cursus()[j] == "") {
+        qDebug() << "ERREUR: " + uv->tag();
+      }
+      this->_cursus.insert(uv->cursus()[j]); 
+    }
+
     this->ajouterUv(uv);
   }
 }

@@ -25,6 +25,7 @@ class Catalogue : public XmlConvertible {
     void fromXml (const QDomNode& noeud);
     QDomElement toXml () const;
 
+    inline QSet<QString> cursus () const { return _cursus; }
     inline QMap<QString, UV*> uvs () const { return _uvs; }
 
     QString toString ();
@@ -32,6 +33,7 @@ class Catalogue : public XmlConvertible {
     Catalogue () {} 
     static const Catalogue* _instance;
     static Catalogue* charger ();
+    QSet<QString> _cursus;
     QMap<QString, UV*> _uvs;
 };
 
