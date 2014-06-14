@@ -20,7 +20,11 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Etudiant</string>
+   <string>UT’Profiler - Ouvrir</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/ressources/logo.png</normaloff>:/ressources/logo.png</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -62,6 +66,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

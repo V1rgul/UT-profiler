@@ -4,19 +4,21 @@
 #include <QMessageBox>
 #include "semestrecontroller.h"
 #include "model/uv.h"
+#include "semestredialogcontroller.h"
 
-SemestreController::SemestreController(Semestre* semestre, QSemestre* qSemestre, QObject *parent) :
-	QObject(parent), semestre(semestre), qSemestre(qSemestre)
+SemestreController::SemestreController(Etudiant* etudiant, Semestre* semestre, QSemestre* qSemestre, QObject *parent) :
+	QObject(parent), etudiant(etudiant), semestre(semestre), qSemestre(qSemestre)
 {
 	connect(this, SIGNAL(_removed()), qSemestre, SLOT(deleteLater()));
 	connect(this, SIGNAL(_removed()), this, SLOT(deleteLater()));
 	connect(qSemestre, SIGNAL(deleteClicked()), this, SLOT(remove()));
+	connect(qSemestre, SIGNAL(editClicked()), this, SLOT(edit()));
 
 
-	loadInfo();
+	update();
 }
 
-void SemestreController::loadInfo(){
+void SemestreController::update(){
 
 	qSemestre->setDate(date());
 
@@ -40,7 +42,7 @@ QString SemestreController::date(){
 void SemestreController::remove(){
 	QString text("Etes vous sur de vouloir supprimmer le Semestre ");
 	text.append(date());
-	QMessageBox::StandardButton b = QMessageBox::warning( 0,
+	QMessageBox::StandardButton b = QMessageBox::warning( qSemestre,
 									  QString("Attention"),
 									  text,
 									  QMessageBox::Yes | QMessageBox::Discard);
@@ -48,4 +50,9 @@ void SemestreController::remove(){
 		emit(removed(semestre));
 		emit(_removed());
 	}
+}
+
+void SemestreController::edit(){
+	SemestreDialogController* c = new SemestreDialogController(etudiant, semestre, qSemestre);
+	connect(c, SIGNAL(updated()), this, SLOT(update()));
 }

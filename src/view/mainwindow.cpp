@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 	connect(ui->buttonAddFormation, SIGNAL(clicked()), this, SLOT(buttonAddFormationClicked()));
+	connect(ui->buttonAddSemestre, SIGNAL(clicked()), this, SLOT(buttonAddSemestreClicked()));
 	connect(ui->editNom, SIGNAL(textChanged(QString)), this, SLOT(editNameChanged(QString)));
 	connect(ui->editPrenom, SIGNAL(textChanged(QString)), this, SLOT(editSurnameChanged(QString)));
 }
@@ -47,9 +48,5 @@ void MainWindow::editSurnameChanged(const QString & text){
 	emit(nameChanged(ui->editNom->text(), text));
 }
 
-
-QWidget* MainWindow::getTabEtudiant(){
-	return ui->tabEtudiant;
-}
 
 

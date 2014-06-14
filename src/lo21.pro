@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     controller/formationcontroller.cpp \
     controller/semestrecontroller.cpp \
     view/flowlayout.cpp \
-    view/qfiltrebranche.cpp
+    view/qfiltrebranche.cpp \
+    controller/semestredialogcontroller.cpp
 
 
 HEADERS  += \
@@ -53,7 +54,8 @@ HEADERS  += \
     controller/formationcontroller.h \
     controller/semestrecontroller.h \
     view/flowlayout.h \
-    view/qfiltrebranche.h
+    view/qfiltrebranche.h \
+    controller/semestredialogcontroller.h
 
 FORMS    += view/mainwindow.ui \
     view/qsemestre.ui \

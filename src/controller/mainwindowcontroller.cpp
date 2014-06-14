@@ -47,7 +47,7 @@ void MainWindowController::userSelect(const int index){
 		}
 		foreach(Semestre* s, etudiant->formationUtc()->semestres()){
 			QSemestre* qSemestre = new QSemestre();
-			SemestreController* semestreController = new SemestreController(s, qSemestre);
+			SemestreController* semestreController = new SemestreController(etudiant, s, qSemestre);
 			mainWindow->addSemestre(qSemestre);
 			connect(semestreController, SIGNAL(removed(Semestre*)), this, SLOT(removeSemestre(Semestre*)));
 		}
@@ -80,7 +80,14 @@ void MainWindowController::nameChanged(const QString & name, const QString & sur
 
 void MainWindowController::addSemestre(){
 	qDebug() << "add Semestre Clicked";
+	QSemestre* qSemestre = new QSemestre();
+	Semestre* semestre = new Semestre();
+	etudiant->formationUtc()->ajouterSemestre(semestre);
+	SemestreController* semestreController = new SemestreController(etudiant, semestre, qSemestre);
+	mainWindow->addSemestre(qSemestre);
+	connect(semestreController, SIGNAL(removed(Semestre*)), this, SLOT(removeSemestre(Semestre*)));
 
+	semestreController->edit();
 }
 void MainWindowController::addFormation(){
 	qDebug() << "add Formation Clicked";

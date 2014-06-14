@@ -20,7 +20,6 @@ public:
 	void setName(const QString &name, const QString &surname);
 	void addFormation(QFormation *formation);
 	void addSemestre(QSemestre *semestre);
-	QWidget* getTabEtudiant();
 
 signals:
 	void addFormationClicked();

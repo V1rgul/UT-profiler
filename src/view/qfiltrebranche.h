@@ -21,6 +21,9 @@ class QFiltreBranche : public QWidget
 	private:
 		Ui::QFiltreBranche ui;
 		QSemaphore sem; // :)
+		QButtonGroup buttonGroup;
+
+		void checkRadio(bool v);
 };
 
 #endif // QFILTREBRANCHE_H
