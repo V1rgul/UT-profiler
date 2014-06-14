@@ -2,6 +2,7 @@
 #define QSEMESTREDIALOG_H
 
 #include <QDialog>
+#include <QString>
 #include "ui_qsemestredialog.h"
 
 class QSemestreDialog : public QDialog
@@ -10,6 +11,11 @@ class QSemestreDialog : public QDialog
 
 	public:
 		explicit QSemestreDialog(QWidget *parent = 0);
+		void setSaison(QString s);
+	signals:
+		void saisonChanged();
+	public slots:
+		void saisonClicked();
 
 	private:
 		Ui::QSemestreDialog ui;
