@@ -22,6 +22,9 @@ class Etudiant {
     ~Etudiant ();
 
     const static QString XML_NODE_NAME;
+    const static QString PREFERENCE_XML_NODE_NAME;
+    const static unsigned int NOTE_MAX;
+
     static Etudiant* charger (const QString& nom, const QString& prenom);
     static Etudiant* charger (const QString& nomComplet);
     static QStringList listeEtudiants ();
@@ -29,6 +32,12 @@ class Etudiant {
     void sauvegarder ();
     void ajouterFormation (FormationHorsUtc* f);
     void supprimerFormation (int id);
+
+    inline QMap<const UV*, unsigned int> preferences () const {
+      return _preferences;
+    }
+
+    void preference (const UV* uv, unsigned int note);
 
     QMap<QString, unsigned int> credits () const;
     static QMap<QString, unsigned int> creditsNecessaires ();
@@ -46,6 +55,7 @@ class Etudiant {
   private:
     FormationUtc* _formationUtc;
     QList<FormationHorsUtc*> _formationsHorsUtc;
+    QMap<const UV*, unsigned int> _preferences;
     QString _nom; 
     QString _prenom;
 

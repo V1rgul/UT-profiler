@@ -2,12 +2,15 @@
 #include <QtXml>
 #include <QFile>
 
+#include "catalogue.h"
 #include "formation.h"
 #include "formationUtc.h"
 #include "formationHorsUtc.h"
 #include "etudiant.h"
 
 const QString Etudiant::XML_NODE_NAME = "etudiant";
+const QString Etudiant::PREFERENCE_XML_NODE_NAME = "preference";
+const unsigned int Etudiant::NOTE_MAX = 5;
 
 Etudiant::Etudiant () {
   this->_formationUtc = new FormationUtc();
@@ -34,6 +37,14 @@ void Etudiant::supprimerFormation (int id) {
   }
 }
 
+void Etudiant::preference (const UV* uv, unsigned int note) {
+  if (note > Etudiant::NOTE_MAX) {
+    throw std::invalid_argument("Note invalide");
+  }
+
+  this->_preferences[uv] = note;
+}
+
 QMap<QString, unsigned int> Etudiant::credits () const {
   QMap<QString, unsigned int> credits;
   credits["horsUtc"] = 0;
@@ -58,18 +69,15 @@ QMap<QString, unsigned int> Etudiant::credits () const {
         if (credits.contains(type)) { credits[type] += c; }
         else { credits[type] = c;} 
 
-        // L'utc demande 30 crédits CS, 30 crédits TM, la somme
-        // des crédits CS/TM doit être au dessus de 80 (crédits BR)
-        // pour le cycle ingénieur
-        if (type == "CS" || type == "TM") {
-          if (credits.contains("BR")) { credits["BR"] += c; }
-          else { credits["BR"] = c; } 
-        }
-
         credits["total"] += c;
       } 
     }   
   } 
+
+  // L'utc demande 30 crédits CS, 30 crédits TM, la somme
+  // des crédits CS/TM doit être au dessus de 80 (crédits BR)
+  // pour le cycle ingénieur
+  credits["BR"] = credits["CS"] + credits["TM"];
 
   return credits;
 }
@@ -108,11 +116,21 @@ QDomElement Etudiant::toXml () const {
   QDomElement etudiant = doc.createElement(Etudiant::XML_NODE_NAME);
   etudiant.setAttribute("nom", this->nom());
   etudiant.setAttribute("prenom", this->prenom());
-  
+
   etudiant.appendChild(this->formationUtc()->toXml());
 
   for (int i = 0; i < this->formationsHorsUtc().count(); i++) {
     etudiant.appendChild(this->formationsHorsUtc()[i]->toXml());
+  }
+
+  for (int i = 0; i < this->preferences().count(); i++) {
+    QDomElement e = doc.createElement(Etudiant::PREFERENCE_XML_NODE_NAME);
+    const UV* uv = this->preferences().keys()[i];
+    unsigned int note = this->preferences()[uv];
+
+    e.setAttribute("uv", uv->tag());
+    e.setAttribute("note", note);
+    etudiant.appendChild(e);
   }
 
   return etudiant;
@@ -136,6 +154,16 @@ void Etudiant::fromXml (QDomNode& noeud) {
       FormationHorsUtc *f = new FormationHorsUtc();
       f->fromXml(child.at(i));
       this->ajouterFormation(f);
+    }
+    else if (child.at(i).nodeName() == Etudiant::PREFERENCE_XML_NODE_NAME) {
+      QDomElement ce = child.at(i).toElement();
+      const UV* uv = (*(Catalogue::instance()))[ce.attribute("uv")];
+      unsigned int note = ce.attribute("note").toInt();
+
+      QString addr;
+      addr.sprintf("%08p", uv);
+      qDebug() << "Preference " + addr + " set to " + QString::number(note);
+      this->_preferences[uv] = note;
     }
     else {
       throw QString("Les noeuds etudiant ne peuvent contenir que des noeuds formation");
