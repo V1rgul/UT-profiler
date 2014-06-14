@@ -36,8 +36,9 @@ class Etudiant {
     inline QMap<const UV*, unsigned int> preferences () const {
       return _preferences;
     }
-
+    unsigned int preference (const UV* uv) const;
     void preference (const UV* uv, unsigned int note);
+
     QList<const UV*> uvTriees (Semestre::Saison saison,
                                QStringList* cursus = 0) const;
 

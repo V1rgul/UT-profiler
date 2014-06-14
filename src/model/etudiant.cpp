@@ -37,6 +37,10 @@ void Etudiant::supprimerFormation (int id) {
   }
 }
 
+unsigned int Etudiant::preference (const UV* uv) const {
+  return this->preferences()[uv];
+}
+
 void Etudiant::preference (const UV* uv, unsigned int note) {
   if (note > Etudiant::NOTE_MAX) {
     throw std::invalid_argument("Note invalide");
