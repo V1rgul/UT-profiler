@@ -14,6 +14,11 @@ void SemestreDialogController::update(){
 	//Don't forget to empty things
 
 	semestreDialog->setSaison( (semestre->saison()==Semestre::AUTOMNE)? QString("A") : QString("P") );
+
+
+	//* Test
+	semestreDialog->getFiltreBranche()->addBranches(QStringList() << "_TC" << "_GI" << "_GM");
+	//*/
 }
 
 void SemestreDialogController::saisonChanged(){

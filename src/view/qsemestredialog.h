@@ -12,6 +12,7 @@ class QSemestreDialog : public QDialog
 	public:
 		explicit QSemestreDialog(QWidget *parent = 0);
 		void setSaison(QString s);
+		QFiltreBranche* getFiltreBranche();
 	signals:
 		void saisonChanged();
 	public slots:

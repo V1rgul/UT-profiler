@@ -11,6 +11,9 @@ QSemestreDialog::QSemestreDialog(QWidget *parent) :
 	this->show();
 }
 
+QFiltreBranche* QSemestreDialog::getFiltreBranche(){
+	return ui.filtreBranche;
+}
 
 void QSemestreDialog::saisonClicked(){
 	emit(saisonChanged());

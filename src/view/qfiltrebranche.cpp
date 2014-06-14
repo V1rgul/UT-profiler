@@ -3,11 +3,10 @@
 #include <QCheckBox>
 
 QFiltreBranche::QFiltreBranche(QWidget *parent) :
-	QWidget(parent), sem(1)
+	QWidget(parent), sem(1), buttonGroup(this)
 {
 	ui.setupUi(this);
-	QButtonGroup *bg = new QButtonGroup(this);
-	bg->addButton(ui.radioAll);
+	buttonGroup.addButton(ui.radioAll);
 	connect(ui.radioAll, SIGNAL(toggled(bool)), this, SLOT(allToggled(bool)));
 }
 
@@ -23,8 +22,9 @@ void QFiltreBranche::addBranches(QStringList &listeBranches){
 
 
 void QFiltreBranche::allToggled(bool v){	
-	if(!sem.tryAcquire()) return;
 	qDebug() << "radio toggled(" << v << ")";
+	if(!sem.tryAcquire()) return;
+	qDebug() << "semaphore locked !";
 	if(v == true){
 		for(int i=0; i<ui.layoutBranches->count(); i++){
 			QCheckBox *checkBox = qobject_cast<QCheckBox*>( ui.layoutBranches->itemAt(i)->widget() );
@@ -34,31 +34,39 @@ void QFiltreBranche::allToggled(bool v){
 				qCritical() << "qobject_cast<QCheckBox*> returned 0";
 			}
 		}
-	}else{	
 	}
 	emit(filterChanged(QStringList()));
 	sem.release();
 }
 
+void QFiltreBranche::checkRadio(bool v){
+	qDebug() << "radioAll->setChecked(" << v << ")";
+	buttonGroup.setExclusive(v);
+	ui.radioAll->setChecked(v);
+}
+
 void QFiltreBranche::checkBox(bool v){
 	Q_UNUSED(v);
+	qDebug() << "checkBox toggled(" << v << ")";
 	if(!sem.tryAcquire()) return;
+	qDebug() << "semaphore locked !";
 	QStringList r;
-	bool zeroChecked = true;
+	bool zeroChecked = true, allChecked = true;
 	for(int i=0; i<ui.layoutBranches->count(); i++){
 		QCheckBox *checkBox = qobject_cast<QCheckBox*>( ui.layoutBranches->itemAt(i)->widget() );
 		if(checkBox != 0){
 			if(checkBox->isChecked()){
 				r.append(checkBox->text());
 				zeroChecked = false;
+			}else{
+				allChecked = false;
 			}
 		} else {
 			qCritical() << "qobject_cast<QCheckBox*> returned 0";
 		}
 	}
-	if(zeroChecked){
-		ui.radioAll->setChecked(true);
-	}
-	emit(filterChanged(r));
-	sem.release();
+
+	sem.release(); //release before to uncheck all checkBoxes with allTogled
+	checkRadio(zeroChecked || allChecked);
+	emit(filterChanged(r));	
 }
