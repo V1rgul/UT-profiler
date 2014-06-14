@@ -29,6 +29,7 @@ void Semestre::fromXml (const QDomNode& noeud) {
 
   QDomElement e = noeud.toElement();
   this->nom(e.attribute("nom"));
+  this->annee(e.attribute("annee").toInt());
   this->saison(e.attribute("saison") == "printemps" ?
       Semestre::PRINTEMPS :
       Semestre::AUTOMNE);
@@ -48,6 +49,7 @@ QDomElement Semestre::toXml () const {
   QDomElement semestre = doc.createElement(Semestre::XML_NODE_NAME);
   
   semestre.setAttribute("nom", this->nom());
+  semestre.setAttribute("annee", this->annee());
   semestre.setAttribute("saison", this->saison() == Semestre::PRINTEMPS ?
                                   "printemps" : "automne");
   QList<QString> tags = this->uvs().keys();
