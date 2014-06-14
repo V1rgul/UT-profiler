@@ -68,6 +68,11 @@ void QFiltreBranche::checkBox(bool v){
 	}
 	sem.release(); //release before to uncheck all checkBoxes with allTogled
 
-	checkRadio(zeroChecked || allChecked);
-	emit(filterChanged(r));	
+
+	if(zeroChecked || allChecked){
+		checkRadio(true);
+	}else{
+		checkRadio(false);
+		emit(filterChanged(r));
+	}
 }

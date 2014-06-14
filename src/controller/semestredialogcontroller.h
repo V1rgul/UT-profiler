@@ -14,8 +14,10 @@ class SemestreDialogController : public QObject
 	signals:
 		void updated();
 	public slots:
-		void saisonChanged();
 		void update();
+
+		void saisonChanged();
+		void filterChanged(QStringList list);
 	private:
 		Etudiant* etudiant;
 		Semestre* semestre;
