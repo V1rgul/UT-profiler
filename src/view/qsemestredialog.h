@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QString>
 #include "ui_qsemestredialog.h"
+#include "quvchoisie.h"
 
 class QSemestreDialog : public QDialog
 {
@@ -13,6 +14,7 @@ class QSemestreDialog : public QDialog
 		explicit QSemestreDialog(QWidget *parent = 0);
 		void setSaison(QString s);
 		void setYear(int year);
+		void addUVChoisie(QUVChoisie* uvChoisie);
 		QFiltreBranche* getFiltreBranche();
 		QAbstractItemModel* swapModel(QAbstractItemModel *model);
 	signals:

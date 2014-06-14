@@ -10,7 +10,7 @@ QFiltreBranche::QFiltreBranche(QWidget *parent) :
 	connect(ui.radioAll, SIGNAL(toggled(bool)), this, SLOT(allToggled(bool)));
 }
 
-void QFiltreBranche::addBranches(QStringList &listeBranches){
+void QFiltreBranche::addBranches(QStringList listeBranches){
 	sem.acquire();
 	foreach(QString b, listeBranches){
 		QCheckBox *c = new QCheckBox(b);

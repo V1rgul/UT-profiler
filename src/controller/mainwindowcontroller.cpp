@@ -6,8 +6,8 @@
 #include "semestrecontroller.h"
 #include "model/semestre.h"
 
-MainWindowController::MainWindowController(QApplication& a, QObject *parent):
-	QObject(parent), a(&a), mainWindow(new MainWindow()), etudiant(0)
+MainWindowController::MainWindowController(QApplication& a):
+	QObject(new MainWindow()), a(&a), mainWindow(qobject_cast<MainWindow*>(parent())), etudiant(0)
 {
 	etudiantList = Etudiant::listeEtudiants();
 	qDebug() << "etudiant list" << etudiantList;
@@ -41,13 +41,13 @@ void MainWindowController::userSelect(const int index){
 		mainWindow->setName(etudiant->nom(), etudiant->prenom());
 		foreach(FormationHorsUtc* f, etudiant->formationsHorsUtc()){
 			QFormation* qFormation = new QFormation();
-			FormationController* formationController = new FormationController(f, qFormation);
+			FormationController* formationController = new FormationController(f, qFormation, this);
 			mainWindow->addFormation(qFormation);
 			connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
 		}
 		foreach(Semestre* s, etudiant->formationUtc()->semestres()){
 			QSemestre* qSemestre = new QSemestre();
-			SemestreController* semestreController = new SemestreController(etudiant, s, qSemestre);
+			SemestreController* semestreController = new SemestreController(etudiant, s, qSemestre, this);
 			mainWindow->addSemestre(qSemestre);
 			connect(semestreController, SIGNAL(removed(Semestre*)), this, SLOT(removeSemestre(Semestre*)));
 		}

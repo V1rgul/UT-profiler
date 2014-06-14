@@ -54,6 +54,6 @@ void SemestreController::remove(){
 }
 
 void SemestreController::edit(){
-	SemestreDialogController* c = new SemestreDialogController(etudiant, semestre, qSemestre);
+	SemestreDialogController* c = new SemestreDialogController(etudiant, semestre, this);
 	connect(c, SIGNAL(updated()), this, SLOT(update()));
 }

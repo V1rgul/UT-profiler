@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
-
+/*
   const Catalogue* c = Catalogue::instance();
 
   Etudiant::listeEtudiants();
@@ -86,7 +86,7 @@ int main(int argc, char *argv[]) {
     box.setIcon(QMessageBox::Critical);
     box.setText(e2);
     box.exec();
-  }
+  }*/
 
 
   MainWindowController mainWindowController(a);

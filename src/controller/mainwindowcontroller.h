@@ -13,7 +13,7 @@ class MainWindowController : public QObject
 {
 	Q_OBJECT
 	public:
-		MainWindowController(QApplication &a, QObject *parent = 0);
+		MainWindowController(QApplication &a);
 
 	signals:
 
@@ -29,8 +29,9 @@ class MainWindowController : public QObject
 		void exiting();
 	private:
 		QApplication *a;
-		QUserDialog *userDialog;
 		MainWindow *mainWindow;
+		QUserDialog *userDialog;
+
 
 		Etudiant *etudiant;
 		QStringList etudiantList;

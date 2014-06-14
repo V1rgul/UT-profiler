@@ -11,7 +11,7 @@ class QFiltreBranche : public QWidget
 
 	public:
 		explicit QFiltreBranche(QWidget *parent = 0);
-		void addBranches(QStringList &listeBranches);
+		void addBranches(QStringList listeBranches);
 	signals:
 		void filterChanged(QStringList);
 	public slots:

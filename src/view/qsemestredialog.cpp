@@ -36,3 +36,7 @@ QAbstractItemModel* QSemestreDialog::swapModel(QAbstractItemModel *model){
 	ui.listView->setModel(model);
 	return old;
 }
+
+void QSemestreDialog::addUVChoisie(QUVChoisie* uvChoisie){
+	ui.groupUVChoisies->layout()->addWidget(uvChoisie);
+}
