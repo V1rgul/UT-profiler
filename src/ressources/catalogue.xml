@@ -231,277 +231,277 @@
   <uv tag="UR05" titre="Aménagement Et Environnement" cursus="TC HUTECH GSU" printemps="printemps">
     <credits type="TM">5</credits>
   </uv>
-  <uv tag="AR03" titre="Art Et Technologies Contemporaines" >
+  <uv tag="AR03" titre="Art Et Technologies Contemporaines"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="DI01" titre="Initiation Au Design Industriel" >
+  <uv tag="DI01" titre="Initiation Au Design Industriel"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="DI02" titre="Initiation Au Design Graphique" >
+  <uv tag="DI02" titre="Initiation Au Design Graphique"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="EI03" titre="Communication Interculturelle En Entreprises, Organisations Transnationales" >
+  <uv tag="EI03" titre="Communication Interculturelle En Entreprises, Organisations Transnationales"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="EI04" titre="Intelligence économique : Stratégie D'Entreprise, Démarche Et Outils" >
+  <uv tag="EI04" titre="Intelligence économique : Stratégie D'Entreprise, Démarche Et Outils"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="EI05" titre="Science, Technologie Et Société Dans L'Union Européenne" >
+  <uv tag="EI05" titre="Science, Technologie Et Société Dans L'Union Européenne"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE10" titre="économie Politique" >
+  <uv tag="GE10" titre="économie Politique"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE12" titre="Géographie Et économie Des Territoires" >
+  <uv tag="GE12" titre="Géographie Et économie Des Territoires"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE13" titre="Les Risques Entre Technique Et Societe" >
+  <uv tag="GE13" titre="Les Risques Entre Technique Et Societe"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE15" titre="Initiation A La Création Et Gestion D'Entreprises Innovantes" >
+  <uv tag="GE15" titre="Initiation A La Création Et Gestion D'Entreprises Innovantes"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE20" titre="économie Industrielle" >
+  <uv tag="GE20" titre="économie Industrielle"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE21" titre="économie Et Gestion De L'Innovation Et Du Numérique" >
+  <uv tag="GE21" titre="économie Et Gestion De L'Innovation Et Du Numérique"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE22" titre="économie Internationale" >
+  <uv tag="GE22" titre="économie Internationale"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE23" titre="Transferts De Technologies Et Développements" >
+  <uv tag="GE23" titre="Transferts De Technologies Et Développements"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE24" titre="Recherche Developpement : Ingenieur Et Investisseurs" >
+  <uv tag="GE24" titre="Recherche Developpement : Ingenieur Et Investisseurs"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE25" titre="Gestion Et Organisation De La Production" >
+  <uv tag="GE25" titre="Gestion Et Organisation De La Production"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE26" titre="Management Stratégique Des Ressources Humaines" >
+  <uv tag="GE26" titre="Management Stratégique Des Ressources Humaines"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE28" titre="économie Et Droit De La Propriété Intellectuelle (Industrielle Et Artistique) Dans Une économie Reposant Sur La Connaissance" >
+  <uv tag="GE28" titre="économie Et Droit De La Propriété Intellectuelle (Industrielle Et Artistique) Dans Une économie Reposant Sur La Connaissance"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE29" titre="Gestion Et Management International De L'Entreprise" >
+  <uv tag="GE29" titre="Gestion Et Management International De L'Entreprise"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE36" titre="Marketing" >
+  <uv tag="GE36" titre="Marketing"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="GE90" titre="Organisation, Innovation Et International" >
+  <uv tag="GE90" titre="Organisation, Innovation Et International"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="HE01" titre="épistémologie Et Histoire Des Sciences" >
+  <uv tag="HE01" titre="épistémologie Et Histoire Des Sciences"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="HE03" titre="Logique : Histoire Et Formalisme" >
+  <uv tag="HE03" titre="Logique : Histoire Et Formalisme"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="HE05" titre="Culture Et Histoire Des Techniques" >
+  <uv tag="HE05" titre="Culture Et Histoire Des Techniques"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="IC01" titre="Histoire Et Prospective Des Industries Culturelles" >
+  <uv tag="IC01" titre="Histoire Et Prospective Des Industries Culturelles"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="IC03" titre="Le Numérique : Des Formats Aux Chaines De Production" >
+  <uv tag="IC03" titre="Le Numérique : Des Formats Aux Chaines De Production"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="IC05" titre="Technologies Pour La Documentation Et L'Indexation Dans L'Hypermédia" >
+  <uv tag="IC05" titre="Technologies Pour La Documentation Et L'Indexation Dans L'Hypermédia"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="IC07" titre="Techniques Et Technologies Du Musical Et Du Sonore" >
+  <uv tag="IC07" titre="Techniques Et Technologies Du Musical Et Du Sonore"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA00" titre="Allemand Initiation" >
+  <uv tag="LA00" titre="Allemand Initiation"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA01" titre="Allemand Niveau I" >
+  <uv tag="LA01" titre="Allemand Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA02" titre="Allemand Niveau II" >
+  <uv tag="LA02" titre="Allemand Niveau II"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA03" titre="Allemand Niveau III" >
+  <uv tag="LA03" titre="Allemand Niveau III"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA04" titre="Pratique De La Communication En Allemand" >
+  <uv tag="LA04" titre="Pratique De La Communication En Allemand"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA11" titre="Anglais Niveau I" >
+  <uv tag="LA11" titre="Anglais Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA12" titre="Anglais Niveau II" >
+  <uv tag="LA12" titre="Anglais Niveau II"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA13" titre="Anglais Niveau III" >
+  <uv tag="LA13" titre="Anglais Niveau III"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA14" titre="Civilisation Du Monde Anglophone" >
+  <uv tag="LA14" titre="Civilisation Du Monde Anglophone"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA15" titre="Anglais Professionnel - Niveau V" >
+  <uv tag="LA15" titre="Anglais Professionnel - Niveau V"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA20" titre="Espagnol Initiation" >
+  <uv tag="LA20" titre="Espagnol Initiation"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA21" titre="Espagnol Niveau I" >
+  <uv tag="LA21" titre="Espagnol Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA22" titre="Espagnol Niveau II" >
+  <uv tag="LA22" titre="Espagnol Niveau II"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA23" titre="Espagnol Niveau III" >
+  <uv tag="LA23" titre="Espagnol Niveau III"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA24" titre="Le Monde Hispanique Contemporain : L'Amérique Latine (Niveau IV)" >
+  <uv tag="LA24" titre="Le Monde Hispanique Contemporain : L'Amérique Latine (Niveau IV)"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA91" titre="Francais Langue étrangère Niveau I" >
+  <uv tag="LA91" titre="Francais Langue étrangère Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA92" titre="Francais Langue étrangère Niveau II" >
+  <uv tag="LA92" titre="Francais Langue étrangère Niveau II"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA93" titre="Francais Langue étrangère Niveau III" >
+  <uv tag="LA93" titre="Francais Langue étrangère Niveau III"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LA94" titre="Francais Langue étrangère Niveau IV" >
+  <uv tag="LA94" titre="Francais Langue étrangère Niveau IV"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LB04" titre="Interculturalité Franco-Allemande" >
+  <uv tag="LB04" titre="Interculturalité Franco-Allemande"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LB14" titre="Interculturalité Appliquée Aux Pays Anglophones" >
+  <uv tag="LB14" titre="Interculturalité Appliquée Aux Pays Anglophones"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LB24" titre="Le Monde Hispanique (Niveau IV): L'Espagne" >
+  <uv tag="LB24" titre="Le Monde Hispanique (Niveau IV): L'Espagne"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LC14" titre="Communication Scientifique Et Technique En Anglais" >
+  <uv tag="LC14" titre="Communication Scientifique Et Technique En Anglais"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG30" titre="Japonais Initiation" >
+  <uv tag="LG30" titre="Japonais Initiation"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG31" titre="Japonais Niveau I" >
+  <uv tag="LG31" titre="Japonais Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG40" titre="Portugais Initiation" >
+  <uv tag="LG40" titre="Portugais Initiation"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG41" titre="Portugais Niveau I" >
+  <uv tag="LG41" titre="Portugais Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG42" titre="Portugais Niveau II" >
+  <uv tag="LG42" titre="Portugais Niveau II"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG50" titre="Italien Initiation" >
+  <uv tag="LG50" titre="Italien Initiation"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG51" titre="Italien Niveau I" >
+  <uv tag="LG51" titre="Italien Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG52" titre="Italien Niveau II" >
+  <uv tag="LG52" titre="Italien Niveau II"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG60" titre="Chinois Initiation" >
+  <uv tag="LG60" titre="Chinois Initiation"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="LG61" titre="Chinois Niveau I" >
+  <uv tag="LG61" titre="Chinois Niveau I"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="MU01" titre="Pratique Instrumentale D'Ensemble" >
+  <uv tag="MU01" titre="Pratique Instrumentale D'Ensemble"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="MU02" titre="Pratique Instrumentale De Haut Niveau" >
+  <uv tag="MU02" titre="Pratique Instrumentale De Haut Niveau"  automne="automne" printemps="printemps">
     <credits type="TSH">8</credits>
   </uv>
-  <uv tag="MU03" titre="Pratique Collective Des Musiques Contemporaines" >
+  <uv tag="MU03" titre="Pratique Collective Des Musiques Contemporaines"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="PH01" titre="Introduction à La Philosophie" >
+  <uv tag="PH01" titre="Introduction à La Philosophie"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="PH09" titre="éthiques : Approche Pluridisciplinaire" >
+  <uv tag="PH09" titre="éthiques : Approche Pluridisciplinaire"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SA11" titre="Pratiques Théatrales" >
+  <uv tag="SA11" titre="Pratiques Théatrales"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SC01" titre="Séminaire Interdisciplinaire De Sciences Et Technologies Cognitives" >
+  <uv tag="SC01" titre="Séminaire Interdisciplinaire De Sciences Et Technologies Cognitives"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SC11" titre="Théorie Des Sciences Cognitives : Computation Et énaction" >
+  <uv tag="SC11" titre="Théorie Des Sciences Cognitives : Computation Et énaction"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SC12" titre="Technologie, Cognition, Perception" >
+  <uv tag="SC12" titre="Technologie, Cognition, Perception"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SC21" titre="Linguistique Et Philosophie Du Langage" >
+  <uv tag="SC21" titre="Linguistique Et Philosophie Du Langage"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SC22" titre="Sociologie Cognitive, Lien Social Et Techniques" >
+  <uv tag="SC22" titre="Sociologie Cognitive, Lien Social Et Techniques"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI01" titre="Science Et Debat Public" >
+  <uv tag="SI01" titre="Science Et Debat Public"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI02" titre="Communication Professionnelle De L'Ingénieur" >
+  <uv tag="SI02" titre="Communication Professionnelle De L'Ingénieur"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI05" titre="Theories De La Communication" >
+  <uv tag="SI05" titre="Theories De La Communication"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI06" titre="La Documentattion Cross-Media Pour Les Entreprises Et Les Collectivites Locales" >
+  <uv tag="SI06" titre="La Documentattion Cross-Media Pour Les Entreprises Et Les Collectivites Locales"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI07" titre="Medias Classiques Et Medias Numeriques" >
+  <uv tag="SI07" titre="Medias Classiques Et Medias Numeriques"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI11" titre="Expression Orale- Parole Publique" >
+  <uv tag="SI11" titre="Expression Orale- Parole Publique"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI14" titre="Parole Publique En Anglais" >
+  <uv tag="SI14" titre="Parole Publique En Anglais"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI20" titre="Rhetorique Et Arts Du Discours" >
+  <uv tag="SI20" titre="Rhetorique Et Arts Du Discours"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI22" titre="Signes Et Contenus Numeriques" >
+  <uv tag="SI22" titre="Signes Et Contenus Numeriques"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI24" titre="études Des écritures Numériques Ordinaires" >
+  <uv tag="SI24" titre="études Des écritures Numériques Ordinaires"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI28" titre="écriture Interactive Et Multimédia" >
+  <uv tag="SI28" titre="écriture Interactive Et Multimédia"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SI90" titre="Séminaire De Communication Des Connaissances Technologiques" >
+  <uv tag="SI90" titre="Séminaire De Communication Des Connaissances Technologiques"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SL" titre="Suivi Linguistique" >
+  <uv tag="SL" titre="Suivi Linguistique"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SO04" titre="Initiation Au Droit" >
+  <uv tag="SO04" titre="Initiation Au Droit"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SO05" titre="Sociologie, Organisations Et Dynamiques Des Collectifs" >
+  <uv tag="SO05" titre="Sociologie, Organisations Et Dynamiques Des Collectifs"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SP01" titre="Un Corps Pour Comprendre Et Apprendre" >
+  <uv tag="SP01" titre="Un Corps Pour Comprendre Et Apprendre"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="SP02" titre="Conduire Un Projet Sportif" >
+  <uv tag="SP02" titre="Conduire Un Projet Sportif"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="TN16" titre="étude Interculturelle" >
+  <uv tag="TN16" titre="étude Interculturelle"  automne="automne" printemps="printemps">
     <credits type="TSH">4</credits>
   </uv>
-  <uv tag="TO01" titre="Module De Preparation Au Toeic" >
+  <uv tag="TO01" titre="Module De Preparation Au Toeic"  automne="automne" printemps="printemps">
     <credits type="TSH">2</credits>
   </uv>
   <uv tag="MT34" titre="Analyse 2 : Mesures, Intégrations, Probabilités" cursus="HUTECH" printemps="printemps">
