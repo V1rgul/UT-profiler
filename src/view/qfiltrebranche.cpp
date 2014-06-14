@@ -22,9 +22,9 @@ void QFiltreBranche::addBranches(QStringList &listeBranches){
 
 
 void QFiltreBranche::allToggled(bool v){	
-	qDebug() << "radio toggled(" << v << ")";
+	//qDebug() << "radio toggled(" << v << ")";
 	if(!sem.tryAcquire()) return;
-	qDebug() << "semaphore locked !";
+	//qDebug() << "semaphore locked !";
 	if(v == true){
 		for(int i=0; i<ui.layoutBranches->count(); i++){
 			QCheckBox *checkBox = qobject_cast<QCheckBox*>( ui.layoutBranches->itemAt(i)->widget() );
@@ -34,22 +34,23 @@ void QFiltreBranche::allToggled(bool v){
 				qCritical() << "qobject_cast<QCheckBox*> returned 0";
 			}
 		}
+		emit(filterChanged(QStringList()));
 	}
-	emit(filterChanged(QStringList()));
+
 	sem.release();
 }
 
 void QFiltreBranche::checkRadio(bool v){
-	qDebug() << "radioAll->setChecked(" << v << ")";
+	//qDebug() << "radioAll->setChecked(" << v << ")";
 	buttonGroup.setExclusive(v);
 	ui.radioAll->setChecked(v);
 }
 
 void QFiltreBranche::checkBox(bool v){
 	Q_UNUSED(v);
-	qDebug() << "checkBox toggled(" << v << ")";
+	//qDebug() << "checkBox toggled(" << v << ")";
 	if(!sem.tryAcquire()) return;
-	qDebug() << "semaphore locked !";
+	//qDebug() << "semaphore locked !";
 	QStringList r;
 	bool zeroChecked = true, allChecked = true;
 	for(int i=0; i<ui.layoutBranches->count(); i++){
@@ -65,8 +66,8 @@ void QFiltreBranche::checkBox(bool v){
 			qCritical() << "qobject_cast<QCheckBox*> returned 0";
 		}
 	}
-
 	sem.release(); //release before to uncheck all checkBoxes with allTogled
+
 	checkRadio(zeroChecked || allChecked);
 	emit(filterChanged(r));	
 }
