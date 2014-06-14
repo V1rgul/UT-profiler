@@ -14,7 +14,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Edition de semestre</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/ressources/logo.png</normaloff>:/ressources/logo.png</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -48,6 +52,9 @@
          </item>
          <item>
           <widget class="QToolButton" name="buttonSaison">
+           <property name="toolTip">
+            <string>Changer la saison</string>
+           </property>
            <property name="text">
             <string>A</string>
            </property>
@@ -86,6 +93,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

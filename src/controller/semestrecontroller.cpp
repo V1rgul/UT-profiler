@@ -42,7 +42,7 @@ QString SemestreController::date(){
 void SemestreController::remove(){
 	QString text("Etes vous sur de vouloir supprimmer le Semestre ");
 	text.append(date());
-	QMessageBox::StandardButton b = QMessageBox::warning( 0,
+	QMessageBox::StandardButton b = QMessageBox::warning( semestre,
 									  QString("Attention"),
 									  text,
 									  QMessageBox::Yes | QMessageBox::Discard);

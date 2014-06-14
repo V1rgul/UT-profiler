@@ -3,5 +3,6 @@
         <file>ressources/catalogue.xml</file>
         <file>ressources/cursus.xml</file>
         <file>ressources/credits.xml</file>
+        <file>ressources/logo.png</file>
     </qresource>
 </RCC>

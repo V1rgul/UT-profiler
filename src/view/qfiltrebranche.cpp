@@ -3,9 +3,11 @@
 #include <QCheckBox>
 
 QFiltreBranche::QFiltreBranche(QWidget *parent) :
-	QWidget(parent)
+	QWidget(parent), sem(1)
 {
 	ui.setupUi(this);
+	QButtonGroup *bg = new QButtonGroup(this);
+	bg->addButton(ui.radioAll);
 	connect(ui.radioAll, SIGNAL(toggled(bool)), this, SLOT(allToggled(bool)));
 }
 
@@ -20,8 +22,9 @@ void QFiltreBranche::addBranches(QStringList &listeBranches){
 }
 
 
-void QFiltreBranche::allToggled(bool v){
+void QFiltreBranche::allToggled(bool v){	
 	if(!sem.tryAcquire()) return;
+	qDebug() << "radio toggled(" << v << ")";
 	if(v == true){
 		for(int i=0; i<ui.layoutBranches->count(); i++){
 			QCheckBox *checkBox = qobject_cast<QCheckBox*>( ui.layoutBranches->itemAt(i)->widget() );
@@ -31,8 +34,7 @@ void QFiltreBranche::allToggled(bool v){
 				qCritical() << "qobject_cast<QCheckBox*> returned 0";
 			}
 		}
-	}else{
-		qDebug() << "radio toggled(false)";
+	}else{	
 	}
 	emit(filterChanged(QStringList()));
 	sem.release();
