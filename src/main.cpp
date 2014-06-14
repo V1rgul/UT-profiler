@@ -16,6 +16,9 @@ int main(int argc, char *argv[]) {
 
   const Catalogue* c = Catalogue::instance();
 
+  Etudiant::listeEtudiants();
+  Etudiant::creditsNecessaires();
+
   Etudiant e;
   e.nom("Potter");
   e.prenom("Harry");
@@ -43,6 +46,15 @@ int main(int argc, char *argv[]) {
 
   e.ajouterFormation(&f1);
   e.ajouterFormation(&f2);
+
+  QMap<QString, unsigned int> creditsNecessaires = Etudiant::creditsNecessaires();
+  QMap<QString, unsigned int> credits = e.credits();
+
+  for (int i = 0; i < creditsNecessaires.keys().count(); i++) {
+    QString type = creditsNecessaires.keys()[i];
+    qDebug() << type + ": " + QString::number(credits[type]) + "/" + QString::number(creditsNecessaires[type]);
+  }
+
   try {
     e.sauvegarder(); // test la sauvegarde d'un etudiant dans un fichier xml
     Etudiant *e1 = Etudiant::charger("Newton Isaac"); // ainsi que le chargement d'un fichier xml

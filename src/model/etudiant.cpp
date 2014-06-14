@@ -34,6 +34,75 @@ void Etudiant::supprimerFormation (int id) {
   }
 }
 
+QMap<QString, unsigned int> Etudiant::credits () const {
+  QMap<QString, unsigned int> credits;
+  credits["horsUtc"] = 0;
+
+  for (int i = 0; i < this->_formationsHorsUtc.count(); i++) {
+    credits["horsUtc"] += this->_formationsHorsUtc[i]->credits();  
+  }
+
+  credits["total"] = credits["horsUtc"];
+
+  QList<Semestre*> semestres = _formationUtc->semestres();
+  for (int i = 0; i < semestres.count(); i++) {
+    Semestre* s = semestres[i];
+    QMap<QString, UVEtudiant*> uvs = s->uvs();
+
+    for (int j = 0; j < uvs.keys().count(); j++) {
+      UVEtudiant* u = uvs[uvs.keys()[j]];
+      for (int k = 0; k < u->credits().keys().count(); k++) {
+        QString type = u->credits().keys()[k];
+        unsigned int c = u->credits()[type];
+
+        if (credits.contains(type)) { credits[type] += c; }
+        else { credits[type] = c;} 
+
+        // L'utc demande 30 crédits CS, 30 crédits TM, la somme
+        // des crédits CS/TM doit être au dessus de 80 (crédits BR)
+        // pour le cycle ingénieur
+        if (type == "CS" || type == "TM") {
+          if (credits.contains("BR")) { credits["BR"] += c; }
+          else { credits["BR"] = c; } 
+        }
+
+        credits["total"] += c;
+      } 
+    }   
+  } 
+
+  return credits;
+}
+
+QMap<QString, unsigned int> Etudiant::creditsNecessaires () {
+  QMap<QString, unsigned int> credits;
+
+  QFile f(":/ressources/credits.xml");
+  QDomDocument dom = QDomDocument("doc");
+  QString err;
+
+  if(!f.open(QIODevice::ReadOnly)) {
+    throw f.errorString();
+  }
+  if (!dom.setContent(&f, &err)) {
+    f.close();
+    throw "erreur lors de l'association fichier/Dom";
+  }
+
+  QDomElement domElement = dom.documentElement();
+
+  QDomNodeList child = domElement.childNodes();
+  for (int i = 0; i < child.count(); i++) {
+    QDomNode c = child.at(i);
+    QDomElement e = c.toElement();
+    QString type = e.attribute("type");
+    credits[type] = e.text().toInt();
+  }
+
+  f.close();
+  return credits;
+}
+
 QDomElement Etudiant::toXml () const {
   QDomDocument doc;
   QDomElement etudiant = doc.createElement(Etudiant::XML_NODE_NAME);

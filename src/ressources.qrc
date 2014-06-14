@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>ressources/catalogue.xml</file>
         <file>ressources/cursus.xml</file>
+        <file>ressources/credits.xml</file>
     </qresource>
 </RCC>

@@ -29,3 +29,6 @@ build-*
 
 # Vim swap
 *.sw[op]
+
+" Doxygen
+doxygen/

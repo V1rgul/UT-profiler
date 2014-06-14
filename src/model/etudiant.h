@@ -30,9 +30,11 @@ class Etudiant {
     void ajouterFormation (FormationHorsUtc* f);
     void supprimerFormation (int id);
 
+    QMap<QString, unsigned int> credits () const;
+    static QMap<QString, unsigned int> creditsNecessaires ();
+
     void fromXml (QDomNode& noeud);
     QDomElement toXml () const;
-    QString xmlNodeName () const;
 
     inline FormationUtc* formationUtc () const { return _formationUtc; }
     inline QList<FormationHorsUtc*> formationsHorsUtc () const { return _formationsHorsUtc; }

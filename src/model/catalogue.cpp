@@ -92,9 +92,8 @@ Catalogue* Catalogue::charger () {
 
   f = f2.exists() ? &f2 : &f1;
 
-  qDebug() << "Chargement du fichier " + f->fileName();
   if(!f->open(QIODevice::ReadOnly)) {
-    throw "Impossible d'ouvrir le fichier catalogue.xml";
+    throw f->errorString();
   }
   if (!dom.setContent(f, &err)) {
     f->close();

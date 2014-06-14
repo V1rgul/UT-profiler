@@ -774,5 +774,11 @@
   <uv tag="UXD01" titre="Design D'Experience" >
     <credits type="TM">6</credits>
   </uv>
+  <uv tag="TN09" titre="Stage" >
+    <credits type="SP">30</credits>
+  </uv>
+  <uv tag="TN10" titre="Stage" >
+    <credits type="SP">30</credits>
+  </uv>
 </catalogue>
 
