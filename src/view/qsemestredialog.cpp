@@ -30,3 +30,9 @@ void QSemestreDialog::spinYearChanged(int year){
 void QSemestreDialog::setYear(int year){
 	ui.spinAnnee->setValue(year);
 }
+
+QAbstractItemModel* QSemestreDialog::swapModel(QAbstractItemModel *model){
+	QAbstractItemModel *old = ui.listView->model();
+	ui.listView->setModel(model);
+	return old;
+}

@@ -1,10 +1,12 @@
 #include "semestredialogcontroller.h"
 #include <QtDebug>
+#include "model/uv.h"
 
 SemestreDialogController::SemestreDialogController(Etudiant* etudiant, Semestre* semestre, QWidget* parent) :
-	QObject(parent), etudiant(etudiant), semestre(semestre), semestreDialog(new QSemestreDialog)
+	QObject(parent), etudiant(etudiant), semestre(semestre), semestreDialog(new QSemestreDialog), uvModel()
 {
 	update();
+	filterChanged(QStringList());
 	//* Test
 	semestreDialog->getFiltreBranche()->addBranches(QStringList() << "_TC" << "_GI" << "_GM");
 	//*/
@@ -19,6 +21,7 @@ SemestreDialogController::SemestreDialogController(Etudiant* etudiant, Semestre*
 
 void SemestreDialogController::update(){
 	//Don't forget to empty things
+
 
 	semestreDialog->setSaison( (semestre->saison()==Semestre::AUTOMNE)? QString("A") : QString("P") );
 	semestreDialog->setYear(semestre->annee());
@@ -37,4 +40,20 @@ void SemestreDialogController::yearChanged(int year){
 
 void SemestreDialogController::filterChanged(QStringList list){
 	qDebug() << "filterChanged(" << list.join(", ") << ")";
+
+	QList<const UV*> uvs = etudiant->uvTriees(semestre->saison(), (list.count()==0)?0:&list );
+	QStandardItemModel* model = new QStandardItemModel(list.count(), 1, this);
+
+	int row = 0;
+	foreach(const UV* uv, uvs){
+		model->setItem(row, 0, new QStandardItem(uv->tag()));
+		row++;
+	}
+
+	QAbstractItemModel* old = semestreDialog->swapModel(model);
+	delete old;
 }
+
+
+
+

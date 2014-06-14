@@ -20,6 +20,8 @@ void QSemestre::buttonDeleteClicked(){
 	emit(deleteClicked());
 }
 
-void QSemestre::setTable(QAbstractItemModel *model){
+QAbstractItemModel* QSemestre::swapModel(QAbstractItemModel *model){
+	QAbstractItemModel *old = ui.tableUV->model();
 	ui.tableUV->setModel(model);
+	return old;
 }

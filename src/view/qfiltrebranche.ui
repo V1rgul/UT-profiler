@@ -35,7 +35,7 @@
       <item>
        <widget class="QRadioButton" name="radioAll">
         <property name="text">
-         <string>Tout</string>
+         <string>Toutes les UV</string>
         </property>
         <property name="checked">
          <bool>true</bool>

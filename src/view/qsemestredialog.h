@@ -14,6 +14,7 @@ class QSemestreDialog : public QDialog
 		void setSaison(QString s);
 		void setYear(int year);
 		QFiltreBranche* getFiltreBranche();
+		QAbstractItemModel* swapModel(QAbstractItemModel *model);
 	signals:
 		void saisonChanged();
 		void yearChanged(int year);

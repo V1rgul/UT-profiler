@@ -12,7 +12,7 @@ class QSemestre : public QWidget
 		explicit QSemestre(QWidget *parent = 0);
 
 		void setDate(QString d);
-		void setTable(QAbstractItemModel * model);
+		QAbstractItemModel* swapModel(QAbstractItemModel * model);
 	signals:
 		void editClicked();
 		void deleteClicked();

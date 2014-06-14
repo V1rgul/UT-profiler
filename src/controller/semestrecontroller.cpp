@@ -22,14 +22,15 @@ void SemestreController::update(){
 
 	qSemestre->setDate(date());
 
-	QStandardItemModel* model = new QStandardItemModel(2, semestre->uvs().size());
+	QStandardItemModel* model = new QStandardItemModel(2, semestre->uvs().size(), this);
 	int column = 0;
 	foreach (QString uv, semestre->uvs().keys()){
 		model->setItem(0, column, new QStandardItem(uv));
 		model->setItem(1, column, new QStandardItem("42"));
 		column++;
 	}
-	qSemestre->setTable(model);
+	QAbstractItemModel* old = qSemestre->swapModel(model);
+	delete old;
 }
 
 QString SemestreController::date(){

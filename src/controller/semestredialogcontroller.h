@@ -2,6 +2,7 @@
 #define SEMESTREDIALOGCONTROLLER_H
 
 #include <QObject>
+#include <QStandardItemModel>
 #include "qsemestredialog.h"
 #include "model/etudiant.h"
 #include "model/semestre.h"
@@ -16,6 +17,7 @@ class SemestreDialogController : public QObject
 	public slots:
 		void update();
 
+
 		void saisonChanged();
 		void yearChanged(int year);
 		void filterChanged(QStringList list);
@@ -23,6 +25,9 @@ class SemestreDialogController : public QObject
 		Etudiant* etudiant;
 		Semestre* semestre;
 		QSemestreDialog* semestreDialog;
+
+		QStandardItemModel* uvModel;
+
 };
 
 #endif // SEMESTREDIALOGCONTROLLER_H
