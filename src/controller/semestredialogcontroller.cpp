@@ -1,5 +1,6 @@
 #include "semestredialogcontroller.h"
 #include <QtDebug>
+#include <QSortFilterProxyModel>
 #include "model/uv.h"
 #include "model/catalogue.h"
 #include "uvchoisiecontroller.h"
@@ -51,17 +52,22 @@ void SemestreDialogController::filterChanged(QStringList list){
 }
 
 void SemestreDialogController::updateList(){
-	return ;
 	QList<const UV*> uvs = etudiant->uvTriees(semestre->saison(), (currentFilter.count()==0)?0:&currentFilter );
-	QStandardItemModel* model = new QStandardItemModel(uvs.count(), 1, this);
+	QStringList headers;
+	headers << "Tag" << "Titre" << "Cursus";
 
+	QStandardItemModel* model = new QStandardItemModel(uvs.count(), headers.count(), this);
+	model->setHorizontalHeaderLabels(headers);
 	int row = 0;
 	foreach(const UV* uv, uvs){
 		model->setItem(row, 0, new QStandardItem(uv->tag()));
+		model->setItem(row, 1, new QStandardItem(uv->titre()));
+		model->setItem(row, 2, new QStandardItem(uv->cursus().join(",")));
 		row++;
 	}
 
 	qDebug() << "model filled with" << row << "rows";
+	//new QSortFilterProxyModel(
 	QAbstractItemModel* old = semestreDialog->swapModel(model);
 	delete old;
 }

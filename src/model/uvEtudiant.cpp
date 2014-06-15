@@ -5,16 +5,17 @@
 
 const QString UVEtudiant::XML_NODE_NAME = "uv";
 
-QSet<QString> UVEtudiant::listeNotes () {
-  QSet<QString> set;
-  set.insert("A");
-  set.insert("B");
-  set.insert("C");
-  set.insert("D");
-  set.insert("E");
-  set.insert("F");
-  set.insert("FX");
-  set.insert("ABS");
+QList<QString> UVEtudiant::listeNotes () {
+  QList<QString> set;
+  set.append("-");
+  set.append("A");
+  set.append("B");
+  set.append("C");
+  set.append("D");
+  set.append("E");
+  set.append("F");
+  set.append("FX");
+  set.append("ABS");
 
   return set;
 }

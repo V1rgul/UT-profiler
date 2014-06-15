@@ -16,7 +16,7 @@
   <property name="toolTip">
    <string>Annuler le choix</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,0">
    <property name="leftMargin">
     <number>0</number>
    </property>
@@ -30,9 +30,19 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QPushButton" name="buttonUV">
+    <widget class="QLabel" name="labelName">
      <property name="text">
-      <string>PushButton</string>
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboNote"/>
+   </item>
+   <item>
+    <widget class="QToolButton" name="buttonRemove">
+     <property name="text">
+      <string>X</string>
      </property>
     </widget>
    </item>

@@ -16,6 +16,7 @@ class UVChoisieController : public QObject
 		void removed(UVEtudiant*);
 	public slots:
 		void remove();
+		void noteChanged(QString note);
 
 	private:
 		UVEtudiant* uv;

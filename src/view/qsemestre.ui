@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
@@ -64,23 +64,11 @@
    </item>
    <item>
     <widget class="QTableView" name="tableUV">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
      <attribute name="horizontalHeaderVisible">
       <bool>false</bool>
      </attribute>
-     <attribute name="horizontalHeaderMinimumSectionSize">
-      <number>20</number>
-     </attribute>
      <attribute name="verticalHeaderVisible">
       <bool>false</bool>
-     </attribute>
-     <attribute name="verticalHeaderMinimumSectionSize">
-      <number>10</number>
      </attribute>
     </widget>
    </item>

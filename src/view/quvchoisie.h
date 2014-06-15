@@ -11,11 +11,15 @@ class QUVChoisie : public QWidget
 	public:
 		explicit QUVChoisie(QWidget *parent = 0);
 		void setName(QString s);
+		void setNote(QString note);
+		void addNotes(QStringList notes);
 
 	signals:
 		void removeClicked();
+		void noteChanged(QString);
 	public slots:
 		void buttonRemoveClicked();
+		void comboNoteChanged(QString);
 	private:
 		Ui::QUVChoisie ui;
 };

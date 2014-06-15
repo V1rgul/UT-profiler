@@ -6,7 +6,8 @@ QUVChoisie::QUVChoisie(QWidget *parent) :
 {
 	ui.setupUi(this);
 
-	connect(ui.buttonUV, SIGNAL(clicked()), this, SLOT(buttonRemoveClicked()));
+	connect(ui.buttonRemove, SIGNAL(clicked()), this, SLOT(buttonRemoveClicked()));
+	connect(ui.comboNote, SIGNAL(currentTextChanged(QString)), this, SLOT(comboNoteChanged(QString)));
 }
 
 void QUVChoisie::buttonRemoveClicked(){
@@ -14,5 +15,17 @@ void QUVChoisie::buttonRemoveClicked(){
 }
 
 void QUVChoisie::setName(QString s){
-	ui.buttonUV->setText(s);
+	ui.labelName->setText(s);
+}
+
+void QUVChoisie::setNote(QString note){
+	ui.comboNote->setCurrentText(note);
+}
+
+void QUVChoisie::addNotes(QStringList notes){
+	ui.comboNote->addItems(notes);
+}
+
+void QUVChoisie::comboNoteChanged(QString note){
+	emit(noteChanged(note));
 }

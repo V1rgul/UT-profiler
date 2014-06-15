@@ -13,6 +13,8 @@ class UVEtudiant : public XmlConvertible {
   public:
     const static QString XML_NODE_NAME;
 
+    static QList<QString> listeNotes ();
+
     UVEtudiant (const UV& uv) : _details(&uv) {}
     UVEtudiant (const QDomNode& node) {
       this->fromXml(node); 
@@ -38,7 +40,6 @@ class UVEtudiant : public XmlConvertible {
     }
 
   private:
-    static QSet<QString> listeNotes ();
     QString _tag, _note;
     const UV* _details;
 };
