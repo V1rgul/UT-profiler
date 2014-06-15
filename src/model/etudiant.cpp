@@ -10,6 +10,7 @@
 
 const QString Etudiant::XML_NODE_NAME = "etudiant";
 const QString Etudiant::PREFERENCE_XML_NODE_NAME = "preference";
+const unsigned int Etudiant::NOTE_DEFAUT = 2;
 const unsigned int Etudiant::NOTE_MAX = 5;
 
 Etudiant::Etudiant () {
@@ -48,31 +49,28 @@ void Etudiant::preference (const UV* uv, unsigned int note) {
   this->_preferences[uv] = note;
 }
 
-QList<const UV*> Etudiant::uvTriees (Semestre::Saison saison, 
-                                     QStringList* cursus) const 
+QMap<const UV*, unsigned int> Etudiant::preferences (
+    Semestre::Saison saison, QStringList* cursus) const 
 {
   QList<const UV*> uvs = this->preferences().keys();
-  QList<const UV*> triees;
-  for (int i = Etudiant::NOTE_MAX; i >= 0; i--) {
-    for (int j = 0; j < uvs.count(); j++) {
-      bool matchSaison = 
-        (saison == Semestre::AUTOMNE && uvs[j]->automne()) ||
-        (saison == Semestre::PRINTEMPS && uvs[j]->printemps());
-      bool dejaValidee = this->formationUtc()->uvDejaValidee(uvs[j]->tag());
-      bool matchCursus = false;
-      if (!cursus) { matchCursus = true; }
-      else {
-        for (int k = 0; k < cursus->count(); k++) {
-          if (uvs[j]->cursus().contains((*cursus)[k])) {
-            matchCursus = true;
-            break;
-          }
+  QMap<const UV*, unsigned int> triees;
+  for (int j = 0; j < uvs.count(); j++) {
+    bool matchSaison = 
+      (saison == Semestre::AUTOMNE && uvs[j]->automne()) ||
+      (saison == Semestre::PRINTEMPS && uvs[j]->printemps());
+    bool dejaValidee = this->formationUtc()->uvDejaValidee(uvs[j]->tag());
+    bool matchCursus = false;
+    if (!cursus) { matchCursus = true; }
+    else {
+      for (int k = 0; k < cursus->count(); k++) {
+        if (uvs[j]->cursus().contains((*cursus)[k])) {
+          matchCursus = true;
+          break;
         }
       }
-      bool noteMatch = this->preferences()[uvs[j]] == i;
-      if (matchSaison && !dejaValidee && matchCursus && noteMatch) { 
-        triees.append(uvs[j]); 
-      }
+    }
+    if (matchSaison && !dejaValidee && matchCursus) { 
+      triees[uvs[j]] = this->preference(uvs[j]); 
     }
   }
  
@@ -157,21 +155,17 @@ QDomElement Etudiant::toXml () const {
     etudiant.appendChild(this->formationsHorsUtc()[i]->toXml());
   }
 
-  qDebug() << "toXml: Ajout des preferences";
   for (int i = 0; i < this->preferences().keys().count(); i++) {
-    QDomElement e = doc.createElement(Etudiant::PREFERENCE_XML_NODE_NAME);
     const UV* uv = this->preferences().keys()[i];
-    if (uv) { qDebug() << "truthy"; } 
-    else { qDebug() << "falsy"; } 
-    qDebug() << "3";
     unsigned int note = this->preferences()[uv];
 
-    e.setAttribute("uv", uv->tag());
-    qDebug() << "5";
-    e.setAttribute("note", note);
-    etudiant.appendChild(e);
+    if (note != Etudiant::NOTE_DEFAUT) {
+      QDomElement e = doc.createElement(Etudiant::PREFERENCE_XML_NODE_NAME);
+      e.setAttribute("uv", uv->tag());
+      e.setAttribute("note", note);
+      etudiant.appendChild(e);
+    }
   }
-  qDebug() << "toXml: Preference ajoutées";
 
   return etudiant;
 }
@@ -186,6 +180,8 @@ void Etudiant::fromXml (QDomNode& noeud) {
   this->prenom(e.attribute("prenom"));
 
   QDomNodeList child = noeud.childNodes();
+  const Catalogue* c = Catalogue::instance();
+
   for (int i = 0; i < child.count(); i++) {
     if (child.at(i).nodeName() == FormationUtc::XML_NODE_NAME) {
       this->formationUtc()->fromXml(child.at(i));
@@ -197,18 +193,24 @@ void Etudiant::fromXml (QDomNode& noeud) {
     }
     else if (child.at(i).nodeName() == Etudiant::PREFERENCE_XML_NODE_NAME) {
       QDomElement ce = child.at(i).toElement();
-      const UV* uv = (*(Catalogue::instance()))[ce.attribute("uv")];
+      const UV* uv = (*c)[ce.attribute("uv")];
       unsigned int note = ce.attribute("note").toInt();
-
-      QString addr;
-      addr.sprintf("%08p", uv);
-      qDebug() << "Preference " + addr + " set to " + QString::number(note);
       this->_preferences[uv] = note;
     }
     else {
       throw QString("Les noeuds etudiant ne peuvent contenir que des noeuds formation");
     }
   }
+
+  QList<UV*> uvs = c->uvs().values();
+  for (int i = 0; i < uvs.count(); i++) {
+    UV* u = uvs[i];
+    if (!this->_preferences.contains(u)) {
+      qDebug() << "Note par defaut pour " + u->tag();
+      this->_preferences[u] = Etudiant::NOTE_DEFAUT;
+    }
+  }
+
 }
 
 Etudiant* Etudiant::charger (const QString& nomComplet) {
