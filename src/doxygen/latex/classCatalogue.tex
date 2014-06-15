@@ -1,0 +1,185 @@
+\hypertarget{classCatalogue}{\section{Catalogue Class Reference}
+\label{classCatalogue}\index{Catalogue@{Catalogue}}
+}
+Inheritance diagram for Catalogue\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCatalogue}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUV}{U\+V} $\ast$ \hyperlink{classCatalogue_a0b41015c9bdedce5463c077e4f5911d9}{operator\mbox{[}$\,$\mbox{]}} (Q\+String tag)
+\item 
+const \hyperlink{classUV}{U\+V} $\ast$ \hyperlink{classCatalogue_ad3c0bd9f62e5dfac1793a38b28b0eb7d}{operator\mbox{[}$\,$\mbox{]}} (Q\+String tag) const 
+\item 
+void \hyperlink{classCatalogue_aaa115ae803e70505a8c1973dc77ed16e}{ajouter\+Uv} (\hyperlink{classUV}{U\+V} $\ast$uv)
+\begin{DoxyCompactList}\small\item\em Ajoute une uv au catalogue. \end{DoxyCompactList}\item 
+void \hyperlink{classCatalogue_aac46b55131756fab4116334f40e2db08}{supprimer\+Uv} (const Q\+String uv)
+\begin{DoxyCompactList}\small\item\em Supprime une uv du catalogue. \end{DoxyCompactList}\item 
+void \hyperlink{classCatalogue_ad57d112222cd659ce25e4c1f2a656a37}{editer\+Uv} (const Q\+String old\+Tag, \hyperlink{classUV}{U\+V} $\ast$uv)
+\begin{DoxyCompactList}\small\item\em Edite une uv du catalogue. \end{DoxyCompactList}\item 
+bool \hyperlink{classCatalogue_aa09bcaa689f5c1a99b2938eb207fcb53}{existe} (Q\+String tag)
+\item 
+\hypertarget{classCatalogue_a5041850ff2105de5cc0a60bd81428f29}{void {\bfseries sauvegarder} ()}\label{classCatalogue_a5041850ff2105de5cc0a60bd81428f29}
+
+\item 
+\hypertarget{classCatalogue_a0a8e893d0f54ca2ce1583758c5b6cf05}{void \hyperlink{classCatalogue_a0a8e893d0f54ca2ce1583758c5b6cf05}{from\+Xml} (const Q\+Dom\+Node \&noeud)}\label{classCatalogue_a0a8e893d0f54ca2ce1583758c5b6cf05}
+
+\begin{DoxyCompactList}\small\item\em Définit l'objet à partir d'un élément X\+M\+L. \end{DoxyCompactList}\item 
+Q\+Dom\+Element \hyperlink{classCatalogue_a12f412e8ba3dd8b950fc1f7dd8608f51}{to\+Xml} () const 
+\begin{DoxyCompactList}\small\item\em Convertit l'objet au format X\+M\+L. \end{DoxyCompactList}\item 
+\hypertarget{classCatalogue_ad474a13f9542c20894560310b75f431c}{Q\+Set$<$ Q\+String $>$ {\bfseries cursus} () const }\label{classCatalogue_ad474a13f9542c20894560310b75f431c}
+
+\item 
+\hypertarget{classCatalogue_a262a14d33cd2d6d8192a2b00b15cdb7f}{Q\+Map$<$ Q\+String, \hyperlink{classUV}{U\+V} $\ast$ $>$ {\bfseries uvs} () const }\label{classCatalogue_a262a14d33cd2d6d8192a2b00b15cdb7f}
+
+\item 
+\hypertarget{classCatalogue_a5992f2acc3cec15b819b97b1f36303ad}{Q\+String {\bfseries to\+String} ()}\label{classCatalogue_a5992f2acc3cec15b819b97b1f36303ad}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classCatalogue}{Catalogue} $\ast$ \hyperlink{classCatalogue_a875a4bd0a28d97b500b5d67704f273a6}{instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCatalogue_a068d1f58e7854f79b05a30667dfebc32}{static const Q\+String \hyperlink{classCatalogue_a068d1f58e7854f79b05a30667dfebc32}{X\+M\+L\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+M\+E} = \char`\"{}catalogue\char`\"{}}\label{classCatalogue_a068d1f58e7854f79b05a30667dfebc32}
+
+\begin{DoxyCompactList}\small\item\em Nom du noeud X\+M\+L correspondant au catalogue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCatalogue_aaa115ae803e70505a8c1973dc77ed16e}{\index{Catalogue@{Catalogue}!ajouter\+Uv@{ajouter\+Uv}}
+\index{ajouter\+Uv@{ajouter\+Uv}!Catalogue@{Catalogue}}
+\subsubsection[{ajouter\+Uv}]{\setlength{\rightskip}{0pt plus 5cm}void Catalogue\+::ajouter\+Uv (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+V} $\ast$}]{uv}
+\end{DoxyParamCaption}
+)}}\label{classCatalogue_aaa115ae803e70505a8c1973dc77ed16e}
+
+
+Ajoute une uv au catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uv} & L'uv à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCatalogue_ad57d112222cd659ce25e4c1f2a656a37}{\index{Catalogue@{Catalogue}!editer\+Uv@{editer\+Uv}}
+\index{editer\+Uv@{editer\+Uv}!Catalogue@{Catalogue}}
+\subsubsection[{editer\+Uv}]{\setlength{\rightskip}{0pt plus 5cm}void Catalogue\+::editer\+Uv (
+\begin{DoxyParamCaption}
+\item[{const Q\+String}]{old\+Tag, }
+\item[{{\bf U\+V} $\ast$}]{uv}
+\end{DoxyParamCaption}
+)}}\label{classCatalogue_ad57d112222cd659ce25e4c1f2a656a37}
+
+
+Edite une uv du catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Tag} & L'ancien nom de l'uv \\
+\hline
+{\em uv} & L'uv éditée \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCatalogue_aa09bcaa689f5c1a99b2938eb207fcb53}{\index{Catalogue@{Catalogue}!existe@{existe}}
+\index{existe@{existe}!Catalogue@{Catalogue}}
+\subsubsection[{existe}]{\setlength{\rightskip}{0pt plus 5cm}bool Catalogue\+::existe (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{tag}
+\end{DoxyParamCaption}
+)}}\label{classCatalogue_aa09bcaa689f5c1a99b2938eb207fcb53}
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Le tag de l'uv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si le catalogue contient l'uv, faux sinon 
+\end{DoxyReturn}
+\hypertarget{classCatalogue_a875a4bd0a28d97b500b5d67704f273a6}{\index{Catalogue@{Catalogue}!instance@{instance}}
+\index{instance@{instance}!Catalogue@{Catalogue}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Catalogue} $\ast$ Catalogue\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCatalogue_a875a4bd0a28d97b500b5d67704f273a6}
+\begin{DoxyReturn}{Returns}
+Le singleton du catalogue 
+\end{DoxyReturn}
+\hypertarget{classCatalogue_a0b41015c9bdedce5463c077e4f5911d9}{\index{Catalogue@{Catalogue}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Catalogue@{Catalogue}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+V} $\ast$ Catalogue\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{tag}
+\end{DoxyParamCaption}
+)}}\label{classCatalogue_a0b41015c9bdedce5463c077e4f5911d9}
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Le tag de l'uv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L'uv ayant le tag passé en argument 
+\end{DoxyReturn}
+\hypertarget{classCatalogue_ad3c0bd9f62e5dfac1793a38b28b0eb7d}{\index{Catalogue@{Catalogue}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Catalogue@{Catalogue}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf U\+V} $\ast$ Catalogue\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{tag}
+\end{DoxyParamCaption}
+) const}}\label{classCatalogue_ad3c0bd9f62e5dfac1793a38b28b0eb7d}
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Le tag de l'uv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L'uv ayant le tag passé en argument 
+\end{DoxyReturn}
+\hypertarget{classCatalogue_aac46b55131756fab4116334f40e2db08}{\index{Catalogue@{Catalogue}!supprimer\+Uv@{supprimer\+Uv}}
+\index{supprimer\+Uv@{supprimer\+Uv}!Catalogue@{Catalogue}}
+\subsubsection[{supprimer\+Uv}]{\setlength{\rightskip}{0pt plus 5cm}void Catalogue\+::supprimer\+Uv (
+\begin{DoxyParamCaption}
+\item[{const Q\+String}]{tag}
+\end{DoxyParamCaption}
+)}}\label{classCatalogue_aac46b55131756fab4116334f40e2db08}
+
+
+Supprime une uv du catalogue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Le tag de l'uv à supprimer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCatalogue_a12f412e8ba3dd8b950fc1f7dd8608f51}{\index{Catalogue@{Catalogue}!to\+Xml@{to\+Xml}}
+\index{to\+Xml@{to\+Xml}!Catalogue@{Catalogue}}
+\subsubsection[{to\+Xml}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dom\+Element Catalogue\+::to\+Xml (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCatalogue_a12f412e8ba3dd8b950fc1f7dd8608f51}
+
+
+Convertit l'objet au format X\+M\+L. 
+
+\begin{DoxyReturn}{Returns}
+L'élément X\+M\+L correspondant 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classXmlConvertible_a188430d1503cf6db7223374306577c2c}{Xml\+Convertible}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+model/catalogue.\+h\item 
+model/catalogue.\+cpp\end{DoxyCompactItemize}

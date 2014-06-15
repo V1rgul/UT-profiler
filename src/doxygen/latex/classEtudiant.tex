@@ -1,0 +1,190 @@
+\hypertarget{classEtudiant}{\section{Etudiant Class Reference}
+\label{classEtudiant}\index{Etudiant@{Etudiant}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classEtudiant_abfb4e7f3a5faac571517798e059242a4}{\hyperlink{classEtudiant_abfb4e7f3a5faac571517798e059242a4}{Etudiant} ()}\label{classEtudiant_abfb4e7f3a5faac571517798e059242a4}
+
+\begin{DoxyCompactList}\small\item\em Crée un étudiant. \end{DoxyCompactList}\item 
+\hypertarget{classEtudiant_a92040e42a52bb569770130c4d386d772}{void {\bfseries sauvegarder} ()}\label{classEtudiant_a92040e42a52bb569770130c4d386d772}
+
+\item 
+void \hyperlink{classEtudiant_a79a952f749699752e2fe93931794c0e2}{ajouter\+Formation} (\hyperlink{classFormationHorsUtc}{Formation\+Hors\+Utc} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Ajoute une formation hors utc. \end{DoxyCompactList}\item 
+void \hyperlink{classEtudiant_a1c0fb87520ceaf9d9ca21988f7b5890a}{supprimer\+Formation} (int id)
+\begin{DoxyCompactList}\small\item\em Supprime une formation hors utc. \end{DoxyCompactList}\item 
+\hypertarget{classEtudiant_a4bc1732ed51c86b1316de31d99b04e7a}{Q\+Map$<$ const \hyperlink{classUV}{U\+V} $\ast$, unsigned int $>$ {\bfseries preferences} () const }\label{classEtudiant_a4bc1732ed51c86b1316de31d99b04e7a}
+
+\item 
+Q\+Map$<$ const \hyperlink{classUV}{U\+V} $\ast$, unsigned int $>$ \hyperlink{classEtudiant_a259cf9606f05adae7883defde1447e58}{preferences} (Semestre\+::\+Saison saison, Q\+String\+List $\ast$cursus=0) const 
+\item 
+unsigned int \hyperlink{classEtudiant_a8522ce46994fe15c22ef2085fe9953d7}{preference} (const \hyperlink{classUV}{U\+V} $\ast$uv) const 
+\item 
+void \hyperlink{classEtudiant_a3a5b8c8db5e73ff9f3330d97f3046549}{preference} (const \hyperlink{classUV}{U\+V} $\ast$uv, unsigned int note)
+\item 
+Q\+Map$<$ Q\+String, unsigned int $>$ \hyperlink{classEtudiant_aa4164906f6683277ea24ca05a0181bd6}{credits} () const 
+\item 
+\hypertarget{classEtudiant_a9f586beaf42634dc5d81fbe06cbcfe2a}{void {\bfseries from\+Xml} (Q\+Dom\+Node \&noeud)}\label{classEtudiant_a9f586beaf42634dc5d81fbe06cbcfe2a}
+
+\item 
+\hypertarget{classEtudiant_a37a9b3c63cca4c58691148c3a6e8d0ea}{Q\+Dom\+Element {\bfseries to\+Xml} () const }\label{classEtudiant_a37a9b3c63cca4c58691148c3a6e8d0ea}
+
+\item 
+\hypertarget{classEtudiant_ad6cbf30a3f98b23890513f1c7c01ef21}{\hyperlink{classFormationUtc}{Formation\+Utc} $\ast$ {\bfseries formation\+Utc} () const }\label{classEtudiant_ad6cbf30a3f98b23890513f1c7c01ef21}
+
+\item 
+\hypertarget{classEtudiant_ada0c08dcc9bd1c85fd63f571de3d5609}{Q\+List$<$ \hyperlink{classFormationHorsUtc}{Formation\+Hors\+Utc} $\ast$ $>$ {\bfseries formations\+Hors\+Utc} () const }\label{classEtudiant_ada0c08dcc9bd1c85fd63f571de3d5609}
+
+\item 
+\hypertarget{classEtudiant_a964ede32b8795124017bf371ee362579}{Q\+String {\bfseries nom} () const }\label{classEtudiant_a964ede32b8795124017bf371ee362579}
+
+\item 
+\hypertarget{classEtudiant_ae820d0092a8a5b9c89cb96cdc42b76cc}{void {\bfseries nom} (const Q\+String \&n)}\label{classEtudiant_ae820d0092a8a5b9c89cb96cdc42b76cc}
+
+\item 
+\hypertarget{classEtudiant_ab4ea9ea62203ee83175eb9c82dac73cf}{Q\+String {\bfseries prenom} () const }\label{classEtudiant_ab4ea9ea62203ee83175eb9c82dac73cf}
+
+\item 
+\hypertarget{classEtudiant_ab32c80f9d28533c6bac546f80d74243c}{void {\bfseries prenom} (const Q\+String \&p)}\label{classEtudiant_ab32c80f9d28533c6bac546f80d74243c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classEtudiant_af9f1b33459e9d35fb759b604ee674ced}{static \hyperlink{classEtudiant}{Etudiant} $\ast$ {\bfseries charger} (const Q\+String \&nom, const Q\+String \&prenom)}\label{classEtudiant_af9f1b33459e9d35fb759b604ee674ced}
+
+\item 
+\hypertarget{classEtudiant_a4513003f4ebb1f5232c02f6946c79d4a}{static \hyperlink{classEtudiant}{Etudiant} $\ast$ {\bfseries charger} (const Q\+String \&nom\+Complet)}\label{classEtudiant_a4513003f4ebb1f5232c02f6946c79d4a}
+
+\item 
+\hypertarget{classEtudiant_a7e4bf797b538d319d6bf80115d379437}{static Q\+String\+List {\bfseries liste\+Etudiants} ()}\label{classEtudiant_a7e4bf797b538d319d6bf80115d379437}
+
+\item 
+static Q\+Map$<$ Q\+String, unsigned \\*
+int $>$ \hyperlink{classEtudiant_a4cdc782c0710febb617b2a25a0859fa9}{credits\+Necessaires} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classEtudiant_ac25234ddf60108a99bbbea445f19abb6}{static const Q\+String \hyperlink{classEtudiant_ac25234ddf60108a99bbbea445f19abb6}{X\+M\+L\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+M\+E} = \char`\"{}etudiant\char`\"{}}\label{classEtudiant_ac25234ddf60108a99bbbea445f19abb6}
+
+\begin{DoxyCompactList}\small\item\em Nom du noeud X\+M\+L correspondant à un étudiant. \end{DoxyCompactList}\item 
+\hypertarget{classEtudiant_a1b797bf85c3a7910f75e3cea5d4d1d1c}{static const Q\+String \hyperlink{classEtudiant_a1b797bf85c3a7910f75e3cea5d4d1d1c}{P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+X\+M\+L\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+M\+E} = \char`\"{}preference\char`\"{}}\label{classEtudiant_a1b797bf85c3a7910f75e3cea5d4d1d1c}
+
+\begin{DoxyCompactList}\small\item\em Nom du noeud X\+M\+L correspondant aux préférences d'uvs d'un étudiant. \end{DoxyCompactList}\item 
+\hypertarget{classEtudiant_afeee33e22bb1086fa13a2d9717343ff7}{static const unsigned int \hyperlink{classEtudiant_afeee33e22bb1086fa13a2d9717343ff7}{N\+O\+T\+E\+\_\+\+D\+E\+F\+A\+U\+T} = 2}\label{classEtudiant_afeee33e22bb1086fa13a2d9717343ff7}
+
+\begin{DoxyCompactList}\small\item\em Note de préférence par défaut. \end{DoxyCompactList}\item 
+\hypertarget{classEtudiant_a4c4570e87c631b0ec36880386f7bce8f}{static const unsigned int \hyperlink{classEtudiant_a4c4570e87c631b0ec36880386f7bce8f}{N\+O\+T\+E\+\_\+\+M\+A\+X} = 5}\label{classEtudiant_a4c4570e87c631b0ec36880386f7bce8f}
+
+\begin{DoxyCompactList}\small\item\em Note de préférence maximum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classEtudiant_a79a952f749699752e2fe93931794c0e2}{\index{Etudiant@{Etudiant}!ajouter\+Formation@{ajouter\+Formation}}
+\index{ajouter\+Formation@{ajouter\+Formation}!Etudiant@{Etudiant}}
+\subsubsection[{ajouter\+Formation}]{\setlength{\rightskip}{0pt plus 5cm}void Etudiant\+::ajouter\+Formation (
+\begin{DoxyParamCaption}
+\item[{{\bf Formation\+Hors\+Utc} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}\label{classEtudiant_a79a952f749699752e2fe93931794c0e2}
+
+
+Ajoute une formation hors utc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & La formation à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEtudiant_aa4164906f6683277ea24ca05a0181bd6}{\index{Etudiant@{Etudiant}!credits@{credits}}
+\index{credits@{credits}!Etudiant@{Etudiant}}
+\subsubsection[{credits}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Map$<$ Q\+String, unsigned int $>$ Etudiant\+::credits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classEtudiant_aa4164906f6683277ea24ca05a0181bd6}
+\begin{DoxyReturn}{Returns}
+Les crédits de l'étudiant dans les diverses catégorie d'U\+Vs, la clef \char`\"{}total\char`\"{} contient la somme de tous les crédits de l'étudiant, et la clef \char`\"{}\+B\+R\char`\"{} contient la somme des crédits de type C\+S et T\+M 
+\end{DoxyReturn}
+\hypertarget{classEtudiant_a4cdc782c0710febb617b2a25a0859fa9}{\index{Etudiant@{Etudiant}!credits\+Necessaires@{credits\+Necessaires}}
+\index{credits\+Necessaires@{credits\+Necessaires}!Etudiant@{Etudiant}}
+\subsubsection[{credits\+Necessaires}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Map$<$ Q\+String, unsigned int $>$ Etudiant\+::credits\+Necessaires (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classEtudiant_a4cdc782c0710febb617b2a25a0859fa9}
+\begin{DoxyReturn}{Returns}
+La liste des crédits necessaires par catégorie d'\hyperlink{classUV}{U\+V} 
+\end{DoxyReturn}
+\hypertarget{classEtudiant_a8522ce46994fe15c22ef2085fe9953d7}{\index{Etudiant@{Etudiant}!preference@{preference}}
+\index{preference@{preference}!Etudiant@{Etudiant}}
+\subsubsection[{preference}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Etudiant\+::preference (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+V} $\ast$}]{uv}
+\end{DoxyParamCaption}
+) const}}\label{classEtudiant_a8522ce46994fe15c22ef2085fe9953d7}
+
+\begin{DoxyParams}{Parameters}
+{\em uv} & L'uv dont la note de préférence doit être retournée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La note de préférence pour l'uv, ou la note de préférence par défaut si l'étudiant n'a pas spécifié de note pour l'uv 
+\end{DoxyReturn}
+\hypertarget{classEtudiant_a3a5b8c8db5e73ff9f3330d97f3046549}{\index{Etudiant@{Etudiant}!preference@{preference}}
+\index{preference@{preference}!Etudiant@{Etudiant}}
+\subsubsection[{preference}]{\setlength{\rightskip}{0pt plus 5cm}void Etudiant\+::preference (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+V} $\ast$}]{uv, }
+\item[{unsigned int}]{note}
+\end{DoxyParamCaption}
+)}}\label{classEtudiant_a3a5b8c8db5e73ff9f3330d97f3046549}
+
+\begin{DoxyParams}{Parameters}
+{\em uv} & L'uv dont la note de préférence doit être définie \\
+\hline
+{\em note} & La note de préférence pour l'uv \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEtudiant_a259cf9606f05adae7883defde1447e58}{\index{Etudiant@{Etudiant}!preferences@{preferences}}
+\index{preferences@{preferences}!Etudiant@{Etudiant}}
+\subsubsection[{preferences}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Map$<$ const {\bf U\+V} $\ast$, unsigned int $>$ Etudiant\+::preferences (
+\begin{DoxyParamCaption}
+\item[{Semestre\+::\+Saison}]{saison, }
+\item[{Q\+String\+List $\ast$}]{cursus = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{classEtudiant_a259cf9606f05adae7883defde1447e58}
+
+\begin{DoxyParams}{Parameters}
+{\em saison} & La saison à laquelle les U\+Vs doivent être enseignées \\
+\hline
+{\em cursus} & La liste des cursus à afficher, si cursus vaut N\+U\+L\+L, les U\+Vs de tous les cursus pour la saison donnée sont retournées\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Les préférences de l'étudiant pour les U\+Vs enseignés durant la saison passé en argument et appartenant aux cursus donnés 
+\end{DoxyReturn}
+\hypertarget{classEtudiant_a1c0fb87520ceaf9d9ca21988f7b5890a}{\index{Etudiant@{Etudiant}!supprimer\+Formation@{supprimer\+Formation}}
+\index{supprimer\+Formation@{supprimer\+Formation}!Etudiant@{Etudiant}}
+\subsubsection[{supprimer\+Formation}]{\setlength{\rightskip}{0pt plus 5cm}void Etudiant\+::supprimer\+Formation (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{classEtudiant_a1c0fb87520ceaf9d9ca21988f7b5890a}
+
+
+Supprime une formation hors utc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & L'identifiant de la formation à supprimer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+model/etudiant.\+h\item 
+model/etudiant.\+cpp\end{DoxyCompactItemize}

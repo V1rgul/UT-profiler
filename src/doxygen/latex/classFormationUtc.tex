@@ -1,0 +1,121 @@
+\hypertarget{classFormationUtc}{\section{Formation\+Utc Class Reference}
+\label{classFormationUtc}\index{Formation\+Utc@{Formation\+Utc}}
+}
+Inheritance diagram for Formation\+Utc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classFormationUtc}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFormationUtc_a9922944f1ec47720995c836b1eb7eea7}{ajouter\+Semestre} (\hyperlink{classSemestre}{Semestre} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Ajoute un semestre à la formation. \end{DoxyCompactList}\item 
+void \hyperlink{classFormationUtc_ac3af0dcb7092a12790d979496c466466}{supprimer\+Semestre} (int id)
+\begin{DoxyCompactList}\small\item\em Supprime un semestre de la formation. \end{DoxyCompactList}\item 
+\hypertarget{classFormationUtc_a370bec2b5e818d45fd4b447500fb7a57}{void \hyperlink{classFormationUtc_a370bec2b5e818d45fd4b447500fb7a57}{from\+Xml} (const Q\+Dom\+Node \&noeud)}\label{classFormationUtc_a370bec2b5e818d45fd4b447500fb7a57}
+
+\begin{DoxyCompactList}\small\item\em Définit l'objet à partir d'un élément X\+M\+L. \end{DoxyCompactList}\item 
+Q\+Dom\+Element \hyperlink{classFormationUtc_a8dcda30820484cd00e82ad53a1b313f9}{to\+Xml} () const 
+\begin{DoxyCompactList}\small\item\em Convertit l'objet au format X\+M\+L. \end{DoxyCompactList}\item 
+\hypertarget{classFormationUtc_a144b0074f75c3ccdbd02974581758484}{Q\+List$<$ \hyperlink{classSemestre}{Semestre} $\ast$ $>$ {\bfseries semestres} () const }\label{classFormationUtc_a144b0074f75c3ccdbd02974581758484}
+
+\item 
+\hypertarget{classFormationUtc_a7f6f00890a69b763544791bf0310d892}{unsigned int {\bfseries id} () const }\label{classFormationUtc_a7f6f00890a69b763544791bf0310d892}
+
+\item 
+\hypertarget{classFormationUtc_a5b09b2e9c99fcaa643991acdab2c4117}{unsigned int {\bfseries credits} () const }\label{classFormationUtc_a5b09b2e9c99fcaa643991acdab2c4117}
+
+\item 
+\hypertarget{classFormationUtc_a9940a7fae66a24fdff63e862a3b5d0b7}{Q\+String {\bfseries nom} () const }\label{classFormationUtc_a9940a7fae66a24fdff63e862a3b5d0b7}
+
+\item 
+\hypertarget{classFormationUtc_ab9be42a9ee817c07d473a08e0684c453}{void {\bfseries nom} (const Q\+String \&n)}\label{classFormationUtc_ab9be42a9ee817c07d473a08e0684c453}
+
+\item 
+bool \hyperlink{classFormationUtc_a188a5be3b7561d558cdafde750f302b5}{uv\+Deja\+Validee} (const Q\+String \&tag, \hyperlink{classUVEtudiant}{U\+V\+Etudiant} $\ast$uv=0) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFormationUtc_ab4939306e72edabdc484f3c1b208507e}{static const Q\+String \hyperlink{classFormationUtc_ab4939306e72edabdc484f3c1b208507e}{X\+M\+L\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+M\+E} = \char`\"{}formation-\/utc\char`\"{}}\label{classFormationUtc_ab4939306e72edabdc484f3c1b208507e}
+
+\begin{DoxyCompactList}\small\item\em Nom du noeud X\+M\+L correspondant à une formation hors utc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFormationUtc_a9922944f1ec47720995c836b1eb7eea7}{\index{Formation\+Utc@{Formation\+Utc}!ajouter\+Semestre@{ajouter\+Semestre}}
+\index{ajouter\+Semestre@{ajouter\+Semestre}!Formation\+Utc@{Formation\+Utc}}
+\subsubsection[{ajouter\+Semestre}]{\setlength{\rightskip}{0pt plus 5cm}void Formation\+Utc\+::ajouter\+Semestre (
+\begin{DoxyParamCaption}
+\item[{{\bf Semestre} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{classFormationUtc_a9922944f1ec47720995c836b1eb7eea7}
+
+
+Ajoute un semestre à la formation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Le semestre à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFormationUtc_ac3af0dcb7092a12790d979496c466466}{\index{Formation\+Utc@{Formation\+Utc}!supprimer\+Semestre@{supprimer\+Semestre}}
+\index{supprimer\+Semestre@{supprimer\+Semestre}!Formation\+Utc@{Formation\+Utc}}
+\subsubsection[{supprimer\+Semestre}]{\setlength{\rightskip}{0pt plus 5cm}void Formation\+Utc\+::supprimer\+Semestre (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{classFormationUtc_ac3af0dcb7092a12790d979496c466466}
+
+
+Supprime un semestre de la formation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & L'identifiant du semestre à supprimer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFormationUtc_a8dcda30820484cd00e82ad53a1b313f9}{\index{Formation\+Utc@{Formation\+Utc}!to\+Xml@{to\+Xml}}
+\index{to\+Xml@{to\+Xml}!Formation\+Utc@{Formation\+Utc}}
+\subsubsection[{to\+Xml}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dom\+Element Formation\+Utc\+::to\+Xml (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classFormationUtc_a8dcda30820484cd00e82ad53a1b313f9}
+
+
+Convertit l'objet au format X\+M\+L. 
+
+\begin{DoxyReturn}{Returns}
+L'élément X\+M\+L correspondant 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classFormation_aea1a12114f435bba6a32a0a32ca32e47}{Formation}.
+
+\hypertarget{classFormationUtc_a188a5be3b7561d558cdafde750f302b5}{\index{Formation\+Utc@{Formation\+Utc}!uv\+Deja\+Validee@{uv\+Deja\+Validee}}
+\index{uv\+Deja\+Validee@{uv\+Deja\+Validee}!Formation\+Utc@{Formation\+Utc}}
+\subsubsection[{uv\+Deja\+Validee}]{\setlength{\rightskip}{0pt plus 5cm}bool Formation\+Utc\+::uv\+Deja\+Validee (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{tag, }
+\item[{{\bf U\+V\+Etudiant} $\ast$}]{uv = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{classFormationUtc_a188a5be3b7561d558cdafde750f302b5}
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Le tag de l'uv \\
+\hline
+{\em uv} & L'uv contenant la note de l'étudiant si l'uv a été validée\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si l'uv a été validée par l'étudiant, faux sinon 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+model/formation\+Utc.\+h\item 
+model/formation\+Utc.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{classSemestre}{\section{Semestre Class Reference}
+\label{classSemestre}\index{Semestre@{Semestre}}
+}
+Inheritance diagram for Semestre\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSemestre}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSemestre_a1f4bcf95773a68fb7538c01c11a8cd7e}{enum {\bfseries Saison} \{ {\bfseries P\+R\+I\+N\+T\+E\+M\+P\+S}, 
+{\bfseries A\+U\+T\+O\+M\+N\+E}
+ \}}\label{classSemestre_a1f4bcf95773a68fb7538c01c11a8cd7e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSemestre_a4315bab4b2425a4000da60d3afb811e2}{ajouter\+Uv} (\hyperlink{classUVEtudiant}{U\+V\+Etudiant} $\ast$uv)
+\begin{DoxyCompactList}\small\item\em Ajoute une uv au semestre. \end{DoxyCompactList}\item 
+void \hyperlink{classSemestre_abb29a3e06f99052e28356a671c200c91}{supprimer\+Uv} (const Q\+String \&tag)
+\begin{DoxyCompactList}\small\item\em Supprime une uv du semestre. \end{DoxyCompactList}\item 
+\hypertarget{classSemestre_a9f63fd844fd580c26b7df6f3786bc59b}{void \hyperlink{classSemestre_a9f63fd844fd580c26b7df6f3786bc59b}{from\+Xml} (const Q\+Dom\+Node \&noeud)}\label{classSemestre_a9f63fd844fd580c26b7df6f3786bc59b}
+
+\begin{DoxyCompactList}\small\item\em Définit l'objet à partir d'un élément X\+M\+L. \end{DoxyCompactList}\item 
+Q\+Dom\+Element \hyperlink{classSemestre_a36272015189e8641d0a736f99981b876}{to\+Xml} () const 
+\begin{DoxyCompactList}\small\item\em Convertit l'objet au format X\+M\+L. \end{DoxyCompactList}\item 
+\hypertarget{classSemestre_adae6581e8bc96ed833939ba6d9ac62d8}{Q\+Map$<$ Q\+String, \hyperlink{classUVEtudiant}{U\+V\+Etudiant} $\ast$ $>$ {\bfseries uvs} () const }\label{classSemestre_adae6581e8bc96ed833939ba6d9ac62d8}
+
+\item 
+\hypertarget{classSemestre_ae829aa152161807619e874b98327f896}{int {\bfseries id} () const }\label{classSemestre_ae829aa152161807619e874b98327f896}
+
+\item 
+\hypertarget{classSemestre_aec76232f9da3b2e52947a403d426a8f2}{Q\+String {\bfseries nom} () const }\label{classSemestre_aec76232f9da3b2e52947a403d426a8f2}
+
+\item 
+\hypertarget{classSemestre_a0710500a4eafae6e30ef828b12768090}{enum Saison {\bfseries saison} () const }\label{classSemestre_a0710500a4eafae6e30ef828b12768090}
+
+\item 
+\hypertarget{classSemestre_a1828329d5f1aafef07a1f2756cf4d497}{int {\bfseries annee} () const }\label{classSemestre_a1828329d5f1aafef07a1f2756cf4d497}
+
+\item 
+\hypertarget{classSemestre_a3549ba8bcd42de751312150964f140cb}{void {\bfseries nom} (const Q\+String \&n)}\label{classSemestre_a3549ba8bcd42de751312150964f140cb}
+
+\item 
+\hypertarget{classSemestre_a2d106ad925696688381ca0e40ffca2b0}{void {\bfseries annee} (int a)}\label{classSemestre_a2d106ad925696688381ca0e40ffca2b0}
+
+\item 
+\hypertarget{classSemestre_ac851dbab40163f804a4a382faab38e23}{void {\bfseries saison} (enum Saison s)}\label{classSemestre_ac851dbab40163f804a4a382faab38e23}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSemestre_a03fcd2d2eecdcaabfd6048473798f133}{static const Q\+String \hyperlink{classSemestre_a03fcd2d2eecdcaabfd6048473798f133}{X\+M\+L\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+M\+E} = \char`\"{}semestre\char`\"{}}\label{classSemestre_a03fcd2d2eecdcaabfd6048473798f133}
+
+\begin{DoxyCompactList}\small\item\em Nom du noeud X\+M\+L correspondant à un semestre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSemestre_a4315bab4b2425a4000da60d3afb811e2}{\index{Semestre@{Semestre}!ajouter\+Uv@{ajouter\+Uv}}
+\index{ajouter\+Uv@{ajouter\+Uv}!Semestre@{Semestre}}
+\subsubsection[{ajouter\+Uv}]{\setlength{\rightskip}{0pt plus 5cm}void Semestre\+::ajouter\+Uv (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+V\+Etudiant} $\ast$}]{uv}
+\end{DoxyParamCaption}
+)}}\label{classSemestre_a4315bab4b2425a4000da60d3afb811e2}
+
+
+Ajoute une uv au semestre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uv} & L'uv à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSemestre_abb29a3e06f99052e28356a671c200c91}{\index{Semestre@{Semestre}!supprimer\+Uv@{supprimer\+Uv}}
+\index{supprimer\+Uv@{supprimer\+Uv}!Semestre@{Semestre}}
+\subsubsection[{supprimer\+Uv}]{\setlength{\rightskip}{0pt plus 5cm}void Semestre\+::supprimer\+Uv (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{tag}
+\end{DoxyParamCaption}
+)}}\label{classSemestre_abb29a3e06f99052e28356a671c200c91}
+
+
+Supprime une uv du semestre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Le tag de l'uv à supprimer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSemestre_a36272015189e8641d0a736f99981b876}{\index{Semestre@{Semestre}!to\+Xml@{to\+Xml}}
+\index{to\+Xml@{to\+Xml}!Semestre@{Semestre}}
+\subsubsection[{to\+Xml}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dom\+Element Semestre\+::to\+Xml (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSemestre_a36272015189e8641d0a736f99981b876}
+
+
+Convertit l'objet au format X\+M\+L. 
+
+\begin{DoxyReturn}{Returns}
+L'élément X\+M\+L correspondant 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classXmlConvertible_a188430d1503cf6db7223374306577c2c}{Xml\+Convertible}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+model/semestre.\+h\item 
+model/semestre.\+cpp\end{DoxyCompactItemize}
