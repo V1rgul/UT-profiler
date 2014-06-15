@@ -138,7 +138,7 @@ QMap<QString, unsigned int> Etudiant::credits () const {
     credits["TSH"] += this->_formationsHorsUtc[i]->creditsTSH();  
   }
 
-  credits["total"] = credits["horsUtc"];
+  credits["total"] = credits["CS"] + credits["TM"] + credits["TSH"];
 
   QList<Semestre*> semestres = _formationUtc->semestres();
   for (int i = 0; i < semestres.count(); i++) {
@@ -262,7 +262,6 @@ void Etudiant::fromXml (QDomNode& noeud) {
   for (int i = 0; i < uvs.count(); i++) {
     UV* u = uvs[i];
     if (!this->_preferences.contains(u)) {
-      qDebug() << "Note par defaut pour " + u->tag();
       this->_preferences[u] = Etudiant::NOTE_DEFAUT;
     }
   }
