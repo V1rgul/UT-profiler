@@ -7,24 +7,23 @@ FormationController::FormationController(FormationHorsUtc* formation, QFormation
 	connect(this, SIGNAL(_removed()), qFormation, SLOT(deleteLater()));
 	connect(this, SIGNAL(_removed()), this, SLOT(deleteLater()));
 
-	connect(qFormation, SIGNAL(edited(QString,int)), this, SLOT(editEvent(QString,int)));
+	connect(qFormation, SIGNAL(edited(QString, int, int, int)), this, SLOT(editEvent(QString, int, int, int)));
 	connect(qFormation, SIGNAL(remove()), this, SLOT(remove()));
 
-	qFormation->edit(formation->nom(), /*formation->credits()*/42);
+	qFormation->edit(formation->nom(), formation->creditsCS(), formation->creditsTM(), formation->creditsTSH());
 }
 
 
 
-void FormationController::editEvent(const QString name, const int credits){
+void FormationController::editEvent(QString name, int creditsCS, int creditsTM, int creditsTSH){
 	formation->nom(name);
-	//formation->credits(credits);
-	qDebug() << "Formation setted to " << credits << " credits";
+	formation->creditsCS(creditsCS);
+	formation->creditsTM(creditsTM);
+	formation->creditsTSH(creditsTSH);
+	qDebug() << "formation credits changed";
 }
 
 void FormationController::remove(){
 	emit(removed(formation));
 	emit(_removed());
 }
-
-
-/*/////////////////// Change Credits //////////////////*/

@@ -14,7 +14,7 @@ class FormationController : public QObject
 		void removed(FormationHorsUtc *formation);
 		void _removed();
 	public slots:
-		void editEvent(const QString name, const int credits);
+		void editEvent(QString name, int creditsCS, int creditsTM, int creditsTSH);
 		void remove();
 
 	private:

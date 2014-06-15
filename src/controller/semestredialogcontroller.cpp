@@ -72,23 +72,29 @@ void SemestreDialogController::updateList(){
 	model->setHorizontalHeaderLabels(headers);
 	int row = 0;
 	foreach(const UV* uv, uvs.keys()){
-		QStandardItem* choisie = new QStandardItem(  semestre->uvs().keys().contains(uv->tag())?"X":" "  );
-		QStandardItem* note = new QStandardItem(QString::number(uvs.value(uv)));
+		QStandardItem* choisie = new QStandardItem(  semestre->uvs().keys().contains(uv->tag())?"X":"+"  );
 		choisie->setData(QVariant::fromValue( reinterpret_cast<quintptr>(uv) ));
 		choisie->setToolTip("Choisir/Ajouter cette UV au semestre");
+		QStandardItem* note = new QStandardItem(QString::number(uvs.value(uv)));
 		note->setData(QVariant::fromValue( reinterpret_cast<quintptr>(uv) ));
+		QStandardItem* tag = new QStandardItem(uv->tag());
+		tag->setEditable(false);
+		QStandardItem* titre = new QStandardItem(uv->titre());
+		titre->setEditable(false);
+		QStandardItem* cursus = new QStandardItem(uv->cursus().join(","));
+		cursus->setEditable(false);
 
 		model->setItem(row, 0, choisie);
 		model->setItem(row, 1, note);
-		model->setItem(row, 2, new QStandardItem(uv->tag()));
-		model->setItem(row, 3, new QStandardItem(uv->titre()));
-		model->setItem(row, 4, new QStandardItem(uv->cursus().join(",")));
+		model->setItem(row, 2, tag);
+		model->setItem(row, 3, titre);
+		model->setItem(row, 4, cursus);
 		row++;
 	}
 	connect(model, SIGNAL(itemChanged(QStandardItem*)), this, SLOT(UVChanged(QStandardItem*)));
 
 	qDebug() << "model filled with" << row << "rows";
-	model->sort(0, Qt::DescendingOrder);
+	model->sort(1, Qt::DescendingOrder);
 	QAbstractItemModel* old = semestreDialog->swapModel(model);
 	delete old;
 

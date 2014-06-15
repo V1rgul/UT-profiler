@@ -26,6 +26,7 @@ class MainWindowController : public QObject
 		void removeFormation(FormationHorsUtc *formation);
 		void removeSemestre(Semestre *semestre);
 
+		void update();
 		void exiting();
 	private:
 		QApplication *a;

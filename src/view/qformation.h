@@ -11,10 +11,10 @@ class QFormation : public QWidget
 	public:
 		explicit QFormation(QWidget *parent = 0);
 
-		void edit(QString name, int credits);
+		void edit(QString name, int creditsCS, int creditsTM, int creditsTSH);
 	signals:
 		void remove();
-		void edited(const QString name, const int credits);
+		void edited(QString name, int creditsCS, int creditsTM, int creditsTSH);
 	public slots:
 		void buttonRemoveClicked();
 		void editedName(QString name);

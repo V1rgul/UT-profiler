@@ -10,7 +10,7 @@ const QString UVEtudiant::XML_NODE_NAME = "uv";
 
 QList<QString> UVEtudiant::listeNotes () {
   QList<QString> set;
-  set.append("-");
+  set.append(" ");
   set.append("A");
   set.append("B");
   set.append("C");

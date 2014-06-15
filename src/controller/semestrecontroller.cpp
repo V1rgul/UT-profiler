@@ -25,12 +25,19 @@ void SemestreController::update(){
 	QStandardItemModel* model = new QStandardItemModel(2, semestre->uvs().size(), this);
 	int column = 0;
 	foreach (UVEtudiant* uv, semestre->uvs().values()){
-		model->setItem(0, column, new QStandardItem(uv->tag()));
-		model->setItem(1, column, new QStandardItem(uv->note()));
+		QStandardItem* tag = new QStandardItem(uv->tag());
+		tag->setEditable(false);
+		QStandardItem* note = new QStandardItem(uv->note());
+		note->setEditable(false);
+
+		model->setItem(0, column, tag);
+		model->setItem(1, column, note);
 		column++;
 	}
 	QAbstractItemModel* old = qSemestre->swapModel(model);
 	delete old;
+
+	emit(updated());
 }
 
 QString SemestreController::date(){

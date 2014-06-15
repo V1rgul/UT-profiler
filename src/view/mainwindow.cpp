@@ -47,6 +47,10 @@ void MainWindow::editSurnameChanged(const QString & text){
 	qDebug() << "nameChanged" << ui->editNom->text() <<  text;
 	emit(nameChanged(ui->editNom->text(), text));
 }
-
+QAbstractItemModel* MainWindow::swapModel(QAbstractItemModel* model){
+	QAbstractItemModel* old = ui->tableView->model();
+	ui->tableView->setModel(model);
+	return old;
+}
 
 

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QAbstractItemModel>
 #include "qformation.h"
 #include "qsemestre.h"
 
@@ -20,6 +21,7 @@ public:
 	void setName(const QString &name, const QString &surname);
 	void addFormation(QFormation *formation);
 	void addSemestre(QSemestre *semestre);
+	QAbstractItemModel* swapModel(QAbstractItemModel* model);
 
 signals:
 	void addFormationClicked();

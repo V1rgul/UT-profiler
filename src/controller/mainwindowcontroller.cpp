@@ -1,4 +1,5 @@
 #include <QtDebug>
+#include <QStandardItemModel>
 #include "mainwindowcontroller.h"
 
 #include "model/formationHorsUtc.h"
@@ -39,6 +40,8 @@ void MainWindowController::userSelect(const int index){
 	else{
 		etudiant = Etudiant::charger(etudiantList.at(index));
 		mainWindow->setName(etudiant->nom(), etudiant->prenom());
+
+		update();
 		foreach(FormationHorsUtc* f, etudiant->formationsHorsUtc()){
 			QFormation* qFormation = new QFormation();
 			FormationController* formationController = new FormationController(f, qFormation, this);
@@ -53,6 +56,8 @@ void MainWindowController::userSelect(const int index){
 		}
 	}
 
+	qDebug() << "credits()" << etudiant->credits();
+	qDebug() << "creditsNecessaires()" << etudiant->creditsNecessaires();
 	//Init main Window Events
 	connect(mainWindow, SIGNAL(nameChanged(QString,QString)), this, SLOT(nameChanged(QString,QString)));
 	connect(mainWindow, SIGNAL(addFormationClicked()), this, SLOT(addFormation()));
@@ -60,6 +65,26 @@ void MainWindowController::userSelect(const int index){
 	connect(a, SIGNAL(aboutToQuit()), this, SLOT(exiting()));
 
 	mainWindow->show();
+}
+
+
+void MainWindowController::update(){
+	QMap<QString, unsigned int> creditsObtenus = etudiant->credits();
+	QStandardItemModel* model = new QStandardItemModel(2, creditsObtenus.count(), this);
+	int column = 0;
+	foreach (QString typeCredits, creditsObtenus.keys()){
+		QStandardItem* typeItem = new QStandardItem(typeCredits);
+		typeItem->setEditable(false);
+		QStandardItem* creditsItem = new QStandardItem(QString::number(creditsObtenus.value(typeCredits)));
+		creditsItem->setEditable(false);
+
+		model->setItem(0, column, typeItem);
+		model->setItem(1, column, creditsItem);
+		column++;
+	}
+	QAbstractItemModel* old = mainWindow->swapModel(model);
+	delete old;
+	qDebug() << "Mainwindow update()";
 }
 void MainWindowController::userSelectRejected(){
 	qDebug() << "User select rejected";
@@ -86,6 +111,7 @@ void MainWindowController::addSemestre(){
 	SemestreController* semestreController = new SemestreController(etudiant, semestre, qSemestre);
 	mainWindow->addSemestre(qSemestre);
 	connect(semestreController, SIGNAL(removed(Semestre*)), this, SLOT(removeSemestre(Semestre*)));
+	connect(semestreController, SIGNAL(updated()), this, SLOT(update()));
 
 	semestreController->edit();
 }
