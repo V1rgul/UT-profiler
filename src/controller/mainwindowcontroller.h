@@ -37,6 +37,9 @@ class MainWindowController : public QObject
 		Etudiant *etudiant;
 		QStringList etudiantList;
 
+		void addFormationToView(FormationHorsUtc* f);
+		void addSemestreToView(Semestre* s, bool edit = false);
+
 };
 
 #endif // MAINWINDOWCONTROLLER_H

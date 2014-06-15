@@ -21,6 +21,7 @@ void FormationController::editEvent(QString name, int creditsCS, int creditsTM, 
 	formation->creditsTM(creditsTM);
 	formation->creditsTSH(creditsTSH);
 	qDebug() << "formation credits changed";
+	emit(updated());
 }
 
 void FormationController::remove(){

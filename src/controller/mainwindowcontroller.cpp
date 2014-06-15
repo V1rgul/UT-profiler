@@ -43,16 +43,10 @@ void MainWindowController::userSelect(const int index){
 
 		update();
 		foreach(FormationHorsUtc* f, etudiant->formationsHorsUtc()){
-			QFormation* qFormation = new QFormation();
-			FormationController* formationController = new FormationController(f, qFormation, this);
-			mainWindow->addFormation(qFormation);
-			connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
+			addFormationToView(f);
 		}
 		foreach(Semestre* s, etudiant->formationUtc()->semestres()){
-			QSemestre* qSemestre = new QSemestre();
-			SemestreController* semestreController = new SemestreController(etudiant, s, qSemestre, this);
-			mainWindow->addSemestre(qSemestre);
-			connect(semestreController, SIGNAL(removed(Semestre*)), this, SLOT(removeSemestre(Semestre*)));
+			addSemestreToView(s);
 		}
 	}
 
@@ -105,31 +99,46 @@ void MainWindowController::nameChanged(const QString & name, const QString & sur
 
 void MainWindowController::addSemestre(){
 	qDebug() << "add Semestre Clicked";
-	QSemestre* qSemestre = new QSemestre();
+
 	Semestre* semestre = new Semestre();
 	etudiant->formationUtc()->ajouterSemestre(semestre);
-	SemestreController* semestreController = new SemestreController(etudiant, semestre, qSemestre);
+
+	addSemestreToView(semestre, true);
+}
+void MainWindowController::addFormation(){
+	qDebug() << "add Formation Clicked";
+
+	FormationHorsUtc* formation = new FormationHorsUtc();
+	etudiant->ajouterFormation(formation);
+
+	addFormationToView(formation);
+}
+
+void MainWindowController::addFormationToView(FormationHorsUtc* f){
+	QFormation* qFormation = new QFormation();
+	FormationController* formationController = new FormationController(f, qFormation);
+	mainWindow->addFormation(qFormation);
+	connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
+	connect(formationController, SIGNAL(updated()), this, SLOT(update()));
+}
+
+void MainWindowController::addSemestreToView(Semestre* s, bool edit){
+	QSemestre* qSemestre = new QSemestre();
+	SemestreController* semestreController = new SemestreController(etudiant, s, qSemestre);
 	mainWindow->addSemestre(qSemestre);
 	connect(semestreController, SIGNAL(removed(Semestre*)), this, SLOT(removeSemestre(Semestre*)));
 	connect(semestreController, SIGNAL(updated()), this, SLOT(update()));
 
-	semestreController->edit();
-}
-void MainWindowController::addFormation(){
-	qDebug() << "add Formation Clicked";
-	QFormation* qFormation = new QFormation();
-	FormationHorsUtc* formation = new FormationHorsUtc();
-	FormationController* formationController = new FormationController(formation, qFormation);
-	mainWindow->addFormation(qFormation);
-	etudiant->ajouterFormation(formation);
-	connect(formationController, SIGNAL(removed(FormationHorsUtc*)), this, SLOT(removeFormation(FormationHorsUtc*)));
+	if(edit) semestreController->edit();
 }
 
 void MainWindowController::removeFormation(FormationHorsUtc *formation){
 	qDebug() << "remove Formation Clicked";
 	etudiant->supprimerFormation(formation->id());
+	update();
 }
 void MainWindowController::removeSemestre(Semestre *semestre){
 	qDebug() << "remove Semestre Clicked";
 	etudiant->formationUtc()->supprimerSemestre(semestre->id());
+	update();
 }

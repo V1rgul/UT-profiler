@@ -11,6 +11,7 @@ class FormationController : public QObject
 	public:
 		explicit FormationController(FormationHorsUtc* formation, QFormation* qFormation, QObject *parent = 0);
 	signals:
+		void updated();
 		void removed(FormationHorsUtc *formation);
 		void _removed();
 	public slots:
