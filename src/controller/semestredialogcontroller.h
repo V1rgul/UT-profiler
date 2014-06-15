@@ -8,6 +8,7 @@
 #include "model/semestre.h"
 #include "model/uvEtudiant.h"
 #include "qspinnerdelegate.h"
+#include "qcheckboxdelegate.h"
 
 class SemestreDialogController : public QObject
 {
@@ -15,6 +16,7 @@ class SemestreDialogController : public QObject
 	public:
 		SemestreDialogController(Etudiant* etudiant, Semestre* semestre, QObject* parent=0);
 		~SemestreDialogController();
+
 	signals:
 		void updated();
 	public slots:
@@ -24,7 +26,7 @@ class SemestreDialogController : public QObject
 		void saisonChanged();
 		void yearChanged(int year);
 		void filterChanged(QStringList list);
-		void preferenceUVChanged(QStandardItem * item);
+		void UVChanged(QStandardItem * item);
 	private:
 		Etudiant* etudiant;
 		Semestre* semestre;
@@ -34,6 +36,7 @@ class SemestreDialogController : public QObject
 
 		QStandardItemModel* uvModel;
 		QSpinnerDelegate* spinDelegate;
+		QCheckBoxDelegate* checkDelegate;
 
 		void updateList();
 		void addUVChoisieToView(UVEtudiant* uv);

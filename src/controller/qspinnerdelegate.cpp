@@ -7,9 +7,7 @@ QSpinnerDelegate::QSpinnerDelegate(QObject *parent) :
 }
 
 
-QWidget *QSpinnerDelegate::createEditor(QWidget *parent,
- const QStyleOptionViewItem &/* option */,
- const QModelIndex &/* index */) const
+QWidget *QSpinnerDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &/* option */, const QModelIndex &/* index */) const
 {
    QSpinBox *editor = new QSpinBox(parent);
 
@@ -17,8 +15,7 @@ QWidget *QSpinnerDelegate::createEditor(QWidget *parent,
    return editor;
 }
 
-void QSpinnerDelegate::setEditorData(QWidget *editor,
-								 const QModelIndex &index) const
+void QSpinnerDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
    int value = index.model()->data(index, Qt::EditRole).toInt();
 
@@ -26,8 +23,7 @@ void QSpinnerDelegate::setEditorData(QWidget *editor,
    sBox->setValue(value);
 }
 
-void QSpinnerDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
-								const QModelIndex &index) const
+void QSpinnerDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
    QSpinBox *sBox = static_cast<QSpinBox*>(editor);
    int value = sBox->value();
@@ -35,8 +31,7 @@ void QSpinnerDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
    model->setData(index, value, Qt::EditRole);
 }
 
-void QSpinnerDelegate::updateEditorGeometry(QWidget *editor,
- const QStyleOptionViewItem &option, const QModelIndex &/* index */) const
+void QSpinnerDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &/* index */) const
 {
    editor->setGeometry(option.rect);
 }

@@ -35,7 +35,8 @@ SOURCES += main.cpp\
     view/quvchoisie.cpp \
     controller/uvchoisiecontroller.cpp \
     view/quvpreview.cpp \
-    controller/qspinnerdelegate.cpp
+    controller/qspinnerdelegate.cpp \
+    controller/qcheckboxdelegate.cpp
 
 
 HEADERS  += \
@@ -63,7 +64,8 @@ HEADERS  += \
     view/quvchoisie.h \
     controller/uvchoisiecontroller.h \
     view/quvpreview.h \
-    controller/qspinnerdelegate.h
+    controller/qspinnerdelegate.h \
+    controller/qcheckboxdelegate.h
 
 FORMS    += view/mainwindow.ui \
     view/qsemestre.ui \

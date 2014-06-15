@@ -12,8 +12,12 @@ Q_DECLARE_METATYPE(UV *)
 SemestreDialogController::SemestreDialogController(Etudiant* etudiant, Semestre* semestre, QObject* parent) :
 	QObject(parent), etudiant(etudiant), semestre(semestre), semestreDialog(new QSemestreDialog), uvModel()
 {
+	//delegates
+	checkDelegate = new QCheckBoxDelegate(semestreDialog->getTableView());
 	spinDelegate = new QSpinnerDelegate(semestreDialog->getTableView());
-	semestreDialog->getTableView()->setItemDelegateForColumn(0, spinDelegate);
+	semestreDialog->getTableView()->setItemDelegateForColumn(0, checkDelegate);
+	semestreDialog->getTableView()->setItemDelegateForColumn(1, spinDelegate);
+
 	update();
 	updateList();
 	semestreDialog->getFiltreBranche()->addBranches(QStringList(QList<QString>::fromSet(Catalogue::instance()->cursus())));
@@ -62,35 +66,58 @@ void SemestreDialogController::filterChanged(QStringList list){
 void SemestreDialogController::updateList(){
 	QMap<const UV*, unsigned int> uvs = etudiant->preferences(semestre->saison(), (currentFilter.count()==0)?0:&currentFilter );
 	QStringList headers;
-	headers << "Note" << "Tag" << "Titre" << "Cursus";
+	headers << " " << "Note" << "Tag" << "Titre" << "Cursus";
 
 	QStandardItemModel* model = new QStandardItemModel(uvs.count(), headers.count(), this);
 	model->setHorizontalHeaderLabels(headers);
 	int row = 0;
 	foreach(const UV* uv, uvs.keys()){
+		QStandardItem* choisie = new QStandardItem(  semestre->uvs().keys().contains(uv->tag())?"X":" "  );
 		QStandardItem* note = new QStandardItem(QString::number(uvs.value(uv)));
+		choisie->setData(QVariant::fromValue( reinterpret_cast<quintptr>(uv) ));
+		choisie->setToolTip("Choisir/Ajouter cette UV au semestre");
 		note->setData(QVariant::fromValue( reinterpret_cast<quintptr>(uv) ));
 
-		model->setItem(row, 0, note);
-		model->setItem(row, 1, new QStandardItem(uv->tag()));
-		model->setItem(row, 2, new QStandardItem(uv->titre()));
-		model->setItem(row, 3, new QStandardItem(uv->cursus().join(",")));
+		model->setItem(row, 0, choisie);
+		model->setItem(row, 1, note);
+		model->setItem(row, 2, new QStandardItem(uv->tag()));
+		model->setItem(row, 3, new QStandardItem(uv->titre()));
+		model->setItem(row, 4, new QStandardItem(uv->cursus().join(",")));
 		row++;
 	}
-	connect(model, SIGNAL(itemChanged(QStandardItem*)), this, SLOT(preferenceUVChanged(QStandardItem*)));
+	connect(model, SIGNAL(itemChanged(QStandardItem*)), this, SLOT(UVChanged(QStandardItem*)));
 
 	qDebug() << "model filled with" << row << "rows";
 	model->sort(0, Qt::DescendingOrder);
 	QAbstractItemModel* old = semestreDialog->swapModel(model);
 	delete old;
+
+	semestreDialog->getTableView()->resizeColumnsToContents();
 }
-void SemestreDialogController::preferenceUVChanged(QStandardItem * item){
+void SemestreDialogController::UVChanged(QStandardItem * item){
 	UV* uv = reinterpret_cast<UV*>( item->data().value<quintptr>() );
 	if( uv == 0 ){
 		qCritical() << "UV back cast failed ! : " << item->data().value<quintptr>() << ";";
 	}
-	etudiant->preference(uv, item->data(Qt::EditRole).toInt());
-	qDebug() << "preference for uv'" << uv->tag() << "'changed to" << QString::number(etudiant->preference(uv));
+	if(item->index().column() == 0){
+		if(item->data(Qt::EditRole).toString() == "X"){
+			UVEtudiant* uvE = new UVEtudiant(*uv);
+			semestre->ajouterUv(uvE);
+			addUVChoisieToView(uvE);
+			qDebug() << "uv added in semestre";
+			update();
+			updateList();
+		}else{
+			semestre->supprimerUv(uv->tag());
+			qDebug() << "uv removed in semestre";
+		}
+	}else if(item->index().column() == 1){
+		etudiant->preference(uv, item->data(Qt::EditRole).toInt());
+		qDebug() << "preference for uv'" << uv->tag() << "'changed to" << QString::number(etudiant->preference(uv));
+	}else{
+
+	}
+
 }
 
 void SemestreDialogController::addUVChoisieToView(UVEtudiant* uv){
