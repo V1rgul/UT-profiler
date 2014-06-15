@@ -7,12 +7,14 @@
 #include "model/etudiant.h"
 #include "model/semestre.h"
 #include "model/uvEtudiant.h"
+#include "qspinnerdelegate.h"
 
 class SemestreDialogController : public QObject
 {
 		Q_OBJECT
 	public:
 		SemestreDialogController(Etudiant* etudiant, Semestre* semestre, QObject* parent=0);
+		~SemestreDialogController();
 	signals:
 		void updated();
 	public slots:
@@ -22,13 +24,16 @@ class SemestreDialogController : public QObject
 		void saisonChanged();
 		void yearChanged(int year);
 		void filterChanged(QStringList list);
+		void preferenceUVChanged(QStandardItem * item);
 	private:
 		Etudiant* etudiant;
 		Semestre* semestre;
 		QSemestreDialog* semestreDialog;
 		QStringList currentFilter;
 
+
 		QStandardItemModel* uvModel;
+		QSpinnerDelegate* spinDelegate;
 
 		void updateList();
 		void addUVChoisieToView(UVEtudiant* uv);

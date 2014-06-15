@@ -6,9 +6,14 @@
 #include "uvchoisiecontroller.h"
 #include "quvchoisie.h"
 
+
+Q_DECLARE_METATYPE(UV *)
+
 SemestreDialogController::SemestreDialogController(Etudiant* etudiant, Semestre* semestre, QObject* parent) :
 	QObject(parent), etudiant(etudiant), semestre(semestre), semestreDialog(new QSemestreDialog), uvModel()
 {
+	spinDelegate = new QSpinnerDelegate(semestreDialog->getTableView());
+	semestreDialog->getTableView()->setItemDelegateForColumn(0, spinDelegate);
 	update();
 	updateList();
 	semestreDialog->getFiltreBranche()->addBranches(QStringList(QList<QString>::fromSet(Catalogue::instance()->cursus())));
@@ -24,6 +29,10 @@ SemestreDialogController::SemestreDialogController(Etudiant* etudiant, Semestre*
 
 	connect(semestreDialog, SIGNAL(rejected()), this, SLOT(deleteLater()));
 	connect(semestreDialog, SIGNAL(rejected()), semestreDialog, SLOT(deleteLater()));	
+}
+SemestreDialogController::~SemestreDialogController(){
+	delete spinDelegate;
+	delete uvModel;
 }
 
 void SemestreDialogController::update(){
@@ -59,17 +68,29 @@ void SemestreDialogController::updateList(){
 	model->setHorizontalHeaderLabels(headers);
 	int row = 0;
 	foreach(const UV* uv, uvs.keys()){
-		model->setItem(row, 0, new QStandardItem(QString::number(uvs.value(uv))));
+		QStandardItem* note = new QStandardItem(QString::number(uvs.value(uv)));
+		note->setData(QVariant::fromValue( reinterpret_cast<quintptr>(uv) ));
+
+		model->setItem(row, 0, note);
 		model->setItem(row, 1, new QStandardItem(uv->tag()));
 		model->setItem(row, 2, new QStandardItem(uv->titre()));
 		model->setItem(row, 3, new QStandardItem(uv->cursus().join(",")));
 		row++;
 	}
+	connect(model, SIGNAL(itemChanged(QStandardItem*)), this, SLOT(preferenceUVChanged(QStandardItem*)));
 
 	qDebug() << "model filled with" << row << "rows";
-	//new QSortFilterProxyModel(
+	model->sort(0, Qt::DescendingOrder);
 	QAbstractItemModel* old = semestreDialog->swapModel(model);
 	delete old;
+}
+void SemestreDialogController::preferenceUVChanged(QStandardItem * item){
+	UV* uv = reinterpret_cast<UV*>( item->data().value<quintptr>() );
+	if( uv == 0 ){
+		qCritical() << "UV back cast failed ! : " << item->data().value<quintptr>() << ";";
+	}
+	etudiant->preference(uv, item->data(Qt::EditRole).toInt());
+	qDebug() << "preference for uv'" << uv->tag() << "'changed to" << QString::number(etudiant->preference(uv));
 }
 
 void SemestreDialogController::addUVChoisieToView(UVEtudiant* uv){

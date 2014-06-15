@@ -15,6 +15,10 @@ QFiltreBranche* QSemestreDialog::getFiltreBranche(){
 	return ui.filtreBranche;
 }
 
+QTableView* QSemestreDialog::getTableView(){
+	return ui.listView;
+}
+
 void QSemestreDialog::saisonClicked(){
 	emit(saisonChanged());
 }
