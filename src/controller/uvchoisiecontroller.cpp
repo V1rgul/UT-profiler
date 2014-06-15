@@ -21,4 +21,5 @@ void UVChoisieController::remove(){
 
 void UVChoisieController::noteChanged(QString note){
 	uv->note(note);
+	emit(updated());
 }

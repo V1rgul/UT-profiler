@@ -24,9 +24,9 @@ void SemestreController::update(){
 
 	QStandardItemModel* model = new QStandardItemModel(2, semestre->uvs().size(), this);
 	int column = 0;
-	foreach (QString uv, semestre->uvs().keys()){
-		model->setItem(0, column, new QStandardItem(uv));
-		model->setItem(1, column, new QStandardItem("42"));
+	foreach (UVEtudiant* uv, semestre->uvs().values()){
+		model->setItem(0, column, new QStandardItem(uv->tag()));
+		model->setItem(1, column, new QStandardItem(uv->note()));
 		column++;
 	}
 	QAbstractItemModel* old = qSemestre->swapModel(model);

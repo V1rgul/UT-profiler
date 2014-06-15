@@ -33,7 +33,8 @@ SOURCES += main.cpp\
     view/qfiltrebranche.cpp \
     controller/semestredialogcontroller.cpp \
     view/quvchoisie.cpp \
-    controller/uvchoisiecontroller.cpp
+    controller/uvchoisiecontroller.cpp \
+    view/quvpreview.cpp
 
 
 HEADERS  += \
@@ -59,7 +60,8 @@ HEADERS  += \
     view/qfiltrebranche.h \
     controller/semestredialogcontroller.h \
     view/quvchoisie.h \
-    controller/uvchoisiecontroller.h
+    controller/uvchoisiecontroller.h \
+    view/quvpreview.h
 
 FORMS    += view/mainwindow.ui \
     view/qsemestre.ui \
@@ -67,7 +69,8 @@ FORMS    += view/mainwindow.ui \
     view/quserdialog.ui \
     view/qsemestredialog.ui \
     view/qfiltrebranche.ui \
-    view/quvchoisie.ui
+    view/quvchoisie.ui \
+    view/quvpreview.ui
 
 INCLUDEPATH += view
 

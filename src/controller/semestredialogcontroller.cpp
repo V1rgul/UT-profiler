@@ -21,7 +21,6 @@ SemestreDialogController::SemestreDialogController(Etudiant* etudiant, Semestre*
 	connect(semestreDialog, SIGNAL(saisonChanged()), this, SLOT(saisonChanged()));
 	connect(semestreDialog, SIGNAL(yearChanged(int)), this, SLOT(yearChanged(int)));
 	connect(semestreDialog->getFiltreBranche(), SIGNAL(filterChanged(QStringList)), this, SLOT(filterChanged(QStringList)));
-	connect(this, SIGNAL(updated()), this, SLOT(update()));
 
 	connect(semestreDialog, SIGNAL(rejected()), this, SLOT(deleteLater()));
 	connect(semestreDialog, SIGNAL(rejected()), semestreDialog, SLOT(deleteLater()));	
@@ -30,19 +29,19 @@ SemestreDialogController::SemestreDialogController(Etudiant* etudiant, Semestre*
 void SemestreDialogController::update(){
 	semestreDialog->setSaison( (semestre->saison()==Semestre::AUTOMNE)? QString("A") : QString("P") );
 	semestreDialog->setYear(semestre->annee());
-
+	emit(updated());
 }
 
 void SemestreDialogController::saisonChanged(){
 	Semestre::Saison newSaison = (semestre->saison()==Semestre::AUTOMNE)? Semestre::PRINTEMPS : Semestre::AUTOMNE;
 	semestre->saison( newSaison );
-	emit(updated());
+	update();
 	updateList();
 }
 void SemestreDialogController::yearChanged(int year){
 	semestre->annee(year);
 	//qDebug() << "semestre->annee(" << QString::number(year) << ")";
-	emit(updated());
+	update();
 }
 
 void SemestreDialogController::filterChanged(QStringList list){
@@ -77,12 +76,13 @@ void SemestreDialogController::addUVChoisieToView(UVEtudiant* uv){
 	UVChoisieController* uvChosieController = new UVChoisieController(uv, uvChoisie, this);
 	semestreDialog->addUVChoisie(uvChoisie);
 	connect(uvChosieController, SIGNAL(removed(UVEtudiant*)), this, SLOT(uvChoisieRemoved(UVEtudiant*)));
+	connect(uvChosieController, SIGNAL(updated()), this, SLOT(update()));
 }
 
 void SemestreDialogController::uvChoisieRemoved(UVEtudiant* uv){
 	qDebug() << "UVChoisie removed(" << uv << ")";
 	semestre->supprimerUv(uv->tag());
-	emit(updated());
+	update();
 }
 
 

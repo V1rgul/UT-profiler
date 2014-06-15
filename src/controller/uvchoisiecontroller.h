@@ -14,6 +14,7 @@ class UVChoisieController : public QObject
 	signals:
 		void _remove();
 		void removed(UVEtudiant*);
+		void updated();
 	public slots:
 		void remove();
 		void noteChanged(QString note);
