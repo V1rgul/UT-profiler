@@ -3,8 +3,16 @@
 #include "semestreInvalideErreur.h"
 #include "formationUtc.h"
 
+/**
+ * @brief Nom du noeud XML correspondant à une formation hors utc
+ */
 const QString FormationUtc::XML_NODE_NAME = "formation-utc";
 
+/**
+ * @brief Ajoute un semestre à la formation
+ *
+ * @param s Le semestre à ajouter
+ */
 void FormationUtc::ajouterSemestre (Semestre* s) {
   QList<UVEtudiant> dejaValidees;
   if (!this->verifierSemestre(*s, &dejaValidees)) {
@@ -13,6 +21,11 @@ void FormationUtc::ajouterSemestre (Semestre* s) {
   this->_semestres.append(s);
 }
 
+/**
+ * @brief Supprime un semestre de la formation
+ *
+ * @param id L'identifiant du semestre à supprimer
+ */
 void FormationUtc::supprimerSemestre (int id) {
   for (int i = 0; i < this->_semestres.count(); i++) {
     if (this->_semestres[i]->id() == id) {
@@ -41,6 +54,12 @@ bool FormationUtc::verifierSemestre (const Semestre &s, QList<UVEtudiant>* dejaV
   return true;
 }
 
+/**
+ * @param tag Le tag de l'uv
+ * @param uv L'uv contenant la note de l'étudiant si l'uv a été validée
+ *
+ * @return Vrai si l'uv a été validée par l'étudiant, faux sinon
+ */
 bool FormationUtc::uvDejaValidee(const QString& tag, UVEtudiant* uv) const {
   QList<Semestre*> s = this->semestres();
   for (int i = 0; i < s.count(); i++) {

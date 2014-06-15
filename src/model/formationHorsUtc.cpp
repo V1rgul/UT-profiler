@@ -2,6 +2,9 @@
 #include <QtXml>
 #include "formationHorsUtc.h"
 
+/**
+ * @brief Nom du noeud XML correspondant à une formation hors utc
+ */
 const QString FormationHorsUtc::XML_NODE_NAME = "formation-hors-utc";
 
 void FormationHorsUtc::fromXml (const QDomNode& noeud) {

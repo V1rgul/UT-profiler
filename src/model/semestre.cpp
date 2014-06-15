@@ -5,9 +5,16 @@
 
 #include "semestre.h"
 
+/**
+ * @brief Nom du noeud XML correspondant à un semestre 
+ */
 const QString Semestre::XML_NODE_NAME = "semestre";
 int Semestre::idCpt = 0;
 
+/**
+ * @brief Ajoute une uv au semestre
+ * @param uv L'uv à ajouter
+ */
 void Semestre::ajouterUv (UVEtudiant* uv) {
   if (this->dejaChoisie(uv->tag())) {
     throw std::invalid_argument("Uv déjà choisie !");
@@ -15,6 +22,10 @@ void Semestre::ajouterUv (UVEtudiant* uv) {
   this->_uvs[uv->tag()] = uv;
 }
 
+/**
+ * @brief Supprime une uv du semestre
+ * @param tag Le tag de l'uv à supprimer
+ */
 void Semestre::supprimerUv (const QString& tag) {
   this->_uvs.remove(tag);
 }

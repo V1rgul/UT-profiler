@@ -3,9 +3,16 @@
 #include "catalogue.h"
 #include "uv.h"
 
+/**
+ * @brief Nom du noeud XML correspondant au catalogue
+ */
 const QString Catalogue::XML_NODE_NAME = "catalogue";
+
 const Catalogue* Catalogue::_instance = 0;
 
+/**
+ * @return Le singleton du catalogue
+ */
 const Catalogue * Catalogue::instance () {
   if (!_instance) {
     _instance = Catalogue::charger();
@@ -14,14 +21,26 @@ const Catalogue * Catalogue::instance () {
   return _instance;
 }
 
+/**
+ * @param tag Le tag de l'uv
+ * @return L'uv ayant le tag passé en argument
+ */
 UV* Catalogue::operator[] (QString tag) {
   return this->uvs()[tag];
 }
 
+/**
+ * @param tag Le tag de l'uv
+ * @return L'uv ayant le tag passé en argument
+ */
 const UV* Catalogue::operator[] (QString tag) const {
   return this->uvs()[tag];
 }
 
+/**
+ * @brief Ajoute une uv au catalogue
+ * @param uv L'uv à ajouter
+ */
 void Catalogue::ajouterUv (UV* uv) {
   if (this->existe(uv->tag())) {
     throw std::invalid_argument("L'uv existe déjà");
@@ -30,10 +49,19 @@ void Catalogue::ajouterUv (UV* uv) {
   this->_uvs[uv->tag()] = uv;
 }
 
+/**
+ * @brief Supprime une uv du catalogue
+ * @param tag Le tag de l'uv à supprimer
+ */
 void Catalogue::supprimerUv (const QString tag) {
   this->_uvs.remove(tag);
 }
 
+/**
+ * @brief Edite une uv du catalogue
+ * @param oldTag L'ancien nom de l'uv
+ * @param uv L'uv éditée
+ */
 void Catalogue::editerUv (const QString oldTag, UV* uv) {
   if (uv->tag() != oldTag) {
     if (this->existe(uv->tag())) {
@@ -46,6 +74,10 @@ void Catalogue::editerUv (const QString oldTag, UV* uv) {
   this->_uvs[uv->tag()] = uv; 
 }
 
+/**
+ * @param tag Le tag de l'uv
+ * @return Vrai si le catalogue contient l'uv, faux sinon
+ */
 bool Catalogue::existe(QString tag) {
   return this->_uvs.contains(tag);
 }

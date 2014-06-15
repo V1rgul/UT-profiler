@@ -1,6 +1,14 @@
 #include "uv.h"
 
+/**
+ * @brief Nom du noeud XML correspondant à une uv
+ */
 const QString UV::XML_NODE_NAME = "uv";
+
+/**
+ * @brief Nom du noeud XML correspondant aux crédits 
+ *    apportés par une uv pour une catégorie
+ */
 const QString UV::CREDIT_XML_NODE_NAME = "credits";
 
 void UV::fromXml (const QDomNode& noeud) {

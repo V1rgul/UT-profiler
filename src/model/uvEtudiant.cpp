@@ -3,6 +3,9 @@
 #include "catalogue.h"
 #include "uvEtudiant.h"
 
+/**
+ * @brief Nom du noeud XML correspondant à une uv 
+ */
 const QString UVEtudiant::XML_NODE_NAME = "uv";
 
 QList<QString> UVEtudiant::listeNotes () {

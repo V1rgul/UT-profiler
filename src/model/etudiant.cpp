@@ -8,11 +8,29 @@
 #include "formationHorsUtc.h"
 #include "etudiant.h"
 
+/**
+ * @brief Nom du noeud XML correspondant à un étudiant
+ */
 const QString Etudiant::XML_NODE_NAME = "etudiant";
+
+/**
+ * @brief Nom du noeud XML correspondant aux préférences d'uvs d'un étudiant
+ */
 const QString Etudiant::PREFERENCE_XML_NODE_NAME = "preference";
+
+/**
+ * @brief Note de préférence par défaut
+ */
 const unsigned int Etudiant::NOTE_DEFAUT = 2;
+
+/**
+ * @brief Note de préférence maximum
+ */
 const unsigned int Etudiant::NOTE_MAX = 5;
 
+/**
+ * @brief Crée un étudiant
+ */
 Etudiant::Etudiant () {
   this->_formationUtc = new FormationUtc();
 }
@@ -21,14 +39,25 @@ Etudiant::~Etudiant () {
   // supprimer formations
 }
 
+/**
+ * @return Le chemin du fichier contenant les information de l'étudiant
+ */
 QString Etudiant::nomFichier () const {
   return "./etudiant/" + this->nom() + "_" + this->prenom() + ".xml";
 }
 
+/**
+ * @brief Ajoute une formation hors utc
+ * @param f La formation à ajouter
+ */
 void Etudiant::ajouterFormation (FormationHorsUtc* f) {
   this->_formationsHorsUtc.append(f);
 }
 
+/**
+ * @brief Supprime une formation hors utc
+ * @param id L'identifiant de la formation à supprimer
+ */
 void Etudiant::supprimerFormation (int id) {
   for (int i = 0; i < this->_formationsHorsUtc.count(); i++) {
     if (this->_formationsHorsUtc[i]->id() == id) {
@@ -38,10 +67,19 @@ void Etudiant::supprimerFormation (int id) {
   }
 }
 
+/**
+ * @param uv L'uv dont la note de préférence doit être retournée
+ * @return La note de préférence pour l'uv, ou la note de préférence
+ *    par défaut si l'étudiant n'a pas spécifié de note pour l'uv
+ */
 unsigned int Etudiant::preference (const UV* uv) const {
   return this->preferences()[uv];
 }
 
+/**
+ * @param uv L'uv dont la note de préférence doit être définie
+ * @param note La note de préférence pour l'uv
+ */
 void Etudiant::preference (const UV* uv, unsigned int note) {
   if (note > Etudiant::NOTE_MAX) {
     throw std::invalid_argument("Note invalide");
@@ -49,6 +87,15 @@ void Etudiant::preference (const UV* uv, unsigned int note) {
   this->_preferences[uv] = note;
 }
 
+/**
+ * @param saison La saison à laquelle les UVs doivent être enseignées
+ * @param cursus La liste des cursus à afficher, si cursus vaut NULL,
+ *    les UVs de tous les cursus pour la saison donnée sont retournées
+ *
+ * @return Les préférences de l'étudiant pour les UVs
+ *    enseignés durant la saison passé en argument et appartenant aux
+ *    cursus donnés
+ */
 QMap<const UV*, unsigned int> Etudiant::preferences (
     Semestre::Saison saison, QStringList* cursus) const 
 {
@@ -77,6 +124,11 @@ QMap<const UV*, unsigned int> Etudiant::preferences (
   return triees;
 }
 
+/**
+ * @return Les crédits de l'étudiant dans les diverses catégorie d'UVs,
+ *    la clef "total" contient la somme de tous les crédits de l'étudiant,
+ *    et la clef "BR" contient la somme des crédits de type CS et TM
+ */
 QMap<QString, unsigned int> Etudiant::credits () const {
   QMap<QString, unsigned int> credits;
   credits["horsUtc"] = 0;
@@ -114,6 +166,9 @@ QMap<QString, unsigned int> Etudiant::credits () const {
   return credits;
 }
 
+/**
+ * @return La liste des crédits necessaires par catégorie d'UV
+ */
 QMap<QString, unsigned int> Etudiant::creditsNecessaires () {
   QMap<QString, unsigned int> credits;
 
