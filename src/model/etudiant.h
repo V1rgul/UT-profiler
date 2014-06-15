@@ -11,12 +11,7 @@
 #include "formationHorsUtc.h"
 #include "xmlConvertible.h"
 
-// BUG: Si la classe hérite de XmlConvertible, et donc que la méthode
-// toXml surcharge la méthode virtuelle pure de la classe XmlConvertible,
-// le programme crash dans la fonction sauvegarder a la ligne
-// doc.appendChild(this->toXml()). Le mot clef this dois poser probleme
-// mais je sais pas comment le corriger
-class Etudiant {
+class Etudiant : public XmlConvertible {
   public:
     Etudiant ();
     ~Etudiant ();
@@ -46,7 +41,7 @@ class Etudiant {
     QMap<QString, unsigned int> credits () const;
     static QMap<QString, unsigned int> creditsNecessaires ();
 
-    void fromXml (QDomNode& noeud);
+    void fromXml (const QDomNode& noeud);
     QDomElement toXml () const;
 
     inline FormationUtc* formationUtc () const { return _formationUtc; }

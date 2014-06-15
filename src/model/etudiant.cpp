@@ -226,7 +226,7 @@ QDomElement Etudiant::toXml () const {
   return etudiant;
 }
 
-void Etudiant::fromXml (QDomNode& noeud) {
+void Etudiant::fromXml (const QDomNode& noeud) {
   if (noeud.nodeName() != Etudiant::XML_NODE_NAME) {
     throw "Fichier XML invalide";
   }
