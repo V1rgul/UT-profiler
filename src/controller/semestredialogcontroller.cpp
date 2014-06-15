@@ -51,17 +51,18 @@ void SemestreDialogController::filterChanged(QStringList list){
 }
 
 void SemestreDialogController::updateList(){
-	QList<const UV*> uvs = etudiant->uvTriees(semestre->saison(), (currentFilter.count()==0)?0:&currentFilter );
+	QMap<const UV*, unsigned int> uvs = etudiant->preferences(semestre->saison(), (currentFilter.count()==0)?0:&currentFilter );
 	QStringList headers;
-	headers << "Tag" << "Titre" << "Cursus";
+	headers << "Note" << "Tag" << "Titre" << "Cursus";
 
 	QStandardItemModel* model = new QStandardItemModel(uvs.count(), headers.count(), this);
 	model->setHorizontalHeaderLabels(headers);
 	int row = 0;
-	foreach(const UV* uv, uvs){
-		model->setItem(row, 0, new QStandardItem(uv->tag()));
-		model->setItem(row, 1, new QStandardItem(uv->titre()));
-		model->setItem(row, 2, new QStandardItem(uv->cursus().join(",")));
+	foreach(const UV* uv, uvs.keys()){
+		model->setItem(row, 0, new QStandardItem(QString::number(uvs.value(uv))));
+		model->setItem(row, 1, new QStandardItem(uv->tag()));
+		model->setItem(row, 2, new QStandardItem(uv->titre()));
+		model->setItem(row, 3, new QStandardItem(uv->cursus().join(",")));
 		row++;
 	}
 
