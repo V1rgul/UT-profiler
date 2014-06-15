@@ -1,6 +1,7 @@
 #include <stdexcept>
 #include <QList>
 #include <QtXml>
+#include <QDate>
 
 #include "semestre.h"
 
@@ -28,8 +29,13 @@ void Semestre::fromXml (const QDomNode& noeud) {
   }
 
   QDomElement e = noeud.toElement();
+  QDate date;
+  int anneeCourante = date.year();
+
   this->nom(e.attribute("nom"));
-  this->annee(e.attribute("annee").toInt());
+  if (e.hasAttribute("annee")) { this->annee(e.attribute("annee").toInt()); }
+  else { this->annee(anneeCourante); }
+
   this->saison(e.attribute("saison") == "printemps" ?
       Semestre::PRINTEMPS :
       Semestre::AUTOMNE);
