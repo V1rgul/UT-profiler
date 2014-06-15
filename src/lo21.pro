@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = lo21
 TEMPLATE = app
-
+win32:RC_ICONS += logo.ico
 
 SOURCES += main.cpp\
     model/etudiant.cpp \

@@ -28,5 +28,6 @@ void QFormation::editedName(QString name){
 	emit(edited(name, ui.spinCreditsCS->value(), ui.spinCreditsTM->value(), ui.spinCreditsTSH->value()));
 }
 void QFormation::editedCredits(int credits){
+	Q_UNUSED(credits);
 	emit(edited(ui.editName->text(), ui.spinCreditsCS->value(), ui.spinCreditsTM->value(), ui.spinCreditsTSH->value()));
 }
