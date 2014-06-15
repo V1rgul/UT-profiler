@@ -64,12 +64,18 @@ void MainWindowController::userSelect(const int index){
 
 void MainWindowController::update(){
 	QMap<QString, unsigned int> creditsObtenus = etudiant->credits();
+	QMap<QString, unsigned int> creditsNecessaires = etudiant->creditsNecessaires();
 	QStandardItemModel* model = new QStandardItemModel(2, creditsObtenus.count(), this);
 	int column = 0;
-	foreach (QString typeCredits, creditsObtenus.keys()){
+	foreach (QString typeCredits, creditsNecessaires.keys()){
+		QString creditsCount;
+		creditsCount.append(QString::number(  creditsObtenus.contains(typeCredits) ? creditsObtenus.value(typeCredits) : 0  ));
+		creditsCount.append(" / ");
+		creditsCount.append(QString::number( creditsNecessaires.value(typeCredits) ));
+
 		QStandardItem* typeItem = new QStandardItem(typeCredits);
 		typeItem->setEditable(false);
-		QStandardItem* creditsItem = new QStandardItem(QString::number(creditsObtenus.value(typeCredits)));
+		QStandardItem* creditsItem = new QStandardItem(creditsCount);
 		creditsItem->setEditable(false);
 
 		model->setItem(0, column, typeItem);
