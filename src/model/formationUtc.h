@@ -23,7 +23,6 @@ class FormationUtc : public Formation {
 
     inline QList<Semestre*> semestres () const { return _semestres; }
     inline unsigned int id () const { return _id; }
-    inline unsigned int credits () const { return _credits; }
     inline QString nom () const { return _nom; }
 
     inline void nom (const QString& n) { _nom = n; }
@@ -35,7 +34,6 @@ class FormationUtc : public Formation {
     int _id;
     QString _nom;
     QList<Semestre*> _semestres;
-    unsigned int _credits;
 };
 
 #endif

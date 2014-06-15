@@ -131,10 +131,11 @@ QMap<const UV*, unsigned int> Etudiant::preferences (
  */
 QMap<QString, unsigned int> Etudiant::credits () const {
   QMap<QString, unsigned int> credits;
-  credits["horsUtc"] = 0;
 
   for (int i = 0; i < this->_formationsHorsUtc.count(); i++) {
-    credits["horsUtc"] += this->_formationsHorsUtc[i]->credits();  
+    credits["CS"] += this->_formationsHorsUtc[i]->creditsCS();  
+    credits["TM"] += this->_formationsHorsUtc[i]->creditsTM();  
+    credits["TSH"] += this->_formationsHorsUtc[i]->creditsTSH();  
   }
 
   credits["total"] = credits["horsUtc"];

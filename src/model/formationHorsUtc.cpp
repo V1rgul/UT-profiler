@@ -14,7 +14,9 @@ void FormationHorsUtc::fromXml (const QDomNode& noeud) {
 
   QDomElement e = noeud.toElement();
   this->nom(e.attribute("nom"));
-  this->credits(e.attribute("credits").toInt());
+  this->creditsCS(e.attribute("credits-cs").toInt());
+  this->creditsTM(e.attribute("credits-tm").toInt());
+  this->creditsTSH(e.attribute("credits-tsh").toInt());
 }
 
 QDomElement FormationHorsUtc::toXml () const {
@@ -22,7 +24,9 @@ QDomElement FormationHorsUtc::toXml () const {
   QDomElement formation = doc.createElement(FormationHorsUtc::XML_NODE_NAME);
 
   formation.setAttribute("nom", this->nom());
-  formation.setAttribute("credits", QString::number(this->credits()));
+  formation.setAttribute("credits-cs", QString::number(this->creditsCS()));
+  formation.setAttribute("credits-tm", QString::number(this->creditsTM()));
+  formation.setAttribute("credits-tsh", QString::number(this->creditsTSH()));
 
   return formation;
 }

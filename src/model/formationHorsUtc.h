@@ -17,15 +17,22 @@ class FormationHorsUtc : public Formation {
     void fromXml (const QDomNode& noeud);
     QDomElement toXml () const;
 
-    inline unsigned int credits () const { return _credits; }
+    inline unsigned int creditsCS () const { return _creditsCS; }
+    inline unsigned int creditsTM () const { return _creditsTM; }
+    inline unsigned int creditsTSH () const { return _creditsTSH; }
+
     inline QString nom () const { return _nom; }
 
     inline void nom (const QString& n) { _nom = n; }
-    inline void credits (unsigned int c) { _credits = c; }
+    inline void creditsCS (unsigned int c) { _creditsCS = c; }
+    inline void creditsTM (unsigned int c) { _creditsTM = c; }
+    inline void creditsTSH (unsigned int c) { _creditsTSH = c; }
 
   private:
     QString _nom;
-    unsigned int _credits;
+    unsigned int _creditsCS;
+    unsigned int _creditsTM;
+    unsigned int _creditsTSH;
 };
 
 #endif

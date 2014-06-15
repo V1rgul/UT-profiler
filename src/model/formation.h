@@ -10,12 +10,10 @@ class Formation : public XmlConvertible {
   public:
     Formation () { 
       _id = idCpt++; 
-      _credits = 0;
     }
     virtual ~Formation () {}
 
     inline unsigned int id () const { return _id; }
-    inline unsigned int credits () const { return _credits; }
     inline QString nom () const { return _nom; }
 
     inline void nom (const QString& n) { _nom = n; }
@@ -27,7 +25,6 @@ class Formation : public XmlConvertible {
     static int idCpt;
     int _id;
     QString _nom;
-    unsigned int _credits;
 };
 
 #endif
